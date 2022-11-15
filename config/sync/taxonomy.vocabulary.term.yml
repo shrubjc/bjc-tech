@@ -1,0 +1,8 @@
+uuid: 17655e63-5624-4655-a50e-cfad8b414f58
+langcode: en
+status: true
+dependencies: {  }
+name: Term
+vid: term
+description: ''
+weight: 0

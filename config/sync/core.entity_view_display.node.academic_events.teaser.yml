@@ -1,0 +1,36 @@
+uuid: 99d2546d-656c-49be-a76c-26ea00a98fc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.academic_events.body
+    - field.field.node.academic_events.field_end_date
+    - field.field.node.academic_events.field_start_date
+    - field.field.node.academic_events.field_term
+    - node.type.academic_events
+  module:
+    - text
+    - user
+id: node.academic_events.teaser
+targetEntityType: node
+bundle: academic_events
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_end_date: true
+  field_start_date: true
+  field_term: true

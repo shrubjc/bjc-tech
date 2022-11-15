@@ -1,0 +1,21 @@
+uuid: 3a3e3b18-fb8e-4141-ba03-fd5379b7148a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.academic_events
+  module:
+    - datetime
+id: node.academic_events.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: academic_events
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

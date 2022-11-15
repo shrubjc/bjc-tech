@@ -1,0 +1,21 @@
+uuid: c11ac566-670c-4f98-b92d-1c9049962625
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.academic_events
+  module:
+    - datetime
+id: node.academic_events.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: academic_events
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
