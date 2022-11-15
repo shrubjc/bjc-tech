@@ -1,0 +1,14 @@
+uuid: ed52d3ba-ddea-41ea-882b-dfc93d812c0f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - XR40163@bjc.org
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
