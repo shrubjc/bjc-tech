@@ -1,0 +1,15 @@
+uuid: 22282577-f629-4163-9854-7770bd988af5
+langcode: en
+status: true
+dependencies: {  }
+name: home_page_slideshow
+label: 'Home Page Slideshow(182X360)'
+effects:
+  5d7c131b-fe15-491d-a8c6-2ba1f4479a0f:
+    uuid: 5d7c131b-fe15-491d-a8c6-2ba1f4479a0f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 182
+      height: 360
+      anchor: center-center
