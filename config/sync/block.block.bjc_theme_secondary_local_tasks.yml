@@ -1,0 +1,22 @@
+uuid: aa4c09b6-e8b2-43dc-b012-4afda3faef7c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bjc_theme
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: bjc_theme_secondary_local_tasks
+theme: bjc_theme
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

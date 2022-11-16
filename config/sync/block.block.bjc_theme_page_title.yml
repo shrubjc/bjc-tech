@@ -1,0 +1,20 @@
+uuid: 0e2e7cde-3da5-4f41-a8d7-108b801f70f8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bjc_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: bjc_theme_page_title
+theme: bjc_theme
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

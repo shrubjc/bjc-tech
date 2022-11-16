@@ -1,0 +1,154 @@
+.flex_featured-employees {
+
+    h2 {
+      color: $headers;
+    }
+    .featured-employees {
+        margin-top: 40px;
+        &_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            padding-bottom: 40px;
+            border-bottom: solid 2px $divider;
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0px;
+            }
+            img {
+              margin-right: 0;
+              border-radius: 50%;
+            }
+            p {
+              margin-bottom: 0;
+            }
+            i {
+                font-size: 12px;
+                margin-right: 3px;
+            }
+
+            @include tablet {
+                margin-bottom: 60px;
+                border-bottom: none;
+                padding-bottom: 0px;
+            }
+
+            .employee-detail {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    margin-top: 10px;
+                    font-family: $minionPro;
+                    color: $headers;
+                }
+
+                .departments {
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+
+                }
+                .job-title {
+                    color: $neutral;
+                    font-style: italic;
+                    font-size: 14px;
+                }
+                &_contact {
+
+                    .office-phone a, .bjc-mobile a {
+                        text-decoration: none;
+                        color: $body;
+                    }
+                    .bjc-mobile {
+                        margin-top: 10px;
+                    }
+                    .email {
+                        margin-top: 10px;
+                        color: $bjc_blue;
+                        font-weight: bold;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                &_schedule-meeting {
+                    margin-top: 20px;
+                    @include tablet {
+                        padding-top: 20px;
+                        border-top: solid 2px $divider;
+                    }
+                    .title {
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                        color: $neutral;
+                        font-size: 13px;
+                        line-height: 18px;
+                        letter-spacing: 1.5px;
+                    }
+                    .meeting-links {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        div {
+                            display: flex;
+                            margin-right: 0;
+                            margin-bottom: 8px;
+                            text-align: center;
+                            width: 180px;
+                            a {
+                                border: 1px solid $bjc_blue;
+                                border-radius: 20px;
+                                font-weight: 700;
+                                font-size: 15px;
+                                padding: 5px 20px;
+                                color: $bjc_blue;
+                                width: 100%;
+                                transition: all .3s ease-in-out;
+                                text-decoration: none;
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: $bjc_blue;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .flex_featured-employees {
+        .featured-employees_item {
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            img {
+              margin-right: 30px;
+              border-radius: 50%;
+            }
+
+            .employee-detail {
+                text-align: left;
+                width: calc(100% - 180px);
+
+                &_schedule-meeting .meeting-links {
+                    flex-direction: row;
+                    align-items: flex-start;
+                    div {
+                        margin-right: 8px;
+                        margin-bottom: 0;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+//Responsive Sizes
+$mobile_width: 480px;
+$tablet_width: 768px;
+$desktop_width: 1024px;
+$desktop_wide_width: 1280px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile_width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet_width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop_width}) {
+    @content;
+  }
+}
+@mixin desktop-wide {
+  @media (min-width: #{$desktop_wide_width}) {
+    @content;
+  }
+}
+
+
+//Goldfarb Colors
+$bjc_blue: #00529B;
+$primary_light_blue: #70AFD7;
+$secondary_light_blue: #4AC1DA;
+$dark-teal: #2E6C6F;
+$secondary_teal: #00A2B3;
+$primary_yellow: #FFC50A;
+$hover_yellow: #F6B100;
+$secondary_orange: #D56F1B;
+$secondary_purple: #7A2588;
+$secondary_green: #949C4F;
+$headers: #001A32; // black
+$body: #3C3C3C; // charcoal
+$neutral: #8A8889; // medium gray
+$white: #ffffff;
+$primary_button_text: #4F2F00; //brown
+$footer_blue: #00315D;
+$footer_callout_blue: #014079;
+$error: #B81600; // red
+$background_stripe: #F3F9FF;
+$table_header: #E6EFF6;
+$table_body: rgba(#EEF7FF, .6);
+$table_stripe: #E6F2FE;
+$divider: #E7E7E7; //light gray
+
+
+//Gradients
+$yellow_gradient: linear-gradient(272.45deg, #FFC50A -19.47%, #D56F1B 127.72%);
+$bachelors_gradient: linear-gradient(266.54deg, #28BAD9 -13.11%, #119FBD 50.09%, #008CAA 102.55%);
+$masters_gradient: linear-gradient(266.54deg, #D56F1B -13.11%, #941B00 102.55%);
+$doctoral_gradient: linear-gradient(266.54deg, #818939 -13.11%, #33531A 102.55%);
+$postmasters_gradient: linear-gradient(266.54deg, #7A2588 -13.11%, #4D0658 102.55%);
+$hero_gradient: linear-gradient(266.5deg, #70AFD7 -38.35%, #00529B 56.17%, #00315D 134.62%);
+$card_gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 19.21%, #000000 170%);
+
+
+//Box Shadow Effect styles
+$card_shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+$card_hover: 0px 4px 15px rgba(0, 0, 0, 0.3);
+$gallery_hover: 0px 4px 14px rgba(0, 0, 0, 0.45);
+
+//accessibility
+$color__text-screen: #21759b;
+$color__background-screen: #f1f1f1;
+
+//Fonts
+$minionPro: 'minion-pro', serif;
+$openSans: 'Open Sans', sans-serif;;
+
+//Font Awesome
+$fontAwesomeLight: var(--fa-font-light);
+$fontAwesomeSolid: var(--fa-font-solid);
+$fontAwesomeRegular: var(--fa-font-regular);
+$fontAwesomeThin: var(--fa-font-thin);
+$fontAwesomeDuotone: var(--fa-font-duotone);
+$fontAwesomeBrands: var(--fa-font-brands);
+
+//Icon Gradients
+.yellow-gradient{
+    background-image: $yellow_gradient;
+}
+
+
+// stylelint-disable value-keyword-case
+$font__main: $openSans;
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

@@ -1,0 +1,169 @@
+.contact-us{
+    .contact-information{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        z-index: 100;
+        position: relative;
+        @include tablet{
+            margin-top: -60px;
+            flex-direction: row;
+        }
+        .address-card{
+            flex:0 0 32.3%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 40px 40px;
+            background: $white;
+            margin-right: 0;
+            margin-bottom:20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+            transition: box-shadow 500ms;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &:hover{
+                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.16);
+                i{
+                    background-position: 100% 0;
+                   transition: all .4s ease-in-out;
+                }
+            }
+            @include tablet{
+                margin-bottom:0;
+                margin-right: 20px;
+                justify-content: flex-start;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+            i{
+                background: $yellow-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                flex: 0 1 auto;
+                margin-right: 20px;
+                font-size: 30px;
+                padding-top: 3px;
+
+            }
+            .info{
+
+                h2{
+                    @extend h3;
+                }
+                p{
+                    margin-bottom:15px;
+                }
+                a {
+                    color: $body;
+                    text-decoration: none;
+                    &:hover {
+                        color: $bjc_blue;
+                    }
+                }
+                a.link-arrow {
+                    color: $bjc_blue;
+                    margin-top: 15px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .phone-details{
+        max-width: 700px;
+        text-align: center;
+        margin-bottom: 80px;
+        h3{
+            font-size: 35px;
+            font-family: $minionPro;
+            margin-bottom: 30px;
+            line-height: 1.25;
+            i{
+                @extend .yellow-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-right: 20px;
+                //font-size: 30px;
+                padding-top: 3px;
+                display: block;
+                @include tablet{
+                    display: inline-block;
+                }
+            }
+        }
+        .phone-row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:15px 20px;
+            &:nth-child(even){
+                background: $background_stripe;
+            }
+            p{
+                margin:0;
+                font-weight: 600;
+                text-align: left;
+
+            }
+
+            .label {
+                text-align: left;
+                padding-right: 20px;
+            }
+            .phone-numbers{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+                @include tablet{
+                    align-items: center;
+                    flex-direction: row;
+                }
+
+                .toll-free {
+                    display: flex;
+                    span {
+                        margin-right: 5px;
+
+                        @include tablet {
+                            &:before{
+                                content:'|';
+                                padding-right: 5px;
+                                margin-left: 5px;
+                                display: inline;
+                                position: relative;
+                                top: -2px;
+                            }
+                        }
+                    }
+                }
+
+
+                a{
+                    text-decoration: none;
+                    display: block;
+                    color:$body;
+                    &:hover{
+                        color:$bjc_blue;
+                    }
+                }
+            }
+        }
+    }
+    .contact-us-form{
+        background: $background_stripe;
+        .container{
+            max-width: 700px;
+            margin:auto;
+            padding-top:90px;
+            padding-bottom:130px;
+            h3{
+                @extend h1;
+            }
+        }
+    }
+}

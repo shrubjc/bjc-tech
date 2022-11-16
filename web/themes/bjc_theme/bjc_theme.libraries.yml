@@ -1,0 +1,11 @@
+global-styling:
+  version: 1.x
+  js:
+    js/jquery.sidr.min.js: {}
+    js/jquery.touchSwipe.min.js: {}
+    js/navigation.js: {}
+    js/src/inner-page-flex.js: {}
+    js/src/list-pages.js: {}
+  css:
+    theme:
+      css/style.css: {}

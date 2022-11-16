@@ -1,0 +1,312 @@
+.site-main.inner-page {
+    .flex {
+        scroll-behavior: smooth !important;
+
+        // h2 {
+        //     padding-top: 196px;
+        //     margin-top: -196px;
+        // }
+        .main-content {
+            padding: 40px 0;
+        }
+
+        &:not(:last-child) {
+            .main-content {
+                border-bottom: solid 2px $divider;
+            }
+        }
+    }
+    .callout-bar {
+        margin-top: -80px;
+        @include desktop {
+            margin-top: 0px;
+        }
+    }
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        @include desktop {
+            flex-direction: row;
+            padding: 0 20px;
+        }
+
+
+
+        .mobile-menu-toggle {
+            position: relative;
+            display: block;
+            z-index: 1;
+            padding: 12px 16px;
+            background: $background_stripe;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:after {
+                font: $fontAwesomeSolid;
+                content: '\f078';
+                color: $bjc_blue;
+                position: absolute;
+                right: 20px;
+                top: 16px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &.active {
+                background: #E1EEFC;
+                &:after {
+                    transform: scaleY(-1);
+                }
+            }
+            span {
+                position: relative;
+                margin-left: 20px;
+                color: $bjc_blue;
+                font-weight: 700;
+                font-size: 15px;
+                border-bottom: 1px solid transparent;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border-bottom: 1px solid rgba($neutral, 0.3);
+                }
+                &:before {
+                    position: absolute;
+                    left: -20px;
+                    top: 5px;
+                    font: $fontAwesomeRegular;
+                    content: '\f0c9';
+                }
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+
+        &_sidebar {
+            padding: 0;
+            max-width: 100%;
+            margin-right: 0;
+
+            .container {
+                padding: 0;
+            }
+
+            .sidebar-menu {
+                padding: 20px 20px 5px 20px;
+                box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.16);
+                display: none;
+            }
+
+            .sidebar-wrapper {
+
+                padding: 30px 20px 0;
+
+
+            }
+
+
+
+            @include desktop {
+                padding: 60px 40px 40px 0;
+                width: 325px;
+                margin-right: 20px;
+                box-shadow: 2px -4px 4px rgb(0, 0, 0, 0.08);
+                display: block;
+
+                .sidebar-menu {
+                    padding: 0;
+                    display:  block!important;
+                    box-shadow: none;
+                    //height: 100%;
+                }
+
+                .sidebar-wrapper {
+                    padding: 0px;
+                }
+            }
+        }
+
+        &_main {
+            display: flex;
+            flex-direction: column;
+            @include desktop {
+                flex-direction: row;
+                flex: 1 0 75%;
+            }
+        }
+    }
+
+    .left-sidebar-menu {
+        margin-bottom: 0px;
+        @include desktop {
+            margin-bottom: 40px;
+        }
+        .parent-page {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $neutral;
+            font-size: 13px;
+        }
+
+        a.parent-page {
+            position: relative;
+            margin-left: 18px;
+            text-decoration: none;
+            &:before {
+                position: absolute;
+                font: $fontAwesomeSolid;
+                content: '\f053';
+                left: -18px;
+                top: 3px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                &:before {
+                    left: -23px;
+                }
+            }
+        }
+
+        ul.child-menu {
+            margin: 10px 0 0;
+            padding: 0;
+            list-style: none;
+
+            @include desktop {
+                margin: 20px 0 0;
+            }
+
+            li {
+                padding: 15px 0;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba($neutral, 0.3);
+                }
+
+                &.current_page_item a {
+                    color: $primary_yellow;
+                    pointer-events: none;
+                    cursor: default;
+                    &:after {
+                        color: $primary_yellow;
+                    }
+
+                    &:hover {
+                        border-bottom: 1px solid transparent;
+
+                        &:after {
+                            color: $primary_yellow;
+                            margin-left: 13px;
+                        }
+                    }
+                }
+
+                a {
+                    position: relative;
+                    text-decoration: none;
+                    color: $bjc_blue;
+                    font-weight: 600;
+                    border-bottom: 1px solid transparent;
+                    -webkit-font-smoothing: antialiased;
+                    transform: perspective(1px) translateZ(0);
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        left: 0;
+                        right: 100%;
+                        bottom: 0;
+                        background: $hero_gradient;
+                        height: 3px;
+                        transition-property: right;
+                        transition-duration: 0.5s;
+                        transition-timing-function: ease-out;
+                    }
+                    &:after {
+                        font: $fontAwesomeSolid;
+                        content: '\f178';
+                        position: absolute;
+                        color: rgba($bjc_blue, 0.5);
+                        font-size: 11px;
+                        margin-top: 8px;
+                        margin-left: 13px;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    &:hover {
+                        &:before{
+                            right: 0;
+                        }
+                        &:after {
+                            color: $bjc_blue;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .center-content {
+        margin-top: -20px;
+        margin-bottom:100px;
+
+
+        @include desktop {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            width: calc(100% - 230px);
+            flex: 1 0 auto;
+        }
+
+    }
+
+
+    .right-sidebar {
+        display: none;
+        z-index: 1;
+        margin-left: 20px;
+        margin-bottom: 40px;
+        padding-top: 70px;
+        padding-right: 20px;
+        flex-grow: 1;
+        width: 230px;
+        align-self: start;
+        position: sticky;
+        transition: all 0.5s ease-in-out;
+
+
+        @include desktop {
+            display: block;
+        }
+
+        a {
+            display: block;
+            color: $bjc_blue;
+            text-decoration: none;
+            padding-bottom: 12px;
+            padding-left: 15px;
+            border-left: 2px solid $table_header;
+            font-size: 13px;
+            transition: none;
+            &.active {
+                color: $footer_blue;
+                font-weight: bold;
+                &:before {
+                    content: "•";
+                    padding-right: 8px;
+                    padding-left: 8px;
+                }
+            }
+            &:focus {
+                outline: unset;
+            }
+
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
