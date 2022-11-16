@@ -1,0 +1,72 @@
+uuid: 0be2b430-7827-462b-a787-8e45cfbe494f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.upcoming_events.field_academic_event_card_headli
+    - field.field.paragraph.upcoming_events.field_background_image
+    - field.field.paragraph.upcoming_events.field_event_card_headline
+    - field.field.paragraph.upcoming_events.field_event_link
+    - field.field.paragraph.upcoming_events.field_headline
+    - field.field.paragraph.upcoming_events.field_page_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.upcoming_events
+  module:
+    - image
+    - link
+id: paragraph.upcoming_events.default
+targetEntityType: paragraph
+bundle: upcoming_events
+mode: default
+content:
+  field_academic_event_card_headli:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_background_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_event_card_headline:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_event_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_page_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

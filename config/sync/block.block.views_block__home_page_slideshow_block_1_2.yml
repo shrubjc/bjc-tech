@@ -1,0 +1,24 @@
+uuid: 1557f05e-11e7-4f4d-9de6-c72e9c64fef1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.home_page_slideshow
+  module:
+    - views
+  theme:
+    - bjc_theme
+id: views_block__home_page_slideshow_block_1_2
+theme: bjc_theme
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:home_page_slideshow-block_1'
+settings:
+  id: 'views_block:home_page_slideshow-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

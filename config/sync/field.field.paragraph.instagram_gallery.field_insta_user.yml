@@ -1,0 +1,19 @@
+uuid: 4f5e1e6a-b3c0-446c-9dac-66c0b1f15d1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_insta_user
+    - paragraphs.paragraphs_type.instagram_gallery
+id: paragraph.instagram_gallery.field_insta_user
+field_name: field_insta_user
+entity_type: paragraph
+bundle: instagram_gallery
+label: 'Insta User'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

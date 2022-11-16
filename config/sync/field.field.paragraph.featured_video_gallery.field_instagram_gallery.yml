@@ -1,0 +1,40 @@
+uuid: 10ef61eb-0492-4d63-a427-f40a9c95906b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_instagram_gallery
+    - paragraphs.paragraphs_type.featured_video_gallery
+    - paragraphs.paragraphs_type.instagram_gallery
+  module:
+    - entity_reference_revisions
+id: paragraph.featured_video_gallery.field_instagram_gallery
+field_name: field_instagram_gallery
+entity_type: paragraph
+bundle: featured_video_gallery
+label: 'Instagram Gallery'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      instagram_gallery: instagram_gallery
+    negate: 0
+    target_bundles_drag_drop:
+      animated_counter:
+        weight: 5
+        enabled: false
+      featured_video_gallery:
+        weight: 4
+        enabled: false
+      instagram_gallery:
+        weight: 5
+        enabled: true
+      slideshow:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

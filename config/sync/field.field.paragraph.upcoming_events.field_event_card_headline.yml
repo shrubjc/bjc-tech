@@ -1,0 +1,19 @@
+uuid: ec30c5c1-7e17-4010-8085-089a71aca392
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_card_headline
+    - paragraphs.paragraphs_type.upcoming_events
+id: paragraph.upcoming_events.field_event_card_headline
+field_name: field_event_card_headline
+entity_type: paragraph
+bundle: upcoming_events
+label: 'Event Card Headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

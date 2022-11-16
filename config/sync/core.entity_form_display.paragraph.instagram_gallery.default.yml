@@ -1,0 +1,45 @@
+uuid: f4fd065e-d58b-4221-99b6-5807843e8722
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram_gallery.field_insta_user
+    - field.field.paragraph.instagram_gallery.field_instagram_image
+    - field.field.paragraph.instagram_gallery.field_instagram_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.instagram_gallery
+  module:
+    - image
+    - link
+id: paragraph.instagram_gallery.default
+targetEntityType: paragraph
+bundle: instagram_gallery
+mode: default
+content:
+  field_insta_user:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_instagram_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_instagram_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

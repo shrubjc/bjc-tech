@@ -1,0 +1,19 @@
+uuid: 7b9ddb38-f97d-45a2-a229-3542cc20dd4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_label
+    - paragraphs.paragraphs_type.animated_counter
+id: paragraph.animated_counter.field_stat_label
+field_name: field_stat_label
+entity_type: paragraph
+bundle: animated_counter
+label: 'Stat Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 798deb67-ced8-4f9c-8a0a-df9ba2944238
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.home_page_section
+  module:
+    - system
+    - views
+  theme:
+    - bjc_theme
+id: views_block__home_page_section_block_2
+theme: bjc_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:home_page_section-block_2'
+settings:
+  id: 'views_block:home_page_section-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

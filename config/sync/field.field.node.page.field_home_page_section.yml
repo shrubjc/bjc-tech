@@ -5,7 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_home_page_section
     - node.type.page
+    - paragraphs.paragraphs_type.animated_counter
+    - paragraphs.paragraphs_type.featured_video_gallery
+    - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.upcoming_events
   module:
     - entity_reference_revisions
 id: node.page.field_home_page_section
@@ -23,9 +27,28 @@ settings:
   handler_settings:
     target_bundles:
       slideshow: slideshow
+      animated_counter: animated_counter
+      featured_video_gallery: featured_video_gallery
+      home_page_content_with_image: home_page_content_with_image
+      upcoming_events: upcoming_events
     negate: 0
     target_bundles_drag_drop:
+      animated_counter:
+        weight: 7
+        enabled: true
+      featured_video_gallery:
+        weight: 8
+        enabled: true
+      home_page_content_with_image:
+        weight: 9
+        enabled: true
+      instagram_gallery:
+        weight: 10
+        enabled: false
       slideshow:
         weight: 2
+        enabled: true
+      upcoming_events:
+        weight: 12
         enabled: true
 field_type: entity_reference_revisions

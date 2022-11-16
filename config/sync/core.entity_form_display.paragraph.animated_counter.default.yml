@@ -1,0 +1,56 @@
+uuid: 1e2f3cb8-b772-44b4-b8c8-185c13ab7614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.animated_counter.field_number
+    - field.field.paragraph.animated_counter.field_stat_label
+    - field.field.paragraph.animated_counter.field_stat_number
+    - field.field.paragraph.animated_counter.field_stat_unit
+    - field.field.paragraph.animated_counter.field_unit_position
+    - paragraphs.paragraphs_type.animated_counter
+id: paragraph.animated_counter.default
+targetEntityType: paragraph
+bundle: animated_counter
+mode: default
+content:
+  field_number:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_stat_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_stat_number:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_stat_unit:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_position:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: 75be726f-7141-40c1-970b-52ba5203d82b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.home_page_content_with_image
+  module:
+    - text
+id: paragraph.home_page_content_with_image.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: home_page_content_with_image
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

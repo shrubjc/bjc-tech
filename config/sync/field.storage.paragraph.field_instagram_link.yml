@@ -1,0 +1,19 @@
+uuid: 09584bd5-8cd3-47dc-8922-96afd2c1314f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_instagram_link
+field_name: field_instagram_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
