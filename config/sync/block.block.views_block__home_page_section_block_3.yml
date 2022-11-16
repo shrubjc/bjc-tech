@@ -1,4 +1,4 @@
-uuid: 87847fa2-15a7-4bca-b0f0-7ca44f83b9d8
+uuid: 372ca5a5-2988-4e5f-bdfa-faba9d6d8a34
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - bjc_theme
-id: views_block__home_page_section_block_1
+id: views_block__home_page_section_block_3
 theme: bjc_theme
 region: content
-weight: -8
+weight: -5
 provider: null
-plugin: 'views_block:home_page_section-block_1'
+plugin: 'views_block:home_page_section-block_3'
 settings:
-  id: 'views_block:home_page_section-block_1'
+  id: 'views_block:home_page_section-block_3'
   label: ''
   label_display: visible
   provider: views

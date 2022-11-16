@@ -1,0 +1,15 @@
+uuid: fe1729c9-63ae-480c-a68f-bef8aae2469f
+langcode: en
+status: true
+dependencies: {  }
+name: feature_video_bg_image
+label: 'Feature video BG Image(1440 X 729)'
+effects:
+  05ce4121-3630-4e51-ba8b-a9ad545d4999:
+    uuid: 05ce4121-3630-4e51-ba8b-a9ad545d4999
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 729
+      anchor: center-center
