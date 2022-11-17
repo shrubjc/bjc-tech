@@ -1,0 +1,48 @@
+uuid: 686afc50-4dd9-4a27-952e-429581831376
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faculty_staff.body
+    - field.field.node.faculty_staff.field_bjc_mobile_number
+    - field.field.node.faculty_staff.field_department
+    - field.field.node.faculty_staff.field_email_address
+    - field.field.node.faculty_staff.field_in_person_meeting_link
+    - field.field.node.faculty_staff.field_job_title
+    - field.field.node.faculty_staff.field_office_number
+    - field.field.node.faculty_staff.field_online_meeting_link
+    - field.field.node.faculty_staff.field_phone_meeting_link
+    - field.field.node.faculty_staff.field_photo
+    - node.type.faculty_staff
+  module:
+    - text
+    - user
+id: node.faculty_staff.teaser
+targetEntityType: node
+bundle: faculty_staff
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bjc_mobile_number: true
+  field_department: true
+  field_email_address: true
+  field_in_person_meeting_link: true
+  field_job_title: true
+  field_office_number: true
+  field_online_meeting_link: true
+  field_phone_meeting_link: true
+  field_photo: true

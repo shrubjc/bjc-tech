@@ -1,0 +1,21 @@
+uuid: 880b7144-7d07-4d03-85cd-14392db59afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_requirement_status
+    - node.type.textbooks
+  module:
+    - options
+id: node.textbooks.field_requirement_status
+field_name: field_requirement_status
+entity_type: node
+bundle: textbooks
+label: 'Requirement Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,29 @@
+uuid: 0bc91415-e068-4a56-b82e-d50016bafb31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_names
+    - node.type.textbooks
+    - taxonomy.vocabulary.course_names
+id: node.textbooks.field_course_names
+field_name: field_course_names
+entity_type: node
+bundle: textbooks
+label: 'Course Names'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      course_names: course_names
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

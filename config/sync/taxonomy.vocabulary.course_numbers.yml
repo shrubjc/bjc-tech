@@ -1,0 +1,8 @@
+uuid: 3e2bc25d-6104-4478-a8f4-4474a695a2b9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Numbers'
+vid: course_numbers
+description: ''
+weight: 0

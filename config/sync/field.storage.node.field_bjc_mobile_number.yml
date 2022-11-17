@@ -1,0 +1,21 @@
+uuid: 0feafe04-dc65-41a7-8d2c-c1380707f6fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_bjc_mobile_number
+field_name: field_bjc_mobile_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

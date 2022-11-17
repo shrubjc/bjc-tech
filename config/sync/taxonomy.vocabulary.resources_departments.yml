@@ -1,0 +1,8 @@
+uuid: 6bb12925-204c-4fcf-ac46-3fd15704970a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resources Departments'
+vid: resources_departments
+description: ''
+weight: 0

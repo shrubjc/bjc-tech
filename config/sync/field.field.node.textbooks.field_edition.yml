@@ -1,0 +1,19 @@
+uuid: 035bb686-7964-4ca6-a116-f2ccd121d10a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edition
+    - node.type.textbooks
+id: node.textbooks.field_edition
+field_name: field_edition
+entity_type: node
+bundle: textbooks
+label: Edition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

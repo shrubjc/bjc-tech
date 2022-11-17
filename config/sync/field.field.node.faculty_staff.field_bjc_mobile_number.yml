@@ -1,0 +1,19 @@
+uuid: b98ea1d5-0fa7-495c-a701-27116d18abd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bjc_mobile_number
+    - node.type.faculty_staff
+id: node.faculty_staff.field_bjc_mobile_number
+field_name: field_bjc_mobile_number
+entity_type: node
+bundle: faculty_staff
+label: 'BJC Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

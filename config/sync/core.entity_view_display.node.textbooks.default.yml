@@ -1,0 +1,140 @@
+uuid: aa5265a5-0ba6-4c93-b7df-559f007d4502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.textbooks.body
+    - field.field.node.textbooks.field_amazon_link
+    - field.field.node.textbooks.field_author
+    - field.field.node.textbooks.field_chegg_link
+    - field.field.node.textbooks.field_course_names
+    - field.field.node.textbooks.field_course_numbers
+    - field.field.node.textbooks.field_edition
+    - field.field.node.textbooks.field_isbn
+    - field.field.node.textbooks.field_programs
+    - field.field.node.textbooks.field_publisher_link
+    - field.field.node.textbooks.field_requirement_status
+    - field.field.node.textbooks.field_trimesters
+    - node.type.textbooks
+  module:
+    - link
+    - options
+    - text
+    - user
+id: node.textbooks.default
+targetEntityType: node
+bundle: textbooks
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_amazon_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_author:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_chegg_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_course_names:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_course_numbers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_edition:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_isbn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_programs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_publisher_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_requirement_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_trimesters:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

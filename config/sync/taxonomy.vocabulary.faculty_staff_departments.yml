@@ -1,0 +1,8 @@
+uuid: c0d80810-9ac6-4507-aee9-ec6dd56915ab
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty/Staff Departments'
+vid: faculty_staff_departments
+description: ''
+weight: 0

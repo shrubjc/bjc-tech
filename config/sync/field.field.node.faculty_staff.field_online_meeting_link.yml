@@ -1,0 +1,19 @@
+uuid: 0c97220a-168d-46d9-9bb0-507101c8632b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online_meeting_link
+    - node.type.faculty_staff
+id: node.faculty_staff.field_online_meeting_link
+field_name: field_online_meeting_link
+entity_type: node
+bundle: faculty_staff
+label: 'Online Meeting Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

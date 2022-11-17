@@ -1,0 +1,52 @@
+uuid: 9bcf58e9-cabb-42e1-8407-54dca367944a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.textbooks.body
+    - field.field.node.textbooks.field_amazon_link
+    - field.field.node.textbooks.field_author
+    - field.field.node.textbooks.field_chegg_link
+    - field.field.node.textbooks.field_course_names
+    - field.field.node.textbooks.field_course_numbers
+    - field.field.node.textbooks.field_edition
+    - field.field.node.textbooks.field_isbn
+    - field.field.node.textbooks.field_programs
+    - field.field.node.textbooks.field_publisher_link
+    - field.field.node.textbooks.field_requirement_status
+    - field.field.node.textbooks.field_trimesters
+    - node.type.textbooks
+  module:
+    - text
+    - user
+id: node.textbooks.teaser
+targetEntityType: node
+bundle: textbooks
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_amazon_link: true
+  field_author: true
+  field_chegg_link: true
+  field_course_names: true
+  field_course_numbers: true
+  field_edition: true
+  field_isbn: true
+  field_programs: true
+  field_publisher_link: true
+  field_requirement_status: true
+  field_trimesters: true

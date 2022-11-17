@@ -1,0 +1,29 @@
+uuid: e2f8b978-bba3-4131-9c6f-3f41d8f40804
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_department
+    - node.type.resource
+    - taxonomy.vocabulary.resources_departments
+id: node.resource.field_resource_department
+field_name: field_resource_department
+entity_type: node
+bundle: resource
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resources_departments: resources_departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

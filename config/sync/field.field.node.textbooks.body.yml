@@ -1,0 +1,23 @@
+uuid: dd13350d-9189-457f-bb7a-dbb444c78554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.textbooks
+  module:
+    - text
+id: node.textbooks.body
+field_name: body
+entity_type: node
+bundle: textbooks
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
