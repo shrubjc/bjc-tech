@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.events.body
+    - field.field.node.events.field_add_to_calendar
     - field.field.node.events.field_end_date_time
     - field.field.node.events.field_event_categories
     - field.field.node.events.field_location
@@ -79,4 +80,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_add_to_calendar: true

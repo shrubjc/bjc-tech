@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.events.body
+    - field.field.node.events.field_add_to_calendar
     - field.field.node.events.field_end_date_time
     - field.field.node.events.field_event_categories
     - field.field.node.events.field_location
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.events.field_start_date_time
     - node.type.events
   module:
+    - addtocalendar
     - datetime
     - link
     - path
@@ -33,6 +35,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add_to_calendar:
+    type: add_to_calendar_widget_type
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
