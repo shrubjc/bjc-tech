@@ -1,0 +1,21 @@
+uuid: 13b0bd0d-1520-4c91-8221-b8648f4a407b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.home_page_hero_header
+  module:
+    - text
+id: paragraph.home_page_hero_header.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: home_page_hero_header
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

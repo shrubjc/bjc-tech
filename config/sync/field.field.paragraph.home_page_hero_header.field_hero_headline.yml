@@ -1,0 +1,21 @@
+uuid: cc8aca12-8190-44e1-9d08-dec7ab167dab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_headline
+    - paragraphs.paragraphs_type.home_page_hero_header
+  module:
+    - text
+id: paragraph.home_page_hero_header.field_hero_headline
+field_name: field_hero_headline
+entity_type: paragraph
+bundle: home_page_hero_header
+label: 'Hero Headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

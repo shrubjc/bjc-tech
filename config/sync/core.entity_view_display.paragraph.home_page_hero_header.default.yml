@@ -1,0 +1,57 @@
+uuid: e950a835-1300-43f6-8c30-75f14cf4b7c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_page_hero_header.field_background_image
+    - field.field.paragraph.home_page_hero_header.field_content
+    - field.field.paragraph.home_page_hero_header.field_hero_headline
+    - field.field.paragraph.home_page_hero_header.field_home_page_link
+    - paragraphs.paragraphs_type.home_page_hero_header
+  module:
+    - image
+    - link
+    - text
+id: paragraph.home_page_hero_header.default
+targetEntityType: paragraph
+bundle: home_page_hero_header
+mode: default
+content:
+  field_background_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_hero_headline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_home_page_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }
