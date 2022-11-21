@@ -1,0 +1,393 @@
+.table-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+
+    &:nth-child(odd) {
+        background-color: rgba(238, 247, 255, 0.6);
+    }
+
+    .item_col-1 {
+        display: flex;
+        flex-basis: 50%;
+    }
+    .item_col-2 {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: flex-end;
+    }
+}
+.academic-calendar {
+    max-width: 1129px;
+
+    &_intro {
+        margin-top: 52px;
+        margin-bottom: 44px;
+    }
+
+    &_filter {
+        ul {
+            display: flex;
+        }
+
+        form > ul {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding-left: 0;
+            margin-left: 0;
+
+            @include tablet {
+                flex-direction: row;
+            }
+
+            > li:nth-child(1) {
+                width: 100%;
+                flex-basis: 44%;
+                order: 2;
+                margin-top: 0px;
+                margin-bottom: 0;
+
+                @include tablet {
+                    order: 1;
+                    width: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    padding-left: 0;
+                    flex-direction: column;
+
+                    @include tablet {
+                        flex-direction: row;
+                    }
+
+                    li {
+                        flex:1 0 auto;
+
+                        @include tablet {
+                            flex:0 0 32.3%;
+                        }
+
+                        &:first-child {
+                            display: none;
+                            clip: rect(0 0 0 0);
+                            clip-path: inset(50%);
+                            height: 1px;
+                            overflow: hidden;
+                            position: absolute;
+                            white-space: nowrap;
+                            width: 1px;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 0;
+                            margin-bottom:5px;
+                            @include tablet{
+                                margin-right: 8px;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        input[type="radio"] {
+                            clip: rect(0 0 0 0);
+                            clip-path: inset(50%);
+                            height: 1px;
+                            overflow: hidden;
+                            position: absolute;
+                            white-space: nowrap;
+                            width: 1px;
+
+                            &:focus + label {
+                                color: $white;
+                            }
+                            &:checked + label {
+                                background-color: $bjc_blue;
+                                color: $white;
+                            }
+                        }
+
+                        label {
+                            cursor: pointer;
+                            display: block;
+                        	color:$bjc_blue;
+                        	background: $white;
+                        	border:1px solid $bjc_blue;
+                        	font-weight: 700;
+                        	text-decoration: none;
+                        	text-align: center;
+                        	padding: 8px 20px;
+                        	border-radius: 500px;
+                        	transform: perspective(1px) translateZ(0);
+                        	overflow: hidden;
+                        	transition: all .5s ease-in-out;
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                z-index: -1;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                border-radius: 500px;
+                                background: $bjc_blue;
+                                transition: all .5s ease-in-out;
+                                -webkit-transform: scaleX(0);
+                                transform: scaleX(0);
+                                -webkit-transform-origin: 0 50%;
+                                transform-origin: 0 50%;
+                                -webkit-transition-property: transform;
+                                transition-property: transform;
+                                -webkit-transition-duration: 0.3s;
+                                transition-duration: 0.3s;
+                                -webkit-transition-timing-function: ease-out;
+                                transition-timing-function: ease-out;
+                            }
+                            &:visited{
+                                color: $bjc_blue;
+                            }
+                            &:hover{
+                                color:$white;
+                                &:before{
+                                    border-radius: 500px;
+                                    transform: scaleX(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            > li:nth-child(2) {
+                order: 1;
+                width: 100%;
+
+                select.sf-input-select {
+                    font-weight: 500;
+                    min-width:230px;
+                    option:nth-child(1) {
+                        display: none;
+                    }
+                }
+
+                @include tablet {
+                    order: 2;
+                    width:auto;
+                }
+            }
+        }
+    }
+
+    &_main {
+        .academic-calendar-table {
+            margin-top: 30px;
+            margin-bottom: 55px;
+            border: 1px solid $table_stripe;
+
+
+            .table-header {
+                background-color: $table_header;
+                display: none;
+                justify-content: space-between;
+                padding: 20px;
+                color: $headers;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                @include tablet {
+                    display: flex;
+                }
+
+                .header_col-1 {
+                    display: flex;
+                    flex-basis: 50%;
+
+                }
+                .header_col-2 {
+                    display: flex;
+                    flex-basis: 50%;
+                    justify-content: flex-end;
+                }
+            }
+
+            .table-item {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .item_col-2 {
+                  justify-content: flex-start;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                p.event-title {
+                    color: $headers;
+                    font-weight: bold;
+                }
+
+                @include tablet {
+                    flex-direction: row;
+                    align-items: center;
+
+                    .item_col-2 {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.academic-calendar-download {
+    text-align: center;
+    max-width: 50%;
+    margin:10px auto 0;
+    @include tablet{
+        width:60%;
+    }
+    @include desktop{
+        width: 50%;
+    }
+    a {
+        display: block;
+        margin-right: 10px;
+        border: 1px solid $bjc_blue;
+        color: white;
+        background-color: $bjc_blue;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        padding: 7px 20px 8px;
+        transition: all .3s ease-in-out;
+
+        &:before {
+            font: $fontAwesomeSolid;
+            content: '\f019';
+            margin-right: 10px;
+            font-size: 15px;
+            margin-top: 4px;
+            @include tablet {
+                margin-top: 0;
+            }
+        }
+
+        &:hover {
+            background-color: $white;
+            color: $bjc_blue;
+        }
+    }
+}
+
+.academic-calendar-terms {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    @include tablet {
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+    h2 {
+        color: $headers;
+        text-align: center;
+    }
+    p.terms-copy {
+        margin: 24px 0 40px 0;
+        text-align: center;
+    }
+    .terms-table {
+        max-width: 920px;
+        margin: auto;
+        border: 1px solid $table_stripe;
+
+        p {
+            margin: 0;
+        }
+
+        p.term-title {
+            color: $headers;
+            font-weight: bold;
+        }
+
+        .item_col-1 {
+            flex-basis: 39%;
+        }
+        .item_col-2 {
+            flex-basis: 61%;
+        }
+    }
+}
+
+.academic-calendar-cards {
+    padding-bottom: 50px;
+    background-color: $background_stripe;
+
+    .container {
+        max-width: 950px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 100%;
+        margin-top: -50px;
+        margin-bottom: 70px;
+        padding: 50px 30px;
+        background-color: $white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+        transition: box-shadow 500ms;
+
+        &:hover{
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.16);
+        }
+
+        @include tablet {
+            flex: 0 0 49%;
+        }
+
+        i {
+            padding-top: 5px;
+            font-size: 90px;
+            background-image: $yellow_gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            margin: 20px 0 0;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        a {
+            width: 100%;
+            border: 1px solid $bjc_blue;
+            background-color: $bjc_blue;
+            color: $white;
+            white-space: nowrap;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 7px 20px 8px;
+            transition: all .3s ease-in-out;
+            -webkit-font-smoothing: antialiased;
+
+            &:hover {
+                background-color: $white;
+                color: $bjc_blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,322 @@
+.page-template-page-textbook-list {
+    .inner-hero {
+        padding-bottom: 20px;
+        @include tablet {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.textbook-list {
+    &_filters {
+        margin-top: 0px;
+
+        .container {
+            padding: 0;
+            @include desktop {
+                padding: 0 20px;
+            }
+
+        }
+
+        @include desktop {
+            margin-top: 50px;
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+
+            @include desktop {
+                flex-direction: row;
+            }
+        }
+    }
+    &_main {
+        padding-bottom: 50px;
+        @include desktop {
+            padding-bottom: 100px;
+        }
+
+
+        .textbook-list_table {
+
+            padding: 0;
+            @include desktop {
+                margin-top: 20px;
+                padding: 0 20px;
+            }
+            .table-header {
+                background-color: $table_header;
+                display: none;
+                justify-content: space-between;
+                padding: 20px;
+                color: $headers;
+                font-weight: 600;
+
+                @include desktop {
+                    display: flex;
+                }
+
+                .header_col-1 {
+                    flex-basis: 80%;
+                    display: none;
+                    @include desktop {
+                        display: flex;
+                        flex-basis: 44%;
+                        padding-right: 30px;
+                    }
+                }
+                .header_col-2 {
+                    flex-basis: 0%;
+                    @include desktop {
+                        flex-basis: 16%;
+                    }
+                }
+                .header_col-3 {
+                    flex-basis: 16%;
+                }
+                .header_col-4 {
+                    flex-basis: 12%;
+                }
+                .header_col-5 {
+                    flex-basis: 12%;
+                    align-items: flex-end;
+                    text-align: right;
+                }
+            }
+
+            .textbook-list_item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 20px;
+
+                .item_col-1 {
+                    flex-basis: 80%;
+                    @include desktop {
+                        flex-basis: 44%;
+                        padding-right: 30px;
+                    }
+                }
+                .item_col-2 {
+                    flex-basis: 10%;
+                    display: none;
+                    font-size: 13px;
+                    @include desktop {
+                        display: flex;
+                        flex-basis: 16%;
+                    }
+                }
+                .item_col-3 {
+                    flex-basis: 16%;
+                    font-size: 13px;
+                    display: none;
+                    @include desktop {
+                        display: flex;
+                    }
+                }
+
+
+                .item_col-4 {
+                    flex-basis: 12%;
+                    font-size: 13px;
+                    display: none;
+                    @include desktop {
+                        display: flex;
+                    }
+                }
+
+                .item_col-5 {
+                    flex-basis: 12%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+
+                }
+
+                .requirement-status {
+                    font-size: 12px;
+                    font-style: italic;
+                    font-weight: 600;
+                    line-height: 16px;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                    display: block;
+                    opacity: .8;
+
+                    &.required {
+                        color: #3B8700;
+                    }
+
+                    &.recommended {
+                        color: $neutral;
+                        opacity: .8;
+                    }
+                }
+
+                h2.textbook-title  {
+                    color: $headers;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: $font__main;
+                    line-height: 1.25;
+                }
+
+
+                .cat-tags{
+                    margin-top: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+
+                .desktop-actions {
+                    display: none;
+                    @include desktop {
+                        display: flex;
+                    }
+                }
+
+                .mobile-actions {
+                    display: block;
+                    position: relative;
+                    @include desktop {
+                        display: none;
+                    }
+
+                    .icon-wrap {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        &.active {
+                            background-color: rgba($bjc_blue, .4);
+                        }
+                    }
+
+                    .mobile-action-dropdown {
+                        display: none;
+
+                        &.open {
+                            position: absolute;
+                            display: block;
+                            top: 46px;
+                            right: 0;
+                            background: white;
+                            width: fit-content;
+                            padding: 15px;
+                            box-shadow: 0px 6px 14px 0px #0000004D;
+                            text-align: right;
+                            width: 155px;
+                            z-index: 99;
+
+                            span {
+                                font-weight:700;
+                                font-size: 18px;
+                                color: $headers;
+                            }
+
+                            a {
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                text-align: right;
+                                font-weight: 600;
+                                text-decoration: none;
+                                font-size: 14px;
+                                margin-top: 10px;
+                                i {
+                                    position: relative;
+                                    margin-left: 5px;
+                                    top: 1px;
+                                    font-size: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .icon-wrap {
+                    width: 37px;
+                    height: 37px;
+                    border-radius: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba($bjc_blue, .2);
+                    border: none;
+                    text-decoration: none;
+                    color: $white;
+                    i {
+                        margin-top: 3px;
+                    }
+
+                    &:hover {
+                        background-color: rgba($bjc_blue, .4);
+                        color: $white;
+                    }
+
+                    @include desktop {
+                            border: 1px solid $bjc_blue;
+                            background: transparent;
+                            color: $bjc_blue;
+                    }
+                    &.chegg-link {
+                        border: none;
+                        margin-left: 8px;
+                        &:hover {
+                            img {
+                                filter: brightness(.95);
+                            }
+                        }
+                    }
+
+                    &.amazon-link {
+                        border: none;
+                        margin-left: 8px;
+                        &:hover {
+                            img {
+                                filter: brightness(.95);
+                            }
+
+                        }
+                    }
+                }
+
+
+
+
+
+                &:nth-child(odd) {
+                    background-color: rgba(238, 247, 255, 0.6);
+                }
+            }
+        }
+    }
+}
+
+.textbook-expand-collapse {
+    padding: 50px 0 100px;
+    background: rgba($background_stripe, .7);
+    @include desktop {
+        padding: 100px 0;
+    }
+    .container {
+        max-width: 900px;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+}

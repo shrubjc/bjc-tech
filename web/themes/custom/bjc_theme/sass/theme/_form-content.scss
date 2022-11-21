@@ -1,0 +1,21 @@
+.full-width-content {
+    &.form-content {
+        margin: 50px auto;
+        text-align: center;
+        @include desktop {
+            margin: 100px auto;
+        }
+        .container {
+            h2 {
+                color: $headers;
+            }
+            max-width: 100%;
+            @include tablet {
+                max-width: 675px;
+            }
+            .gform_wrapper {
+                text-align: left;
+            }
+        }
+    }
+}

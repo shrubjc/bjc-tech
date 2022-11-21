@@ -1,0 +1,112 @@
+// Header Search
+.search {
+    position: relative;
+    top: 2px;
+
+    &.desktop {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .search_icon {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        text-align: center;
+        width: 73px;
+
+        span {
+            font-family: $font__main;
+            font-size: 14px;
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        i {
+            position: relative;
+            margin-left: 8px;
+            font: $fontAwesomeRegular;
+            font-size: 18px;
+        }
+
+        &:hover {
+            color: $footer_blue;
+            cursor: pointer;
+        }
+    }
+
+    .searchform {
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: -10px;
+        width: calc(100vw - 115px);
+        z-index: 9999;
+
+        @include tablet {
+            width: 400px;
+        }
+
+        form {
+            padding: 0;
+        }
+
+        @include mobile {
+            width: 670px;
+            right: 25px;
+            top: -6px;
+        }
+
+        .search-field {
+            width: 100%;
+        }
+
+        input[type="search"] {
+            border: none;
+            border-radius: 0px !important;
+            height: 40px;
+            padding: 9px 10px;
+            width: 100%;
+            font-size: 14px;
+            color: $body;
+            @include mobile {
+                height: auto;
+                padding: 8px 10px 8px 35px;
+            }
+
+            ::placeholder {
+                color: $neutral;
+            }
+        }
+
+        input[type="submit"] {
+            background: none;
+            border: none;
+            font: $fontAwesomeRegular;
+            color: $primary_yellow;
+            font-size: 18px;
+            height: auto;
+            width: auto;
+            padding: 9px 10px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            background:#fff0;
+            transition: all .3s ease-in-out;
+
+            @include mobile {
+                padding: 4px 10px;
+                position: absolute;
+                left: 0;
+                right: auto;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

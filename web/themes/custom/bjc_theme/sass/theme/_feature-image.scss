@@ -1,0 +1,74 @@
+.full-width-content{
+    &.featured-image-block{
+        position: relative;
+        margin-top: -100px;
+        margin-bottom: 150px; //matches -margin on photo
+        padding-top: 150px;
+        z-index: 0;
+        text-align: center;
+        color: $white;
+        //Colors
+        &.dark-teal{
+            background: $dark-teal;
+        }
+        &.royal-blue{
+            background: $bjc_blue;
+        }
+        &.purple{
+            background: $secondary_purple;
+        }
+        &.green{
+            background: $secondary_green;
+        }
+        &.teal{
+            background: $secondary_light_blue;
+        }
+        &.orange{
+            background: $secondary_orange;
+        }
+        .container{
+            position: relative;
+            z-index: 10;
+            .content{
+                width: 100%;
+                margin: auto;
+                padding-bottom: 75px;
+                @include desktop{
+                    width:70%;
+                }
+            }
+        }
+        .image-wrap{
+            position: relative;
+            a{
+                display: block;
+                position: absolute;
+                top: 50%; right: 50%;
+                transform: translate(50%,-50%);
+                z-index: 200;
+            }
+            img{
+                margin-bottom: -50px;
+                box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+                max-height: 490px;
+                position: relative;
+                z-index: 100;
+            }
+        }
+        .image-overlay{
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            img{
+                object-fit: cover;
+                height:100%;
+                width: 100%;
+                opacity: .7;
+            }
+        }
+    }
+}

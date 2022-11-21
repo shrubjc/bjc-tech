@@ -1,0 +1,121 @@
+.full-width-content{
+    &.recent-news{
+        margin: 50px auto 100px;
+
+        @include tablet {
+        margin: 100px auto 120px;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        .posts-wrap{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            @include tablet{
+                flex-direction: row;
+            }
+
+            .featured-posts{
+                flex:0 0 46%;
+                margin-bottom: 40px;
+
+                @include tablet {
+                    margin-bottom: 0px;
+                }
+
+
+                .post-image{
+                    overflow: hidden;
+                    transition: transform .7s ease-in-out;
+                    a{
+
+                        img{
+                            object-fit: cover;
+                            transition: transform .7s ease-in-out;
+                            height:100%;
+                            width: 100%;
+                            &:hover{
+                                transform:scale(1.1);
+                            }
+                        }
+                    }
+                }
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: $bjc_blue;
+                    overflow: hidden;
+                }
+                h4{
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            .posts{
+                flex:0 0 50%;
+                .post{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+
+
+                    div{
+                        &:first-of-type{
+                            display: none;
+
+                            @include tablet {
+                                display: inline-block;
+                                width: 210px;
+                            }
+                        }
+                        &:last-of-type{
+                            width: 100%;
+
+                            @include tablet {
+                                width: calc(100% - 210px);
+                                padding-left: 20px;
+                            }
+                        }
+
+                        &.post-image {
+                            min-height: 145px;
+                            max-height: 145px;
+                            overflow: hidden;
+                            a {
+                                display: block;
+                                height: 100%
+                            }
+                            img{
+                                object-fit: cover;
+                                transition: transform .7s ease-in-out;
+                                min-width: 100%;
+                                min-height: 100%;
+                                display: block;
+                                top: 50%;
+                                transform: scale(1) translateY(-50%);
+                                position: relative;
+
+                                &:hover{
+                                    top: 50%;
+                                    transform: scale(1.1) translateY(-50%);
+                                }
+                            }
+                        }
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                    h4{
+                    }
+                }
+                .button-lined{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    margin-top:25px;
+                }
+            }
+        }
+    }
+}

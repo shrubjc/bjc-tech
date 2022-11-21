@@ -1,0 +1,169 @@
+.search{
+
+     .result-wrapper.container{
+         max-width: 900px;
+         .search-count{
+             text-align: right;
+             margin-top:40px;
+             margin-bottom: 30px;
+
+             p{
+                 span {
+                     font-weight: 700;
+                 }
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1px;
+             }
+         }
+        .results{
+            .post-item{
+                padding:30px;
+                margin-top:20px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+                transition: transform .7s ease-in-out;
+                &:first-0f-type{
+                    margin-top:0;
+                }
+                a{
+                     text-decoration: none;
+                     color:$body;
+                     &:hover{
+                         color:$bjc_blue;
+                     }
+                }
+                h2{
+                    font-family: $font__main;
+                	font-weight: 700;
+                	font-size: 16px;
+                	line-height: 26px;
+                	@include tablet {
+                		font-size: 25px;
+                		line-height: 35px;
+                	}
+
+                }
+            }
+        }
+     }
+     .pagination {
+         margin-top:100px;
+         margin-bottom: 100px;
+         .container {
+             display: flex;
+             justify-content: center;
+             align-items: flex-end;
+
+             .page-numbers {
+                 cursor: pointer;
+                 border: 1px solid rgba(0, 82, 155, 0.15);
+                 padding: 6px 0;
+                 border-radius: 50%;
+                 text-decoration: none;
+                 font-size: 15px;
+                 line-height: 20px;
+                 transition: all 0.3s ease-in-out;
+                 height: 35px;
+                 width: 35px;
+                 margin: 0 4px;
+                 text-align: center;
+
+                 &.current {
+                     background: $bjc_blue;
+                     border-color: $bjc_blue;
+                     color: $white;
+                 }
+
+                 &.dots {
+                     border: none;
+                     padding: 6px 0;
+                 }
+
+                 &.prev {
+                     padding: 5.5px 12.25px 7.5px 12.25px;
+                     color: $bjc_blue;
+                     height: 35px;
+                     width: 35px;
+                     margin-right: 14px;
+                 }
+
+                 &.next {
+                     padding: 6.5px 11.5px 7.5px 12.5px;
+                     color: $bjc_blue;
+                     height: 35px;
+                     width: 35px;
+                     margin-left: 14px;
+                 }
+             }
+             a.page-numbers {
+                 &:hover {
+                     background: $bjc_blue;
+                     border-color: $bjc_blue;
+                     color: $white;
+                 }
+             }
+         }
+     }
+     .no-results{
+         margin:100px auto;
+         text-align: center;
+     }
+}
+
+.search, .error404 {
+    .hero-area {
+         .container{
+              max-width: 700px;
+              text-align: center;
+              .searchform{
+                   position: relative;
+                   top: auto;
+                   right:auto;
+                   margin-top:40px;
+                   width: 100%;
+                   input[type=search] {
+                       border: none;
+                       border-radius: 3px!important;
+                       height: 40px;
+                       padding: 9px 10px;
+                       width: 100%;
+                       font-size: 14px;
+                       color: $body;
+                       @include mobile {
+                           height: auto;
+                           padding: 14px 35px 14px 14px;
+                       }
+                   }
+                   input[type=submit]{
+                       background: none;
+                       border: none;
+                       font: $fontAwesomeRegular;
+                       font-size: 18px;
+                       height: auto;
+                       width: auto;
+                       padding: 9px 10px;
+                       position: absolute;
+                       left:auto;
+                       right:0;
+                       top:5px;
+                       color:$bjc_blue;
+                       background:#fff0;
+                       transition: all .3s ease-in-out;
+
+                       @include mobile {
+                           padding: 16px 15px;
+                           position: absolute;
+                           right: 0;
+                           left: auto;
+                           top: 0;
+                       }
+
+                       &:hover {
+                           cursor: pointer;
+                       }
+                   }
+              }
+         }
+    }
+
+}
