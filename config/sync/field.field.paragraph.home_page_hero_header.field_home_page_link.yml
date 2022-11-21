@@ -1,0 +1,23 @@
+uuid: bd6d10c7-4907-4951-91d2-152181643602
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_page_link
+    - paragraphs.paragraphs_type.home_page_hero_header
+  module:
+    - link
+id: paragraph.home_page_hero_header.field_home_page_link
+field_name: field_home_page_link
+entity_type: paragraph
+bundle: home_page_hero_header
+label: 'Home Page Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
