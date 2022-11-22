@@ -1,3 +1,4 @@
+uuid: aad4ed56-d6b1-4687-8848-2e837923bc6b
 langcode: en
 status: true
 dependencies:
@@ -17,17 +18,17 @@ bundle: webform
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   webform: true
