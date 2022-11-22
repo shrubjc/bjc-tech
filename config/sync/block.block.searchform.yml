@@ -1,22 +1,20 @@
-uuid: f931489d-3902-4d9a-a1de-d11b0ddd8486
+uuid: 0317a34c-e76f-4508-92f3-2ed820a5d630
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - search
   theme:
     - bjc_theme
-_core:
-  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
-id: bjc_theme_search_form_wide
+id: searchform
 theme: bjc_theme
-region: secondary_menu
-weight: -5
+region: primary_menu
+weight: 0
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form (wide)'
+  label: 'Search form'
   label_display: '0'
   provider: search
   page_id: ''

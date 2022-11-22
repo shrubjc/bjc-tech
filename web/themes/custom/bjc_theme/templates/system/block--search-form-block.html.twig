@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{%
+  set classes = [
+    'search-form',
+    'search-block-form',
+  ]
+%}
+<div class="search desktop">
+  <a class="search_icon">
+    <span>Search</span> <i class="fal fa-search"></i>
+  </a>
+  <div style="display:none;" class="searchform">{{ content }}</div>
+</div>

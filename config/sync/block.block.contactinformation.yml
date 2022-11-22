@@ -1,0 +1,25 @@
+uuid: 3c06ccdc-d0b0-400c-b64b-26da94069897
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f9b46e3a-1c65-4bdc-9ea0-6e1cb1cb1815'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: contactinformation
+theme: bjc_theme
+region: footer_second
+weight: -9
+provider: null
+plugin: 'block_content:f9b46e3a-1c65-4bdc-9ea0-6e1cb1cb1815'
+settings:
+  id: 'block_content:f9b46e3a-1c65-4bdc-9ea0-6e1cb1cb1815'
+  label: 'Contact Information'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

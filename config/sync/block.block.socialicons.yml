@@ -1,0 +1,25 @@
+uuid: cf511d89-f7df-4dea-8f5c-ad6bdd69c253
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:29ac424f-2c32-4c3f-a09f-e76a45c4742f'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: socialicons
+theme: bjc_theme
+region: footer_second
+weight: -10
+provider: null
+plugin: 'block_content:29ac424f-2c32-4c3f-a09f-e76a45c4742f'
+settings:
+  id: 'block_content:29ac424f-2c32-4c3f-a09f-e76a45c4742f'
+  label: 'Social Icons'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
