@@ -1,0 +1,131 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+
+table.tablepress  {
+	color: $headers;
+	border: 1px solid $table_stripe;
+
+	thead th {
+		border: none;
+		background-color: $table_header;
+		padding: 20px 5px;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font-size: 12px;
+
+		@include tablet {
+				font-size: 18px;
+				padding: 20px 20px;
+		}
+		i {
+			font-weight: normal;
+			text-transform: none;
+		}
+		&:not(:first-child) {
+			text-align: end;
+			max-width: 30%;
+		}
+	}
+	tfoot th {
+		border: none;
+		background-color: $table_header;
+		padding: 20px 5px;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font-size: 12px;
+
+		@include tablet {
+				padding: 20px 20px;
+				font-size: 18px;
+		}
+		i {
+			font-weight: normal;
+			text-transform: none;
+		}
+		&:not(:first-child) {
+			text-align: end;
+			max-width: 30%;
+		}
+
+		strong.small {
+
+			padding-top: 10px;
+			font-size: 12px;
+			text-transform: none;
+			@include tablet {
+				font-size: 14px;
+			}
+		}
+
+		strong.italic {
+			font-style: italic;
+		}
+	}
+	tbody tr {
+		border: none;
+		&.odd {
+			td {
+				background-color: $table_body;
+			}
+
+			&:hover {
+				td {
+					background-color: $table_body;
+				}
+			}
+		}
+
+		&.even {
+			&:hover {
+				td {
+					background-color: white;
+				}
+			}
+		}
+
+		&:hover {
+			td.header-row {
+				background-color: $table_header;
+			}
+		}
+	}
+
+	td.header-row {
+		background-color: $table_header;
+		padding: 20px 5px;
+		text-transform: uppercase;
+		font-size: 12px;
+
+		@include tablet {
+			padding: 20px 20px;
+				font-size: 18px;
+		}
+	}
+
+	td {
+		border: none!important;
+		padding: 15px 5px;
+		vertical-align: middle;
+		font-size: 12px;
+
+		@include tablet {
+			padding: 15px 20px;
+				font-size: 16px;
+		}
+		&:first-child {
+			font-weight: 600;
+		}
+		&:not(:first-child) {
+			text-align: end;
+			max-width: 30%;
+		}
+
+		i {
+			font-weight: normal;
+			text-transform: none;
+		}
+	}
+}

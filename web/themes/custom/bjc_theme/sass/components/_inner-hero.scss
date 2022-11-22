@@ -1,0 +1,111 @@
+/**
+General hero of internal pages
+ */
+.inner-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 60px 0 40px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $hero_gradient;
+    color: $white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    @include tablet {
+        min-height: 389px;
+        padding: 40px 0;
+    }
+
+    .top-liner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $yellow_gradient;
+
+        &.background-teal {
+            background: $secondary_light_blue;
+        }
+        &.background-orange {
+            background: $secondary_orange;
+        }
+        &.background-green {
+            background: $secondary_green;
+        }
+        &.background-purple {
+            background: $secondary_purple;
+        }
+    }
+
+    &.background-teal {
+        background: $bachelors_gradient;
+    }
+    &.background-orange {
+        background: $masters_gradient;
+    }
+    &.background-green {
+        background: $doctoral_gradient;
+    }
+    &.background-purple {
+        background: $postmasters_gradient;
+    }
+
+    .sub-title {
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    .hero-content {
+        max-width: 810px;
+        font-size: 16px;
+    }
+
+    .bsn-start-date {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        span {
+            font-family: $minionPro;
+            font-style: italic;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    }
+
+    .link-arrow{
+        color:$white;
+        display: inline-block;
+    }
+
+    .background-image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+        mix-blend-mode: overlay;
+    }
+}

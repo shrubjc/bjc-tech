@@ -1,0 +1,30 @@
+.flex_gallery {
+    h2 {
+        color: $headers;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        &_item {
+            margin: auto;
+            overflow: hidden;
+            flex: 1 1 31%;
+
+            img {
+                transition: all .7s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Styles*/
+@include mobile {
+    .flex_gallery .gallery_item {
+        margin: 0;
+    }
+}

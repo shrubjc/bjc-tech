@@ -1,0 +1,93 @@
+.program-information-sidebar {
+    background-color: rgba(225, 225, 225, 0.15);
+    border: 1px solid rgba($neutral, 0.12);
+    padding: 40px 30px;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0 0 5px;
+    }
+    p.sub-title {
+        position: relative;
+        color: $neutral;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        font-weight: 600;
+
+        &:before {
+            font: $fontAwesomeLight;
+            content: '\f017';
+            font-size: 16px;
+            position: absolute;
+            left: -24px;
+            padding-top: 3px;
+            background-image: $yellow_gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    p.content {
+        font-weight: 600;
+    }
+
+    a {
+
+        i {
+
+            margin-right: 10px;
+        }
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // text-decoration: none;
+        // border: 1px solid $primary_yellow;
+        // background-color: $primary_yellow;
+        // color: $primary_button_text;
+        // border-radius: 20px;
+        // font-size: 14px;
+        // font-weight: 700;
+        // padding: 7px 20px 8px;
+        // transition: all .3s ease-in-out;
+        // -webkit-font-smoothing: antialiased;
+        //
+        // &:hover {
+        //     border: 1px solid darken($primary_yellow, 5%);
+        //     background-color: darken($primary_yellow, 5%);
+        // }
+        //
+        // &.download:before {
+        //     font: $fontAwesomeSolid;
+        //     content: '\f33d';
+        //     margin-right: 10px;
+        //     margin-top: 2px;
+        // }
+        //
+        // &.external:before {
+        //     font: $fontAwesomeSolid;
+        //     content: '\f08e';
+        //     margin-right: 10px;
+        //     margin-top: 2px;
+        // }
+    }
+
+    &_length, &_term, &_curriculum {
+        margin-bottom: 25px;
+        margin-left: 25px;
+    }
+    &_term {
+        p.sub-title:before {
+            content: '\f073';
+        }
+    }
+    &_curriculum {
+        p.sub-title:before {
+            content: '\f02d';
+        }
+        .info {
+            font-style: italic;
+            font-size: 13px;
+        }
+    }
+}

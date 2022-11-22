@@ -1,0 +1,41 @@
+.flex_quick-links{
+    h2 {
+        color: $headers;
+    }
+
+    .quick-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+         &_item {
+             flex: 47%;
+             margin-right: 20px;
+             margin-bottom: 20px;
+             width: 100%;
+
+             a {
+                 text-decoration: none;
+                 font-weight: 600;
+                 color: $bjc_blue;
+                 &:hover {
+                     color: $footer_blue;
+                 }
+
+                 i {
+                     margin-right: 5px;
+                     width:23px;
+                 }
+             }
+         }
+    }
+}
+
+/* Mobile Styles */
+@include tablet {
+    .flex_quick-links{
+        .quick-links {
+            flex-direction: row;
+        }
+    }
+}

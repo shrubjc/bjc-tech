@@ -1,0 +1,22 @@
+uuid: 1ce530c4-9908-41c1-a980-af26d92c319d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bjc_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: bjc_theme_powered
+theme: bjc_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

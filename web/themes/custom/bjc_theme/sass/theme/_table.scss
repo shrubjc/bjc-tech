@@ -1,0 +1,34 @@
+.flex_table{
+    h2 {
+        color: $headers;
+    }
+
+    .table_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin-bottom: 40px;
+        .button-yellow {
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+    .dataTables_wrapper {
+        overflow-x: auto;
+
+    }
+}
+
+/* Mobile Styles */
+@include tablet {
+    .flex_table {
+        .table_content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+    }
+}
