@@ -1,0 +1,10 @@
+uuid: ca0fa1f5-c433-432d-a364-26f285f13fac
+langcode: en
+status: true
+dependencies: {  }
+id: upcoming_events
+label: 'Upcoming Events'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: da6f4ad6-8458-4593-9d35-fdca4e05ff36
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_content_with_image
+label: 'Home Page Content with Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

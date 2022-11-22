@@ -1,0 +1,27 @@
+uuid: 5e076bc2-6fce-4f2e-9417-9068fe2e00f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_unit_position
+field_name: field_unit_position
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: Before
+    -
+      value: 2
+      label: After
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

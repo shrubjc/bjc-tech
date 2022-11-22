@@ -1,0 +1,10 @@
+uuid: ef0f76c2-39e5-4a34-9b9b-1e35f91c483a
+langcode: en
+status: true
+dependencies: {  }
+id: featured_video_gallery
+label: 'Featured Video Gallery'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

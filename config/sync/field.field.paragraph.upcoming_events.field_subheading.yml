@@ -1,0 +1,19 @@
+uuid: 472dd4f5-95fe-4106-8762-be5f1d99f5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading
+    - paragraphs.paragraphs_type.upcoming_events
+id: paragraph.upcoming_events.field_subheading
+field_name: field_subheading
+entity_type: paragraph
+bundle: upcoming_events
+label: Subheading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
