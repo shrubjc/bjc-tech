@@ -1,0 +1,452 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $neutral;
+	border: 1px solid rgba($neutral,.25);
+	border-radius: 3px;
+	padding: 3px;
+
+	&:focus {
+		border-color: rgba($neutral,.5);
+	}
+}
+
+select {
+	border: 1px solid rgba($neutral,.25);
+	color: $neutral;
+	height: 50px;
+	border-radius: 3px;
+}
+
+textarea {
+	width: 100%;
+}
+
+label {
+	color: $headers;
+}
+
+//Gravity Forms
+
+/* General Gravity Forms styles */
+.gform_wrapper.gravity-theme {
+	.gform-body {
+		.gfield {
+			margin-bottom: 10px;
+		}
+
+		.gchoice {
+			position: relative;
+			font-size: 15px;
+		}
+
+		label {
+			font-size: 17px;
+		}
+
+		input[type="text"], input[type="email"], input[type="tel"], textarea {
+			padding: 13px;
+			color: $body;
+			&::placeholder {
+				color: $neutral;
+			}
+		}
+
+		legend {
+			margin-bottom: 15px;
+			color: $headers;
+			font-size: 17px;
+		}
+
+		.ginput_container_select {
+			position: relative;
+			select {
+				padding: 13px;
+				appearance: none;
+				text-transform: none;
+				background: transparent;
+				color:$body;
+
+			}
+
+			&:after {
+				font: $fontAwesomeRegular;
+				content: '\f078';
+				color: $body;
+				padding-left: 7px;
+				width: 13px;
+				font-size: 15px;
+				top: 19px;
+				position: absolute;
+				right: 25px;
+				z-index: 0;
+			}
+		}
+
+		/* Checkbox styles */
+		input[type="checkbox"]:checked + label,
+		input[type="checkbox"]:not(:checked) + label {
+			position: relative;
+			margin-left:19px;
+			margin-bottom: 12px;
+			padding-left: 20px;
+			font-weight: 400;
+			font-size: 15px;
+			color: $neutral;
+			cursor: pointer;
+		}
+
+		input[type="checkbox"]:not(:checked),
+		input[type="checkbox"]:checked {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		input[type="checkbox"]:checked + label {
+			color: $body;
+		}
+
+		input[type="checkbox"]:not(:checked) + label:before,
+		input[type="checkbox"]:checked + label:before {
+			content: '';
+			position: absolute;
+			left: -17px;
+			top: 2px;
+			width: 23px;
+			height: 23px;
+			border: 1px solid rgba(138, 136, 137, 0.7);
+			border-radius: 3px;
+			background: #fff;
+			padding: 2px;
+		}
+
+		input[type="checkbox"]:not(:checked) + label:after,
+		input[type="checkbox"]:checked + label:after {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			top: 6px;
+			left: -13px;
+			font-size: 1.3em;
+			line-height: 0.8;
+			background-color: $bjc_blue;
+			transition: all .2s;
+		}
+
+		// checked mark aspect changes
+		input[type="checkbox"]:not(:checked) + label:after {
+			opacity: 0;
+			transform: scale(0);
+		}
+
+		input[type="checkbox"]:checked + label:after {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		// disabled checkbox
+		input[type="checkbox"]:disabled:not(:checked) + label:before,
+		input[type="checkbox"]:disabled:checked + label:before {
+			border: 1px solid rgba(138, 136, 137, 0.35);
+		}
+
+		input[type="checkbox"]:disabled:checked + label:after {
+			color: $neutral;
+			background-color: $neutral;
+		}
+
+		input[type="checkbox"]:disabled + label {
+			color: $neutral;
+		}
+
+		/* Radio Buttons styles */
+		input[type="radio"]:checked + label,
+		input[type="radio"]:not(:checked) + label {
+			position: relative;
+			padding-left: 20px;
+			margin-left:19px;
+			margin-bottom: 12px;
+			font-weight: 400;
+			font-size: 15px;
+			cursor: pointer;
+			color: $neutral;
+		}
+
+		input[type="radio"]:not(:checked),
+		input[type="radio"]:checked {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		input[type="radio"]:checked + label {
+			color: $body;
+		}
+
+		input[type="radio"]:not(:checked) + label:before,
+		input[type="radio"]:checked + label:before {
+			content: '';
+			position: absolute;
+			left: -17px;
+			top: 2px;
+			width: 23px;
+			height: 23px;
+			border: 1px solid rgba(138, 136, 137, 0.7);
+			border-radius: 50%;
+			background: #fff;
+			padding: 2px;
+		}
+
+		input[type="radio"]:not(:checked) + label:after,
+		input[type="radio"]:checked + label:after {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			top: 6px;
+			left: -13px;
+			font-size: 1.3em;
+			line-height: 0.8;
+			background-color: $bjc_blue;
+			border-radius: 50%;
+			transition: all .2s;
+		}
+
+		/* radio mark aspect changes */
+		input[type="radio"]:not(:checked) + label:after {
+			opacity: 0;
+			transform: scale(0);
+		}
+
+		input[type="radio"]:checked + label:after {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		/* disabled radio */
+		input[type="radio"]:disabled:not(:checked) + label:before,
+		input[type="radio"]:disabled:checked + label:before {
+			border: 1px solid rgba(138, 136, 137, 0.35);
+		}
+
+		input[type="radio"]:disabled:checked + label:after {
+			color: $neutral;
+			background-color: $neutral;
+		}
+
+		input[type="radio"]:disabled + label {
+			color: $neutral;
+		}
+
+
+		/* Address fields styles */
+		fieldset .ginput_container_address {
+			span {
+				padding-bottom: 18px;
+			}
+			label {
+				font-size: 17px;
+				font-weight: 700;
+				margin-bottom: 8px;
+				display: inline-block;
+				padding: 0;
+			}
+		}
+
+
+
+		.validation_message {
+			padding: 0px;
+			margin: 5px 0 0 0;
+			border: none;
+			background: none;
+			font-size: 14px;
+			font-style: italic;
+			// text-indent: -99999px;
+			// position: absolute;
+			// left: -99999px;
+
+		}
+	}
+}
+
+.gform_wrapper .gform_validation_errors>h2 {
+	display: flex;
+	align-items: center;
+
+}
+
+.gform_wrapper .gform_validation_errors>h2 .gform-icon {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+}
+
+
+//SLATE styles
+.page-template-page-full-width {
+	.form_container {
+		max-width: 670px;
+	}
+}
+.page-template-page-inner-page {
+
+}
+
+.form_container {
+	margin: 0 auto;
+
+	.form_question:not(.hidden) {
+		display: block!important;
+	}
+
+
+
+}
+
+div.form_question {
+	fieldset .form_label,
+	label.form_label {
+			display: block!important;
+			width: 100%!important;
+			text-align: left;
+			font-weight: 700;
+			color: $headers;
+			p {
+				margin: 0;
+				font-weight: 700;
+			}
+	}
+
+
+
+}
+
+div.form_p {
+
+
+
+	.form_label {
+		text-align: left;
+
+		p {
+			em {
+				font-size: 14px;
+				display: inline-block;
+			}
+		}
+		> em {
+			font-size: 14px;
+			margin-top: -25px;
+			display: block;
+		}
+	}
+}
+
+#form_question_12e98854-d5bb-4c0e-9f24-a54d0527af0e {
+	p {
+		margin: 0;
+	}
+	.form_label p:first-of-type {
+		display: none;
+	}
+}
+
+.form_text:not(.hidden) .form_responses,
+.form_address:not(.hidden) .form_responses {
+	display: block!important;
+}
+
+div.form_container:not(.form_width_narrow) div.form_question .form_responses, div.form_container:not(.form_width_narrow) div.form_question.form_layout_table .form_responses_labels {
+	display: block;
+	width: 100%!important;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+div.form_question input[type=text],
+div.form_question input[type=email],
+div.form_question input[type=tel],
+div.form_question textarea,
+ {
+	width: 100%;
+}
+
+
+div.form_question input {
+	height: 50px;
+	padding: 10px;
+
+}
+
+div.form_question select {
+	height: 50px;
+	//min-width: 200px;
+	padding: 10px;
+}
+
+ div.form_question.form_layout_table>fieldset>div {
+	 display: block!important;
+	 width: 100%;
+ }
+
+ .form_address {
+	 fieldset > div.form-label {
+		 font-size: 24px;
+	 }
+ }
+div.form_question .form_label,
+div.form_responses{
+	box-sizing: border-box;
+    padding: 4px 5px;
+    vertical-align: top;
+}
+
+div.form_question.form_layout_table textarea {
+	height: 150px;
+}
+
+.form_checkbox {
+	margin-bottom: 0px!important;
+
+
+	div.form_label {
+		margin-bottom: 15px;
+	}
+	.form_response {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		input {
+			width: 20px;
+			height: 20px;
+			border: 1px solid #8A888959;
+		}
+
+		label {
+			color: $neutral;
+			width: calc(100% - 20px);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+uuid: 15d2a049-b6c6-48b2-88e6-7d493957d2a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bjc_theme
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: bjc_theme_site_branding
+theme: bjc_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

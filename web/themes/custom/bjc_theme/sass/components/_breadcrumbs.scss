@@ -1,0 +1,59 @@
+.breadcrumbs {
+    margin-bottom: -45px;
+    padding: 10px 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    z-index: 10;
+    position: relative;
+
+    @include tablet {
+        margin-bottom: 0px;
+        background: $footer_blue;
+
+    }
+
+    .desktop {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+
+    .mobile {
+        display: block;
+        @include tablet {
+            display: none;
+        }
+
+        .divider i {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    .home-link i {
+        font-size: 10px;
+        top: -2px;
+        position: relative;
+    }
+
+    .divider i {
+        font-size: 13px;
+        opacity: .4;
+        margin: 0 8px;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    .current {
+        font-weight: 700;
+        font-size: 12px;
+    }
+}

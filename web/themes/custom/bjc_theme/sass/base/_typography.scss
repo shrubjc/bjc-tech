@@ -1,0 +1,177 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $body;
+	font-family: $font__main;
+	font-size: 16px;
+	line-height: $font__line-height-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin: 0 0 10px;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-family: $minionPro;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+	@include tablet {
+		font-size: 80px;
+		line-height: 90px;
+	}
+}
+
+h2 {
+	font-family: $minionPro;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 42px;
+	@include tablet {
+		font-size: 50px;
+		line-height: 54px;
+	}
+}
+
+h3 {
+	font-family: $font__main;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 30px;
+	@include tablet {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+h4 {
+	font-family: $font__main;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 0 10px;
+	@include tablet {
+		font-size: 25px;
+		line-height: 35px;
+	}
+}
+
+h5 {
+	font-family: $font__main;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+	@include tablet {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.disclaimer {
+	font-family: $font__main;
+	font-size: 14px;
+	line-height: 26px;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.subtitle {
+	font-family: $font__main;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $background_stripe;
+	font-family: $font__pre;
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font__code;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $divider;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: $background_stripe;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+ul,
+ol {
+	margin: 0 0 .5em .5em;
+
+}
+
+ul {
+	list-style: disc;
+	li {
+		margin-bottom: 10px;
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin: .5em .5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

@@ -1,0 +1,49 @@
+.quick-links-sidebar {
+    background-color: rgba(225, 225, 225, 0.15);
+    border: 1px solid rgba($neutral, 0.12);
+    padding: 40px 30px;
+    margin-bottom: 20px;
+
+    p.title {
+        margin: 0 0 30px;
+        color: $neutral;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: $bjc_blue;
+            &:not(:last-child) {
+                margin-bottom: 17px;
+            }
+            i {
+              font-size: 20px;
+              margin-right: 5px;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 600;
+                color: $bjc_blue;
+            }
+
+            &:hover {
+                i {
+                    color: $footer_blue;
+                }
+                span {
+                    color: $footer_blue;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

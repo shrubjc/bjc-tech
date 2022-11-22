@@ -1,0 +1,139 @@
+.contact-us-sidebar {
+    background-color: rgba(225, 225, 225, 0.15);
+    border: 1px solid rgba($neutral, 0.12);
+    padding: 40px 30px;
+    margin-bottom: 20px;
+
+    p {
+        margin: 0 0 3px;
+    }
+
+    p.title {
+        margin: 0 0 25px;
+        color: $neutral;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        font-weight: 600;
+
+        &:before {
+            font: $fontAwesomeLight;
+            content: '\f4a6';
+            font-size: 16px;
+            margin-right: 5px;
+            background-image: $yellow_gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .employees-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        i {
+            font-size: 12px;
+            margin-right: 3px;
+        }
+
+
+        &_name {
+            margin-bottom: 8px;
+            color: $headers;
+            font-weight: 700;
+        }
+
+        &_job-title {
+            margin-bottom: 16px;
+            p {
+                font-weight: 600;
+            }
+            span {
+                color: $neutral;
+                font-style: italic;
+                font-size: 13px;
+            }
+        }
+
+        &_contact {
+
+            i {
+                margin-right: 5px;
+            }
+
+            .office-phone a, .bjc-mobile a {
+                text-decoration: none;
+                color: $body;
+            }
+
+            .bjc-mobile {
+                margin-top: 10px;
+            }
+
+            .email {
+                margin-top: 10px;
+                color: $bjc_blue;
+                font-weight: bold;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &_schedule-meeting {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: solid 2px $divider;
+                .sub-title {
+                    margin-bottom: 15px;
+                    color: $neutral;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+
+                .meeting-links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid $bjc_blue;
+                        border-radius: 20px;
+                        font-weight: 700;
+                        font-size: 15px;
+                        padding: 5px 20px;
+                        color: $bjc_blue;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        text-decoration: none;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $bjc_blue;
+                            color: $white;
+                        }
+
+                        i {
+                            margin-right: 8px;
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+        }
+    }
+}
