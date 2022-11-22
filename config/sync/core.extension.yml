@@ -3,6 +3,8 @@ _core:
 module:
   addtocalendar: 0
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
   blazy: 0
@@ -44,6 +46,8 @@ module:
   slick: 0
   slick_ui: 0
   slick_views: 0
+  social_media_links: 0
+  social_media_links_field: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -52,6 +56,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  we_megamenu: 0
   webform: 0
   webform_image_select: 0
   webform_options_custom: 0
