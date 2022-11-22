@@ -1,0 +1,27 @@
+uuid: 62cbb570-0f06-44fa-8eaa-7a31cd47623d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_gallery_type
+field_name: field_gallery_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: instagram
+      label: Instagram
+    -
+      value: media
+      label: Media
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

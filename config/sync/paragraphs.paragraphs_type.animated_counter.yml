@@ -1,0 +1,10 @@
+uuid: e8e15c48-887d-4ce7-83b6-64252cad47f1
+langcode: en
+status: true
+dependencies: {  }
+id: animated_counter
+label: 'Animated Counter'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

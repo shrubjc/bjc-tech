@@ -1,0 +1,19 @@
+uuid: caa757fd-b68a-405f-9a44-7abc0f754f6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cite
+    - paragraphs.paragraphs_type.featured_video_gallery
+id: paragraph.featured_video_gallery.field_cite
+field_name: field_cite
+entity_type: paragraph
+bundle: featured_video_gallery
+label: Cite
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

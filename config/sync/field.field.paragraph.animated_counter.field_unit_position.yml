@@ -1,0 +1,21 @@
+uuid: 371794a7-b6d4-4774-9ac9-71e323bc6b8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_position
+    - paragraphs.paragraphs_type.animated_counter
+  module:
+    - options
+id: paragraph.animated_counter.field_unit_position
+field_name: field_unit_position
+entity_type: paragraph
+bundle: animated_counter
+label: 'Unit Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

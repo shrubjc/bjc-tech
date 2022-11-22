@@ -1,0 +1,59 @@
+uuid: f5f89238-1c65-4ac8-8cdf-476c72f5e887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_page_section
+    - node.type.page
+    - paragraphs.paragraphs_type.animated_counter
+    - paragraphs.paragraphs_type.featured_video_gallery
+    - paragraphs.paragraphs_type.home_page_content_with_image
+    - paragraphs.paragraphs_type.home_page_hero_header
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.upcoming_events
+  module:
+    - entity_reference_revisions
+id: node.page.field_home_page_section
+field_name: field_home_page_section
+entity_type: node
+bundle: page
+label: 'Home Page Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      home_page_hero_header: home_page_hero_header
+      home_page_content_with_image: home_page_content_with_image
+      slideshow: slideshow
+      upcoming_events: upcoming_events
+      animated_counter: animated_counter
+      featured_video_gallery: featured_video_gallery
+    negate: 0
+    target_bundles_drag_drop:
+      animated_counter:
+        weight: -11
+        enabled: true
+      featured_video_gallery:
+        weight: -10
+        enabled: true
+      home_page_content_with_image:
+        weight: -14
+        enabled: true
+      home_page_hero_header:
+        weight: -15
+        enabled: true
+      instagram_gallery:
+        weight: -9
+        enabled: false
+      slideshow:
+        weight: -13
+        enabled: true
+      upcoming_events:
+        weight: -12
+        enabled: true
+field_type: entity_reference_revisions
