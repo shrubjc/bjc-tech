@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.animated_counter.field_number
     - field.field.paragraph.animated_counter.field_stat_label
     - field.field.paragraph.animated_counter.field_stat_number
     - field.field.paragraph.animated_counter.field_stat_unit
@@ -14,13 +13,6 @@ targetEntityType: paragraph
 bundle: animated_counter
 mode: default
 content:
-  field_number:
-    type: number
-    weight: 0
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_stat_label:
     type: string_textfield
     weight: 1
@@ -46,7 +38,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_unit_position:
-    type: options_select
+    type: options_buttons
     weight: 4
     region: content
     settings: {  }

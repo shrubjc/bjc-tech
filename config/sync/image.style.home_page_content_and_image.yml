@@ -13,3 +13,10 @@ effects:
       width: 742
       height: 604
       upscale: false
+  2e5c5d14-1154-45e8-b86b-7372596a0019:
+    uuid: 2e5c5d14-1154-45e8-b86b-7372596a0019
+    id: image_resize
+    weight: 2
+    data:
+      width: 742
+      height: 604
