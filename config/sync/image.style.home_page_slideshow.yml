@@ -1,0 +1,15 @@
+uuid: 987f50dc-b0de-489b-a28c-e3638122d0e1
+langcode: en
+status: true
+dependencies: {  }
+name: home_page_slideshow
+label: 'Home Page Slideshow(182X360)'
+effects:
+  c3a0753e-e0e0-4e81-8645-7f68786548d1:
+    uuid: c3a0753e-e0e0-4e81-8645-7f68786548d1
+    id: image_scale
+    weight: 1
+    data:
+      width: 182
+      height: 360
+      upscale: false

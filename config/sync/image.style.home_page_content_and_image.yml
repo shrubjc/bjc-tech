@@ -1,0 +1,15 @@
+uuid: 9652bb6e-34c2-458f-be76-1361b2c5ecc3
+langcode: en
+status: true
+dependencies: {  }
+name: home_page_content_and_image
+label: 'Home Page Content and image(742X604)'
+effects:
+  f4c78aa1-cf09-4cf9-95cd-11515eb4d8e4:
+    uuid: f4c78aa1-cf09-4cf9-95cd-11515eb4d8e4
+    id: image_scale
+    weight: 1
+    data:
+      width: 742
+      height: 604
+      upscale: false
