@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: animated_counter
 label: 'Unit Position'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

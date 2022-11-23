@@ -1,0 +1,15 @@
+uuid: 00d992a6-f388-4374-88f1-4e4416fb614a
+langcode: en
+status: true
+dependencies: {  }
+name: hero_headline_banner
+label: 'Hero Headline Banner(1600X912)'
+effects:
+  69c5fb6e-154b-4a43-9120-66ef09bef683:
+    uuid: 69c5fb6e-154b-4a43-9120-66ef09bef683
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: 912
+      upscale: false

@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: home_page_content_with_image
 label: 'Image Alignment'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
