@@ -1,0 +1,8 @@
+uuid: 2d945abe-dcdd-4b43-8bf5-1b78f3053ed4
+langcode: en
+status: true
+dependencies: {  }
+id: action_block_type
+label: 'Action Block Type'
+revision: 0
+description: ''

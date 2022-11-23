@@ -1,6 +1,6 @@
 uuid: 763a8bb1-5b8e-4640-9695-7b614bc0544a
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - bjc_theme
