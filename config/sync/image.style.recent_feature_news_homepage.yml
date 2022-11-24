@@ -1,0 +1,15 @@
+uuid: 8c17ad43-db6e-43da-97fe-b9c94312ecf9
+langcode: en
+status: true
+dependencies: {  }
+name: recent_feature_news_homepage
+label: 'Recent Feature News HomePage(395X270)'
+effects:
+  b9624e55-7b6c-42f3-83d8-83df5578c508:
+    uuid: b9624e55-7b6c-42f3-83d8-83df5578c508
+    id: image_scale
+    weight: 1
+    data:
+      width: 395
+      height: 270
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: febf16d1-4acb-4091-81b5-056f48cc3dfb
+langcode: en
+status: true
+dependencies: {  }
+name: recent_post_news
+label: 'Recent Post News(111X148)'
+effects:
+  215e82a0-49be-401d-a5a7-e956b8b816cd:
+    uuid: 215e82a0-49be-401d-a5a7-e956b8b816cd
+    id: image_scale
+    weight: 1
+    data:
+      width: 111
+      height: 148
+      upscale: false
