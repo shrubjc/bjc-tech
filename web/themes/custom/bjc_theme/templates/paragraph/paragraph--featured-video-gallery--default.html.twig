@@ -1,8 +1,20 @@
-{{'Videos'}}
-{{ content.field_headline }}
-{{ content.field_body }}
-{{ content.field_headline }}
-{{ content.field_image_alignment }}
-{{ content.field_link }}
-{{ content.field_subheading }}
-{{ content.field_image }}
+<div class="full-width-content featured-video-gallery" >
+    <div class="homepage-hero" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
+    {% if content.field_quote  %}
+            <h2>{{ content.field_quote }}</h2>
+        {% endif %}    
+            {% if content.field_cite  %}
+                <p>{{ content.field_cite }}</p>
+           {% endif %}
+        <div class="video">
+            {% if content.field_quote  %}
+                <a class="video-button" data-fancybox data-options='{"src": "#video-modal", "touch": true, "smallBtn" : false}'>Play Video</a>
+                <div class="video-popup" style="display: none;" id="video-modal">
+                	<div class="content-wrap">
+                		{{ content.field_video_iframe_code }}
+                	</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+   </div> <!-- End of block -->

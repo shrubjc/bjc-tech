@@ -1,0 +1,34 @@
+<div class="full-width-content upcoming-events">
+    <!-- academic callout -->
+    <div class="upcoming-events_aca_card">
+
+        <div class="content">
+            <i class="fa-thin fa-calendar-days"></i>
+           {% if content.field_event_card_headline  %}
+                <h2>{{ content.field_event_card_headline }}</h2>
+            {% endif %}
+            {% if content.field_subheading  %}
+                <p>{{ content.field_subheading }}</p>
+            {% endif %}
+            {% if content.field_page_link  %}
+                {{ content.field_page_link }}
+            {% endif %}
+        </div>
+    </div>
+    <!-- event section -->
+    <div class="upcoming-events_event" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
+        <div class="container">
+            {% if content.field_event_card_headline  %}
+                <h2>{{ content.field_event_card_headline }}</h2>
+            {% endif %}
+            {% if content.field_page_link  %}
+               {{ content.field_page_link }}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
