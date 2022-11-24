@@ -118,7 +118,86 @@
         </aside>
       </div>
     {% endif %}
-    <footer id="colophon" class="site-footer">
+
+
+
+
+
+
+    {# Footer Section #}
+
+
+
+
+
+
+<footer id="colophon" class="site-footer">
+   <div class="layout-container">
+      {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+                <div class="action-bar">
+                    <div class="container">
+                        {{ page.footer_first }}
+                    </div>
+                </div>
+                <div class="site-info">
+                  <div class="container">
+
+
+                      <div class="contact-info page-two">
+                        {{ page.footer_second }}
+                      </div>
+
+                      <div class="page-three">
+                      {{ page.footer_third }}
+                      </div>
+                  
+                      <div class="page-four">
+                      {{ page.footer_fourth }}
+                      {% endif %}
+                      </div>
+                      
+                      {% if page.footer_fifth %}
+                      <div class="site-footer__bottom page-five" >
+                        {{ page.footer_fifth }}           
+                      {% endif %}
+                      </div>
+
+                  </div>
+                  </div>
+    
+
+
+         {% if page.copyright_section_first or page.copyright_section_second or page.copyright_section_third %}
+         <div class= "copyright">
+              <div class= "container">
+                <h4>
+                    {{ page.copyright_section_first }}
+                </h4>
+              </div>
+
+
+              <div class="straight-line">
+                <h4 class="footerpage-two">
+                <a>
+                    {{ page.copyright_section_second }}
+                </a>
+                </h4>
+                <span class="footerpage-three">
+                <a>
+                    {{ page.copyright_section_third }}
+                </a>
+                </span>
+               
+              </div>
+          </div>
+         {% endif %}
+    </div>
+</footer>
+
+
+
+{#  Old  #}
+    {# <footer id="colophon" class="site-footer">
       <div class="layout-container">
         {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
           <div class="action-bar">
@@ -158,6 +237,10 @@
           </div>
         </div>
       {% endif %}
-    </footer>
+    </footer> #}
+
+
+
+
   </div>
 </div>

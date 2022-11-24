@@ -11,3 +11,4 @@ global-styling:
     theme:
       css/header.css: {}
       css/footer.css: {}
+      css/homepage.css: {}
