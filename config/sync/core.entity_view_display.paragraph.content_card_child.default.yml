@@ -1,0 +1,39 @@
+uuid: cff518cb-b8b3-434b-a1b7-80fd99fce13c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_card_child.field_content
+    - field.field.paragraph.content_card_child.field_icon_class
+    - field.field.paragraph.content_card_child.field_title
+    - paragraphs.paragraphs_type.content_card_child
+  module:
+    - text
+id: paragraph.content_card_child.default
+targetEntityType: paragraph
+bundle: content_card_child
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

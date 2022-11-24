@@ -1,0 +1,10 @@
+uuid: 4b38203a-091a-429c-be2a-3e9afa33db85
+langcode: en
+status: true
+dependencies: {  }
+id: content_card
+label: 'Content Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

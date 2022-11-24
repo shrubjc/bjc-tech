@@ -1,0 +1,21 @@
+uuid: fc738b33-1f79-4fb0-9b04-4dc801c1b1b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.callout_bar
+  module:
+    - text
+id: paragraph.callout_bar.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: callout_bar
+label: 'Body Copy'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
