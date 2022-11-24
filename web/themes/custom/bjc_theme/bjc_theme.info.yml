@@ -9,7 +9,7 @@ libraries:
 base theme: false
 regions:
   primary_menu: 'Primary menu'
-  header_logo: Header Logo
+  header_logo: 'Header Logo'
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'

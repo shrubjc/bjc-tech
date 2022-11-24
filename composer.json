@@ -23,7 +23,9 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/counter_on_scroll": "^1.0",
+        "drupal/feeds": "^3.0@beta",
         "drupal/imce": "^3.0",
+        "drupal/migrate_tools": "^6.0",
         "drupal/paragraphs": "^1.5",
         "drupal/slick": "^2.6",
         "drupal/slick_views": "^2.6",
@@ -32,6 +34,7 @@
         "drupal/views_slideshow": "^4.8",
         "drupal/we_megamenu": "^1.13",
         "drupal/webform": "^6.1",
+        "drupal/wordpress_migrate": "^3.0@alpha",
         "drush/drush": "^11.3"
     },
     "conflict": {

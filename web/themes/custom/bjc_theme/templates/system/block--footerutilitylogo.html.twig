@@ -1,0 +1,16 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+{% block content %}
+  {% if content %}
+    <div class="footer-utility_logo-list">
+      <a href= "https://www.usnews.com/best-colleges/goldfarb-school-of-nursing-at-barnesjewish-college-6389">
+        <img alt="" class=" ls-is-cached lazyloaded" src={{ file_url(content.field_image.0['#item'].entity.uri.value) }}>
+      </a>
+    </div>
+  {% endif %}
+{% endblock %}
