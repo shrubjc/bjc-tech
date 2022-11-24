@@ -6,8 +6,13 @@ global-styling:
     js/navigation.js: {}
     js/src/inner-page-flex.js: {}
     js/src/list-pages.js: {}
+    '//kit.fontawesome.com/e40642b092.js?ver=1669214893':
+      type: external
+      attributes:
+        crossorigin: anonymous
 
   css:
     theme:
       css/header.css: {}
       css/footer.css: {}
+      css/custom.css: {}
