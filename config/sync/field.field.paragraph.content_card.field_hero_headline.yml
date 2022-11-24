@@ -1,0 +1,21 @@
+uuid: a1f96e98-b4e7-47c4-af1e-849e2c1a3aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_headline
+    - paragraphs.paragraphs_type.content_card
+  module:
+    - text
+id: paragraph.content_card.field_hero_headline
+field_name: field_hero_headline
+entity_type: paragraph
+bundle: content_card
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

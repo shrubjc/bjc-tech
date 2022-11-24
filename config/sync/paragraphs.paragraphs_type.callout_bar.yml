@@ -1,0 +1,10 @@
+uuid: bb6acc7a-8b83-47db-850e-d2ddb1a437a4
+langcode: en
+status: true
+dependencies: {  }
+id: callout_bar
+label: 'Callout Bar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
