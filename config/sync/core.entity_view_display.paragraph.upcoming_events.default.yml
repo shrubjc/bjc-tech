@@ -20,7 +20,7 @@ mode: default
 content:
   field_academic_event_card_headli:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -28,7 +28,7 @@ content:
     region: content
   field_background_image:
     type: image
-    label: above
+    label: inline
     settings:
       image_link: ''
       image_style: ''
@@ -39,7 +39,7 @@ content:
     region: content
   field_event_card_headline:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -47,7 +47,7 @@ content:
     region: content
   field_event_link:
     type: link
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -59,7 +59,7 @@ content:
     region: content
   field_page_link:
     type: link
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -71,7 +71,7 @@ content:
     region: content
   field_subheading:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

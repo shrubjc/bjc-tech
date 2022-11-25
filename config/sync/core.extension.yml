@@ -19,11 +19,13 @@ module:
   contact: 0
   contextual: 0
   counter_on_scroll: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  feeds: 0
   field: 0
   field_ui: 0
   file: 0
@@ -35,6 +37,11 @@ module:
   media: 0
   menu_link_content: 0
   menu_ui: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_drupal_ui: 0
+  migrate_plus: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   options: 0
@@ -66,6 +73,8 @@ module:
   webform_scheduled_email: 0
   webform_shortcuts: 0
   webform_ui: 0
+  wordpress_migrate: 0
+  wordpress_migrate_ui: 0
   views: 10
   paragraphs: 11
   standard: 1000

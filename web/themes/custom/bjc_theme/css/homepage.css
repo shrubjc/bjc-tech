@@ -132,19 +132,13 @@
     text-align: center;
 }
 
-#counter{
-    visibility: hidden;
-}
-
 #counter .slick-slide h2 div{
     font-size: 72px;
 }
 
-#counter .slick-slide h2 p + div{
-    text-transform: uppercase;
+#counter .slick-slide h2 h2 p div{
     font-size: 18px;
     color: rgba(138, 136, 137, 0.8);
-    background-color: orange;
 }
 
 
