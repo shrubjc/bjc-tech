@@ -1,0 +1,19 @@
+uuid: 0c4777e6-a538-409d-8825-28b1c35409ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_class
+    - paragraphs.paragraphs_type.callout_bar
+id: paragraph.callout_bar.field_icon_class
+field_name: field_icon_class
+entity_type: paragraph
+bundle: callout_bar
+label: 'Icon Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

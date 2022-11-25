@@ -1,0 +1,10 @@
+uuid: db113438-141e-4cae-a04c-4c4f8701991c
+langcode: en
+status: true
+dependencies: {  }
+id: basic_wysiwyg
+label: 'Basic wysiwyg'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

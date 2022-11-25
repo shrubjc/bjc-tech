@@ -1,0 +1,19 @@
+uuid: 82cc2485-668d-4f39-b8f5-2c682463606e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_class
+    - paragraphs.paragraphs_type.content_card_child
+id: paragraph.content_card_child.field_icon_class
+field_name: field_icon_class
+entity_type: paragraph
+bundle: content_card_child
+label: 'Icon Class'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
