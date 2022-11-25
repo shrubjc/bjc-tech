@@ -1,8 +1,7 @@
 uuid: d54a69b2-5b03-4e7e-9546-e583393a58e4
 langcode: en
 status: true
-dependencies:
-  module: null
+dependencies: {  }
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
 name: 'Plain text'
@@ -28,3 +27,11 @@ filters:
     status: true
     weight: 0
     settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

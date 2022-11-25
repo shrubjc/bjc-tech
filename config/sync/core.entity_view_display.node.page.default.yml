@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_home_page_section
-    - field.field.node.page.field_slideshow
     - node.type.page
   module:
     - entity_reference_revisions
@@ -33,15 +32,6 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 102
-    region: content
-  field_slideshow:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 103
     region: content
   links:
     weight: 101
