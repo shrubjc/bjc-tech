@@ -1,0 +1,25 @@
+uuid: 425bad2f-665e-4f49-b867-32d6bdff96ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - bjc_common
+    - system
+  theme:
+    - bjc_theme
+id: recentnewshomepageblock
+theme: bjc_theme
+region: content
+weight: 0
+provider: null
+plugin: resentnewshomepageblock
+settings:
+  id: resentnewshomepageblock
+  label: 'Recent News Home Page Block'
+  label_display: '0'
+  provider: bjc_common
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
