@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_home_page_section
     - node.type.page
     - paragraphs.paragraphs_type.animated_counter
+    - paragraphs.paragraphs_type.content_card
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
@@ -33,11 +34,24 @@ settings:
       upcoming_events: upcoming_events
       animated_counter: animated_counter
       featured_video_gallery: featured_video_gallery
+      content_card: content_card
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
         weight: -11
         enabled: true
+      basic_wysiwyg:
+        weight: 13
+        enabled: false
+      callout_bar:
+        weight: 14
+        enabled: false
+      content_card:
+        weight: 15
+        enabled: true
+      content_card_child:
+        weight: 16
+        enabled: false
       featured_video_gallery:
         weight: -10
         enabled: true

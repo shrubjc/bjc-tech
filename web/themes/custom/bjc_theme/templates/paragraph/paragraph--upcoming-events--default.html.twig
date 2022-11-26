@@ -4,14 +4,14 @@
 
         <div class="content">
             <i class="fa-thin fa-calendar-days"></i>
-           {% if content.field_event_card_headline  %}
-                <h2>{{ content.field_event_card_headline }}</h2>
+           {% if content.field_academic_event_card_headli  %}
+                <h2>{{ content.field_academic_event_card_headli.0 }}</h2>
             {% endif %}
             {% if content.field_subheading  %}
-                <p>{{ content.field_subheading }}</p>
+                <p>{{ content.field_subheading.0 }}</p>
             {% endif %}
             {% if content.field_page_link  %}
-                {{ content.field_page_link }}
+                <a class="icon-button" href= {{ content.field_page_link[0]['#url'] }}>{{ content.field_page_link.0 }}</a>
             {% endif %}
         </div>
     </div>
@@ -19,10 +19,10 @@
     <div class="upcoming-events_event" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
         <div class="container">
             {% if content.field_event_card_headline  %}
-                <h2>{{ content.field_event_card_headline }}</h2>
+                <h2>{{ content.field_event_card_headline.0 }}</h2>
             {% endif %}
-            {% if content.field_page_link  %}
-               {{ content.field_page_link }}
+            {% if content.field_event_link  %}
+              <a class="link-arrow" href= {{ content.field_event_link[0]['#url'] }}>{{ content.field_event_link.0}}</a>
             {% endif %}
             </div>
         </div>
