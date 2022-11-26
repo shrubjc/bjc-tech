@@ -1,0 +1,10 @@
+uuid: 5dfb983e-e16c-4775-a42d-f76c5c7c9877
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_slideshow
+label: 'Home Page Slideshow'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

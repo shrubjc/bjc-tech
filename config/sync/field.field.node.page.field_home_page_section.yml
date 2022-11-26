@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
+    - paragraphs.paragraphs_type.home_page_slideshow
     - paragraphs.paragraphs_type.upcoming_events
   module:
     - entity_reference_revisions
@@ -31,6 +32,7 @@ settings:
       upcoming_events: upcoming_events
       animated_counter: animated_counter
       featured_video_gallery: featured_video_gallery
+      home_page_slideshow: home_page_slideshow
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -57,11 +59,11 @@ settings:
       home_page_hero_header:
         weight: -15
         enabled: true
+      home_page_slideshow:
+        weight: 20
+        enabled: true
       instagram_gallery:
         weight: -9
-        enabled: false
-      slideshow:
-        weight: -13
         enabled: false
       upcoming_events:
         weight: -12
