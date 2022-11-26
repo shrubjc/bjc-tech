@@ -1,0 +1,244 @@
+.yellow-gradient {
+    background-image: linear-gradient(272.45deg, #ffc50a -19.47%, #d56f1b 127.72%);
+}
+.full-width-content.upcoming-events {
+    margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events {
+        background-size: 100% 80%;
+        margin-bottom: 200px;
+   }
+}
+
+.upcoming-events_aca_card .content h2{
+    font-size: 42px;
+    opacity: 0.8;
+    margin-top: 1px;
+}
+
+.upcoming-events_aca_card .content p{
+    opacity: 0.8;
+    margin-top: -12px;
+}
+
+
+
+.upcoming-events_event{
+    height: 450px;
+}
+
+.upcoming-events_event .container h2{
+    font-size: 48px;
+}
+
+.upcoming-events_event .container {
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.upcoming-events_event .container .link-arrow:hover{
+    text-decoration: underline;
+}
+
+
+
+.full-width-content.upcoming-events .upcoming-events_aca_card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 400;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 480px) {
+    .full-width-content.upcoming-events .upcoming-events_aca_card {
+        padding: 40px 20px;
+        width: calc(100% - 40px);
+        margin: 0 20px -50px;
+   }
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_aca_card {
+        margin: auto auto -50px;
+        max-width: 900px;
+        justify-content: center;
+        flex-direction: row;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_aca_card .content {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+}
+.full-width-content.upcoming-events .upcoming-events_aca_card .content i {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_aca_card .content i {
+        left: -100px;
+        top: 0;
+        position: absolute;
+        margin-bottom: 0px;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_aca_card .content a {
+    color: #fff;
+    background: #00529b;
+    border: 1px solid #00529b;
+}
+.full-width-content.upcoming-events .upcoming-events_aca_card .content a:before {
+    content: '\f073';
+    font: var(--fa-font-regular);
+    margin-right: 10px;
+    font-weight: normal;
+}
+.full-width-content.upcoming-events .upcoming-events_aca_card .content a:hover {
+    color: #00529b;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_aca_card .content {
+        text-align: left;
+        margin-left: 10px;
+   }
+}
+@media (min-width: 1024px) {
+    .full-width-content.upcoming-events .upcoming-events_aca_card .content {
+        margin-left: 0;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_event {
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_event {
+        background-size: cover;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_event .container {
+    padding-top: 80px;
+    color: #fff;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_event .container {
+        padding-top: 150px;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_event .container h2 {
+    padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_event .container h2 {
+        padding-bottom: 20px;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .link-arrow {
+    color: #fff;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .link-arrow:before {
+    background: #fff;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: top;
+    margin-top: 30px;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap {
+        margin-top: 150px;
+        flex-direction: row;
+   }
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card {
+    background: #fff;
+    color: #00529b;
+    flex: 0 0 32.3%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    padding: 50px;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 0;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card a {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.7s ease-in-out;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card a:hover {
+    transform: scale(1.1);
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card .date {
+    display: block;
+    color: #8a8889;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card p {
+    margin: 0;
+    color: #3c3c3c;
+    font-size: 16px;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card p:first-of-type {
+    margin-top: 20px;
+}
+.full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card p.location {
+    padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card {
+        max-width: 32.3%;
+        margin-top: 0;
+        margin-right: 20px;
+        margin-bottom: -50px;
+   }
+    .full-width-content.upcoming-events .upcoming-events_event .container .event-card-wrap .card:last-of-type {
+        margin-right: 0;
+   }
+}
+.icon-button, .full-width-content.upcoming-events .upcoming-events_aca_card .content a, .video-button, .button-apply, .sidr #mobile-btn-menu li.nav-btn.apply a, .main-navigation ul#primary-menu > li.nav-btn.apply a, .button-more-info, .site-footer .action-bar_buttons a:first-of-type, .sidr #mobile-btn-menu li.nav-btn.request-info a, .main-navigation ul#primary-menu > li.nav-btn.request-info a, .button-give, .sidr #mobile-btn-menu li.nav-btn.give a, .main-navigation ul#primary-menu > li.nav-btn.give a {
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 500px;
+    transform: perspective(1px) translateZ(0);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.icon-button:after, .full-width-content.upcoming-events .upcoming-events_aca_card .content a:after, .video-button:after, .button-apply:after, .sidr #mobile-btn-menu li.nav-btn.apply a:after, .main-navigation ul#primary-menu > li.nav-btn.apply a:after, .button-more-info:after, .site-footer .action-bar_buttons a:first-of-type:after, .sidr #mobile-btn-menu li.nav-btn.request-info a:after, .main-navigation ul#primary-menu > li.nav-btn.request-info a:after, .button-give:after, .sidr #mobile-btn-menu li.nav-btn.give a:after, .main-navigation ul#primary-menu > li.nav-btn.give a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 500px;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.icon-button:hover, .full-width-content.upcoming-events .upcoming-events_aca_card .content a:hover, .video-button:hover, .button-apply:hover, .sidr #mobile-btn-menu li.nav-btn.apply a:hover, .main-navigation ul#primary-menu > li.nav-btn.apply a:hover, .button-more-info:hover, .site-footer .action-bar_buttons a:hover:first-of-type, .sidr #mobile-btn-menu li.nav-btn.request-info a:hover, .main-navigation ul#primary-menu > li.nav-btn.request-info a:hover, .button-give:hover, .sidr #mobile-btn-menu li.nav-btn.give a:hover, .main-navigation ul#primary-menu > li.nav-btn.give a:hover {
+    color: #fff;
+}
+.icon-button:hover:after, .full-width-content.upcoming-events .upcoming-events_aca_card .content a:hover:after, .video-button:hover:after, .button-apply:hover:after, .sidr #mobile-btn-menu li.nav-btn.apply a:hover:after, .main-navigation ul#primary-menu > li.nav-btn.apply a:hover:after, .button-more-info:hover:after, .site-footer .action-bar_buttons a:hover:first-of-type:after, .sidr #mobile-btn-menu li.nav-btn.request-info a:hover:after, .main-navigation ul#primary-menu > li.nav-btn.request-info a:hover:after, .button-give:hover:after, .sidr #mobile-btn-menu li.nav-btn.give a:hover:after, .main-navigation ul#primary-menu > li.nav-btn.give a:hover:after {
+    border-radius: 500px;
+    transform: scaleX(1);
+}
