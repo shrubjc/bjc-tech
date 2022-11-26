@@ -1,0 +1,26 @@
+uuid: 8581841b-4b58-4e15-9494-fd19a7e82357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.animated_counter_child.field_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.animated_counter_child
+  module:
+    - image
+id: paragraph.animated_counter_child.default
+targetEntityType: paragraph
+bundle: animated_counter_child
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
