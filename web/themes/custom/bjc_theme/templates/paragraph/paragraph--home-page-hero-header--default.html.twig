@@ -1,14 +1,19 @@
-
-
 <div class="homepage-hero" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
 <div class="container">
 <div class="homepage-hero_content">
 <h1 style="transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1;">{{ content.field_hero_headline }}</h1>
 <p style="transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1;">{{ content.field_content }}</p>
+
+ {% if content.field_home_page_link[0]['#title'] or content.field_home_page_link[1]['#title']  %}
 <div class="homepage-hero_buttons" style="transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1;">
-<a href="https://gsondev.wpengine.com/facilities/" target="" class="button-yellow"><i class="fas fa-hospital-alt" aria-hidden="true"></i>Explore Our Campus</a>
-<a href="https://gsondev.wpengine.com/apply/" target="" class="button-yellow"><i class="fas fa-edit" aria-hidden="true"></i>Apply Online Now</a>
+ {% if content.field_home_page_link[0]['#title']  %}
+<a href="{{ content.field_home_page_link[0]['#url']|render }}" target="" class="button-yellow"><i class="fas fa-hospital-alt" aria-hidden="true"></i>{{ content.field_home_page_link[0]['#title']|render }}</a>
+{% endif %}
+{% if content.field_home_page_link[1]['#title']  %}
+<a href="{{ content.field_home_page_link[1]['#url']|render }}" target="" class="button-yellow"><i class="fas fa-edit" aria-hidden="true"></i>{{ content.field_home_page_link[1]['#title']|render }}</a>
+{% endif %}
 </div>
+{% endif %}
 </div>
 </div>
 </div>
