@@ -1,4 +1,3 @@
-{# {{ content.field_content_card_child }} #}
 <div class="flex full-width-content flex_content-cards">
     <div class="container">
         <div class="main-content">
@@ -7,25 +6,7 @@
             {% endif %}
 
             <div class="content-cards">
-				{% for items in content.field_content_card_child %}
-				<div class="content-cards_item">
-					<div class="image-with-content">
-						{% if items.entity.field_icon_class.value %}
-							<i class="gradient {{ items.entity.field_icon_class.value }}"></i>
-						{% endif %}
-						{% if items.entity.field_content.value or items.entity.field_title.value %}
-							<div class="main-text">
-								{% if items.entity.field_title.value %}
-									<h3>{{ items.entity.field_title.value }}</h3>
-								{% endif %}
-								{% if items.entity.field_content.value %}
-									{{ items.entity.field_content.value }}
-								{% endif %}
-							</div>
-					{% endif %}
-					</div>
-				</div>
-				{% endfor %}
+				{{ content.field_content_card_child }}
 			</div>
         </div>
     </div><!-- .container -->

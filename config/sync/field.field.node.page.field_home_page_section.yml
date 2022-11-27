@@ -67,6 +67,9 @@ settings:
       slideshow:
         weight: -13
         enabled: true
+      stats:
+        weight: 23
+        enabled: true
       upcoming_events:
         weight: -12
         enabled: true
