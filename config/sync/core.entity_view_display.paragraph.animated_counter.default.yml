@@ -3,29 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.animated_counter.field_ani
     - field.field.paragraph.animated_counter.field_stat_label
     - field.field.paragraph.animated_counter.field_stat_number
     - field.field.paragraph.animated_counter.field_stat_unit
     - field.field.paragraph.animated_counter.field_unit_position
     - paragraphs.paragraphs_type.animated_counter
   module:
-    - entity_reference_revisions
     - options
 id: paragraph.animated_counter.default
 targetEntityType: paragraph
 bundle: animated_counter
 mode: default
 content:
-  field_ani:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 5
-    region: content
   field_stat_label:
     type: string
     label: hidden
