@@ -17,3 +17,4 @@ global-styling:
       css/footer.css: {}
       css/homepage.css: {}
       css/custom.css: {}
+      css/upcomingevents.css : {}

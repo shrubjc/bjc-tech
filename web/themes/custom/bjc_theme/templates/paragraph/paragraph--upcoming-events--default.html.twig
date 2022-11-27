@@ -11,7 +11,7 @@
                 <p>{{ content.field_subheading.0 }}</p>
             {% endif %}
             {% if content.field_page_link  %}
-                <a class="icon-button" href= {{ content.field_page_link[0]['#url'] }}>{{ content.field_page_link.0 }}</a>
+                <a class="icon-button" href= {{ content.field_page_link[0]['#url'] }}>{{ content.field_page_link[0]['#title'] }}</a>
             {% endif %}
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <h2>{{ content.field_event_card_headline.0 }}</h2>
             {% endif %}
             {% if content.field_event_link  %}
-              <a class="link-arrow" href= {{ content.field_event_link[0]['#url'] }}>{{ content.field_event_link.0}}</a>
+              <a class="link-arrow" href= {{ content.field_event_link[0]['#url'] }}>{{ content.field_event_link[0]['#title'] }}</a>
             {% endif %}
             </div>
         </div>
