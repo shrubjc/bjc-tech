@@ -6,10 +6,11 @@ dependencies:
     - field.storage.node.field_home_page_section
     - node.type.page
     - paragraphs.paragraphs_type.animated_counter
+    - paragraphs.paragraphs_type.content_card
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
-    - paragraphs.paragraphs_type.home_page_slideshow
+    - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.upcoming_events
   module:
     - entity_reference_revisions
@@ -29,10 +30,11 @@ settings:
     target_bundles:
       home_page_hero_header: home_page_hero_header
       home_page_content_with_image: home_page_content_with_image
+      slideshow: slideshow
       upcoming_events: upcoming_events
       animated_counter: animated_counter
       featured_video_gallery: featured_video_gallery
-      home_page_slideshow: home_page_slideshow
+      content_card: content_card
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -46,7 +48,7 @@ settings:
         enabled: false
       content_card:
         weight: 15
-        enabled: false
+        enabled: true
       content_card_child:
         weight: 16
         enabled: false
@@ -59,12 +61,15 @@ settings:
       home_page_hero_header:
         weight: -15
         enabled: true
-      home_page_slideshow:
-        weight: 20
-        enabled: true
       instagram_gallery:
         weight: -9
         enabled: false
+      slideshow:
+        weight: -13
+        enabled: true
+      stats:
+        weight: 23
+        enabled: true
       upcoming_events:
         weight: -12
         enabled: true

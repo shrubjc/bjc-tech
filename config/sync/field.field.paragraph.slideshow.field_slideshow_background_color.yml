@@ -1,0 +1,21 @@
+uuid: a311d1c4-5cf8-4a17-b869-0f14d5985f0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_background_color
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - options
+id: paragraph.slideshow.field_slideshow_background_color
+field_name: field_slideshow_background_color
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
