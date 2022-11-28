@@ -1,0 +1,36 @@
+uuid: b9781a1f-64c1-46fc-ad4f-7b3b15c7806f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slideshow_background_color
+field_name: field_slideshow_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: royal-blue
+      label: 'Royal Blue'
+    -
+      value: teal
+      label: Teal
+    -
+      value: orange
+      label: Orange
+    -
+      value: green
+      label: Green
+    -
+      value: purple
+      label: Purple
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
