@@ -7,6 +7,7 @@ dependencies:
     - taxonomy.vocabulary.programs
   module:
     - image
+    - slick_views
     - taxonomy
     - text
     - user
@@ -336,6 +337,71 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_background_image'
+  block_2:
+    id: block_2
+    display_title: Slideshow
+    display_plugin: block
+    position: 2
+    display_options:
+      title: 'Programs Slideshow'
+      style:
+        type: slick
+        options:
+          caption:
+            name: '0'
+            description__value: '0'
+            field_background_image: '0'
+            view_taxonomy_term: '0'
+          optionset: slideshow
+          class: ''
+          id: ''
+          image: ''
+          link: ''
+          overlay: ''
+          title: ''
+          vanilla: true
+          layout: ''
+          cache: 0
+          skin: ''
+          style: column
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          thumbnail: ''
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_caption: ''
+          thumbnail_effect: ''
+          thumbnail_position: ''
+          override: false
+          preserve_keys: false
+          visible_items: null
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        title: false
+        style: false
+        row: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
