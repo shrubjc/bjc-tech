@@ -1,0 +1,29 @@
+{#/**
+*
+* Callout Bar
+*
+**/
+#}
+{% if content.field_subheading or content.field_body  %}
+    <div class="full-width-content callout-bar">
+        <div class="container">
+            <div class="callout-bar_copy">
+                {% if content.field_title  %}
+                    <h2>{{ content.field_title }}</h2>
+                {% endif %}
+                {% if content.field_body  %}
+                    {{ content.field_body }}
+                {% endif %}
+            </div>
+                <div class="callout-bar_link">
+                    <a class="button-unlined" href= {{ content.field_link[0]['#url'] }} target="_self">
+                        {% if content.field_icon_class  %}
+                            <i class= {{ content.field_icon_class }}></i>
+                             
+                        {% endif %}
+                        {{  content.field_link[0]['#title']  }}
+                    </a>
+                </div>
+        </div>
+    </div>
+{% endif %}
