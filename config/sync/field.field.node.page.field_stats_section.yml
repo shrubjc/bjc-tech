@@ -1,0 +1,61 @@
+uuid: df4ca7bb-af34-44d2-8054-36765038f6c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stats_section
+    - node.type.page
+    - paragraphs.paragraphs_type.animated_counter
+  module:
+    - entity_reference_revisions
+id: node.page.field_stats_section
+field_name: field_stats_section
+entity_type: node
+bundle: page
+label: 'Stats Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      animated_counter: animated_counter
+    negate: 0
+    target_bundles_drag_drop:
+      animated_counter:
+        weight: 12
+        enabled: true
+      basic_wysiwyg:
+        weight: 13
+        enabled: false
+      callout_bar:
+        weight: 14
+        enabled: false
+      content_card:
+        weight: 15
+        enabled: false
+      content_card_child:
+        weight: 16
+        enabled: false
+      featured_video_gallery:
+        weight: 17
+        enabled: false
+      home_page_content_with_image:
+        weight: 18
+        enabled: false
+      home_page_hero_header:
+        weight: 19
+        enabled: false
+      instagram_gallery:
+        weight: 20
+        enabled: false
+      slideshow:
+        weight: 21
+        enabled: false
+      upcoming_events:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions
