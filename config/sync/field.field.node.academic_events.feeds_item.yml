@@ -1,0 +1,23 @@
+uuid: d78ceead-23d7-4569-85bc-3fdd34ff3a53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.academic_events
+  module:
+    - feeds
+id: node.academic_events.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: academic_events
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

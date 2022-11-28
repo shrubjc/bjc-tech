@@ -1,0 +1,111 @@
+uuid: 4d12aaa4-94ff-479b-9c73-ef08bb152c2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.academic_events.field_end_date
+    - field.field.node.academic_events.field_start_date
+    - field.field.node.academic_events.field_term
+    - node.type.academic_events
+  module:
+    - node
+label: 'Academic Events'
+id: academic_events
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: academic_events
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  author:
+    value: author
+    label: author
+    machine_name: author
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  academic_start_date:
+    value: academic_start_date
+    label: academic_start_date
+    machine_name: academic_start_date
+    type: csv
+  academic_end_date:
+    value: academic_end_date
+    label: academic_end_date
+    machine_name: academic_end_date
+    type: csv
+  academic_term:
+    value: academic_term
+    label: academic_term
+    machine_name: academic_term
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: uid
+    map:
+      target_id: author
+    settings:
+      language: ''
+      reference_by: uid
+      autocreate: 0
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: field_start_date
+    map:
+      value: academic_start_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_end_date
+    map:
+      value: academic_end_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_term
+    map:
+      value: academic_term
+    settings:
+      language: null

@@ -16,14 +16,14 @@ mode: default
 content:
   field_content:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_icon_class:
     type: string
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -31,7 +31,7 @@ content:
     region: content
   field_title:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 1
