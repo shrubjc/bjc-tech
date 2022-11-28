@@ -1,19 +1,29 @@
-uuid: 2deeb861-ae77-41c9-ba8a-6d786f1a9a53
+uuid: 01dcdb79-16e3-4ff5-b8a3-eb078bb253e2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
+    - options
 id: node.field_term
 field_name: field_term
 entity_type: node
-type: entity_reference
+type: list_string
 settings:
-  target_type: taxonomy_term
-module: core
+  allowed_values:
+    -
+      value: spring
+      label: Spring
+    -
+      value: summer
+      label: Summer
+    -
+      value: fall
+      label: Fall
+  allowed_values_function: ''
+module: options
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
