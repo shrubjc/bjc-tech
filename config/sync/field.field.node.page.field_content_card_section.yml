@@ -1,0 +1,61 @@
+uuid: 996826e2-c293-4158-b33e-e24008421cd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_card_section
+    - node.type.page
+    - paragraphs.paragraphs_type.content_card
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_card_section
+field_name: field_content_card_section
+entity_type: node
+bundle: page
+label: 'Content Card Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_card: content_card
+    negate: 0
+    target_bundles_drag_drop:
+      animated_counter:
+        weight: 12
+        enabled: false
+      basic_wysiwyg:
+        weight: 13
+        enabled: false
+      callout_bar:
+        weight: 14
+        enabled: false
+      content_card:
+        weight: 15
+        enabled: true
+      content_card_child:
+        weight: 16
+        enabled: false
+      featured_video_gallery:
+        weight: 17
+        enabled: false
+      home_page_content_with_image:
+        weight: 18
+        enabled: false
+      home_page_hero_header:
+        weight: 19
+        enabled: false
+      instagram_gallery:
+        weight: 20
+        enabled: false
+      slideshow:
+        weight: 21
+        enabled: false
+      upcoming_events:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions
