@@ -1,0 +1,17 @@
+<div class="content-cards_item">
+	<div class="image-with-content">
+		{% if content.field_icon_class %}
+			<i class="gradient {{ content.field_icon_class.0 }}"></i>
+		{% endif %}
+		{% if content.field_content or content.field_title %}
+			<div class="main-text">
+				{% if content.field_title %}
+					<h3>{{ content.field_title.0 }}</h3>
+				{% endif %}
+				{% if content.field_content %}
+					{{ content.field_content.0 }}
+				{% endif %}
+			</div>
+	{% endif %}
+	</div>
+</div>
