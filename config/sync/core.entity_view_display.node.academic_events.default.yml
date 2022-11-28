@@ -4,14 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.academic_events.body
-    - field.field.node.academic_events.feeds_item
     - field.field.node.academic_events.field_end_date
     - field.field.node.academic_events.field_start_date
     - field.field.node.academic_events.field_term
     - node.type.academic_events
   module:
     - datetime
-    - options
     - text
     - user
 id: node.academic_events.default
@@ -45,9 +43,10 @@ content:
     weight: 103
     region: content
   field_term:
-    type: list_default
+    type: entity_reference_label
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 104
     region: content
@@ -56,5 +55,4 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden:
-  feeds_item: true
+hidden: {  }
