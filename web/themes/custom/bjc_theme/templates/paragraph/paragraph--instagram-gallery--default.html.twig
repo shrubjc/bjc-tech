@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="gallery-wrap">
+        <!-- Instagram Gallery -->
+        <!-- start off insta check -->
+        <div class="insta-gallery">
+        <div class="insta-gallery_card card">
+        <a href= {{ content.field_instagram_link[0]['#url'] }} target="_blank"><img alt="" data-src={{ file_url(content.field_instagram_image['#items'].entity.uri.value) }} class=" lazyloaded" src={{ file_url(content.field_instagram_image['#items'].entity.uri.value) }} alt=""></noscript></a>
+        <div class="insta-user"><a href= {{ content.field_instagram_link[0]['#url'] }} target="_blank"><p>{{ content.field_insta_user }}</p></a></div>
+        </div>
+        <!-- End Insta Check -->
+        <!-- Start off Media Check -->
+</div>
+</div>
