@@ -1,9 +1,9 @@
-uuid: 5dfb983e-e16c-4775-a42d-f76c5c7c9877
+uuid: 2eca3aed-b269-4db0-b224-be76db0adbb2
 langcode: en
 status: true
 dependencies: {  }
-id: home_page_slideshow
-label: 'Home Page Slideshow'
+id: slideshow
+label: Slideshow
 icon_uuid: null
 icon_default: null
 description: ''
