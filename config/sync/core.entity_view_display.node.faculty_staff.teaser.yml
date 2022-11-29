@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.faculty_staff.body
+    - field.field.node.faculty_staff.feeds_item
     - field.field.node.faculty_staff.field_bjc_mobile_number
     - field.field.node.faculty_staff.field_department
     - field.field.node.faculty_staff.field_email_address
@@ -37,6 +38,7 @@ content:
     weight: 100
     region: content
 hidden:
+  feeds_item: true
   field_bjc_mobile_number: true
   field_department: true
   field_email_address: true
