@@ -20,3 +20,4 @@ global-styling:
       css/upcomingevents.css : {}
       css/contentcard.css : {}
       css/stats.css: {}
+      css/calloutbar.css: {}

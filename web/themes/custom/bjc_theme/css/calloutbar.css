@@ -1,0 +1,83 @@
+.yellow-gradient {
+    background-image: linear-gradient(272.45deg, #ffc50a -19.47%, #d56f1b 127.72%);
+}
+.callout-bar {
+    margin: 0 20px 20px;
+    background: linear-gradient(272.45deg, #ffc50a -19.47%, #d56f1b 127.72%);
+}
+.callout-bar .container {
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .callout-bar .container {
+        padding: 35px 100px;
+   }
+}
+@media (min-width: 1024px) {
+    .callout-bar .container {
+        flex-direction: row;
+        text-align: left;
+   }
+}
+.callout-bar .container .callout-bar_copy {
+    flex: 0 1 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+@media (min-width: 1024px) {
+    .callout-bar .container .callout-bar_copy {
+        text-align: left;
+        margin-bottom: 0px;
+        margin-right: 30px;
+   }
+}
+.callout-bar .container .callout-bar_copy h2 {
+    font-size: 40px;
+    color: #fff;
+}
+@media (min-width: 1280px) {
+    .callout-bar .container .callout-bar_copy h2 {
+        font-size: 50px;
+   }
+}
+.callout-bar .container .callout-bar_copy p {
+    color: #fff;
+    font-weight: bold;
+}
+.callout-bar .container .callout-bar_link {
+    flex: 0 0 auto;
+}
+.callout-bar .container .callout-bar_link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #00529b;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 7px 80px 8px;
+    transition: all 0.3s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 768px) {
+    .callout-bar .container .callout-bar_link a {
+        display: inline-block;
+   }
+}
+.callout-bar .container .callout-bar_link a:hover {
+    background-color: #00529b;
+    color: #fff;
+    border: 1px solid #00529b;
+}
+.callout-bar .container .callout-bar_link a i {
+    margin-right: 6px;
+    font-size: 15px;
+}
