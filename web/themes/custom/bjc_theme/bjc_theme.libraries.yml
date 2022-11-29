@@ -18,3 +18,5 @@ global-styling:
       css/homepage.css: {}
       css/custom.css: {}
       css/upcomingevents.css : {}
+      css/contentcard.css : {}
+      css/stats.css: {}
