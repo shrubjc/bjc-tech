@@ -1,0 +1,23 @@
+uuid: 880f0fdc-fbfb-4f7d-80ad-1c09dcc44bdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.faculty_staff
+  module:
+    - feeds
+id: node.faculty_staff.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: faculty_staff
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

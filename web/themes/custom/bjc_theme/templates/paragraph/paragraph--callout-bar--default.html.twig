@@ -18,8 +18,10 @@
                 <div class="callout-bar_link">
                     <a class="button-unlined" href= {{ content.field_link[0]['#url'] }} target="_self">
                         {% if content.field_icon_class  %}
-                            <i class= {{ content.field_icon_class }}></i>
-                             
+                         {% set conBody %}
+                            {{ content.field_icon_class }}
+                         {% endset %}
+                        <i {{ attributes.addClass(conBody|striptags|spaceless) }}></i>
                         {% endif %}
                         {{  content.field_link[0]['#title']  }}
                     </a>

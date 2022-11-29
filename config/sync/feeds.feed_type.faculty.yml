@@ -1,0 +1,184 @@
+uuid: 9c493d69-8a0a-4404-98cc-903d921465c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faculty_staff.field_bjc_mobile_number
+    - field.field.node.faculty_staff.field_department
+    - field.field.node.faculty_staff.field_email_address
+    - field.field.node.faculty_staff.field_in_person_meeting_link
+    - field.field.node.faculty_staff.field_job_title
+    - field.field.node.faculty_staff.field_office_number
+    - field.field.node.faculty_staff.field_online_meeting_link
+    - field.field.node.faculty_staff.field_phone_meeting_link
+    - node.type.faculty_staff
+  module:
+    - node
+label: faculty
+id: faculty
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: faculty_staff
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  tjob_itle:
+    value: 'Job title'
+    label: 'Job title'
+    machine_name: tjob_itle
+    type: csv
+  pubdate:
+    value: pubDate
+    label: pubDate
+    machine_name: pubdate
+    type: csv
+  department:
+    value: Department
+    label: Department
+    machine_name: department
+    type: csv
+  email_address:
+    value: 'Email address'
+    label: 'Email address'
+    machine_name: email_address
+    type: csv
+  office_number:
+    value: 'office number'
+    label: 'office number'
+    machine_name: office_number
+    type: csv
+  bjc_mobile_number:
+    value: 'bjc mobile number'
+    label: 'bjc mobile number'
+    machine_name: bjc_mobile_number
+    type: csv
+  phone_meeting_link:
+    value: 'phone meeting link'
+    label: 'phone meeting link'
+    machine_name: phone_meeting_link
+    type: csv
+  '':
+    value: 'phone meeting link'
+    label: 'phone meeting link'
+    machine_name: ''
+    type: blank
+  online_meeting_link_csv:
+    value: 'online meeting link'
+    label: 'online meeting link'
+    machine_name: online_meeting_link_csv
+    type: csv
+  in_person_meeting_link_csv:
+    value: 'in person meeting link'
+    label: 'in person meeting link'
+    machine_name: in_person_meeting_link_csv
+    type: csv
+  url_alias:
+    value: url_alias
+    label: url_alias
+    machine_name: url_alias
+    type: csv
+mappings:
+  -
+    target: field_job_title
+    map:
+      value: tjob_itle
+    settings:
+      language: ''
+    unique: {  }
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: created
+    map:
+      value: pubdate
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_department
+    map:
+      target_id: department
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_email_address
+    map:
+      value: email_address
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: field_office_number
+    map:
+      value: office_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_bjc_mobile_number
+    map:
+      value: bjc_mobile_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_online_meeting_link
+    map:
+      value: online_meeting_link_csv
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_phone_meeting_link
+    map:
+      value: phone_meeting_link
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_in_person_meeting_link
+    map:
+      value: in_person_meeting_link_csv
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: path
+    map:
+      alias: url_alias
+      pathauto: ''
+    settings:
+      language: null

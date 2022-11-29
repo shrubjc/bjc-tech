@@ -132,18 +132,6 @@
     text-align: center;
 }
 
-#counter .slick-slide h2 div{
-    font-size: 72px;
-}
-
-#counter .slick-slide h2 h2 p div{
-    font-size: 18px;
-    color: rgba(138, 136, 137, 0.8);
-}
-
-
-
-
 
 @media (min-width: 768px) {
     .homepage-hero .container .homepage-hero_content h1 span:after {
