@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.events.body
+    - field.field.node.events.feeds_item
     - field.field.node.events.field_add_to_calendar
     - field.field.node.events.field_end_date_time
     - field.field.node.events.field_event_categories
@@ -87,4 +88,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  feeds_item: true
