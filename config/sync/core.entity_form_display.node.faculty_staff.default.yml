@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.faculty_staff.body
+    - field.field.node.faculty_staff.feeds_item
     - field.field.node.faculty_staff.field_bjc_mobile_number
     - field.field.node.faculty_staff.field_department
     - field.field.node.faculty_staff.field_email_address
@@ -159,4 +160,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
