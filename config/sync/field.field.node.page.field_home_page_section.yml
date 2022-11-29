@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_home_page_section
     - node.type.page
     - paragraphs.paragraphs_type.animated_counter
+    - paragraphs.paragraphs_type.callout_bar
     - paragraphs.paragraphs_type.content_card
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
@@ -34,6 +35,7 @@ settings:
       upcoming_events: upcoming_events
       animated_counter: animated_counter
       featured_video_gallery: featured_video_gallery
+      callout_bar: callout_bar
       content_card: content_card
     negate: 0
     target_bundles_drag_drop:
@@ -45,7 +47,7 @@ settings:
         enabled: false
       callout_bar:
         weight: 14
-        enabled: false
+        enabled: true
       content_card:
         weight: 15
         enabled: true
@@ -66,9 +68,6 @@ settings:
         enabled: false
       slideshow:
         weight: -13
-        enabled: true
-      stats:
-        weight: 23
         enabled: true
       upcoming_events:
         weight: -12

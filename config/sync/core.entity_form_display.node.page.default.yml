@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_content_card_section
     - field.field.node.page.field_home_page_section
-    - field.field.node.page.field_stats_section
     - node.type.page
   module:
     - paragraphs
@@ -35,45 +33,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_content_card_section:
-    type: paragraphs
-    weight: 123
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
   field_home_page_section:
     type: paragraphs
     weight: 121
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_stats_section:
-    type: paragraphs
-    weight: 122
     region: content
     settings:
       title: Paragraph
