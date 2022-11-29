@@ -1,39 +1,39 @@
-uuid: eb27ae35-a746-460d-95ff-9d8e84c515b2
+uuid: ca12243d-289d-4d00-ab87-98614179c3ab
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.callout_bar.field_body
-    - field.field.paragraph.callout_bar.field_icon_class
-    - field.field.paragraph.callout_bar.field_link
-    - field.field.paragraph.callout_bar.field_title
-    - paragraphs.paragraphs_type.callout_bar
+    - field.field.paragraph.home_page_slideshow.field_body
+    - field.field.paragraph.home_page_slideshow.field_headline
+    - field.field.paragraph.home_page_slideshow.field_link
+    - field.field.paragraph.home_page_slideshow.field_subheading
+    - paragraphs.paragraphs_type.home_page_slideshow
   module:
     - link
     - text
-id: paragraph.callout_bar.default
+id: paragraph.home_page_slideshow.default
 targetEntityType: paragraph
-bundle: callout_bar
+bundle: home_page_slideshow
 mode: default
 content:
   field_body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
-  field_icon_class:
+  field_headline:
     type: string
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_link:
     type: link
-    label: hidden
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -41,12 +41,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
-  field_title:
-    type: text_default
-    label: hidden
-    settings: {  }
+  field_subheading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
