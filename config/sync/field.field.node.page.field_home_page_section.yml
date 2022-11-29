@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
+    - paragraphs.paragraphs_type.home_page_slideshow
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.upcoming_events
   module:
@@ -37,6 +38,7 @@ settings:
       featured_video_gallery: featured_video_gallery
       callout_bar: callout_bar
       content_card: content_card
+      home_page_slideshow: home_page_slideshow
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -62,6 +64,9 @@ settings:
         enabled: true
       home_page_hero_header:
         weight: -15
+        enabled: true
+      home_page_slideshow:
+        weight: 21
         enabled: true
       instagram_gallery:
         weight: -9
