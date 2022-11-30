@@ -11,7 +11,7 @@ id: paragraph.home_page_hero_header.field_content
 field_name: field_content
 entity_type: paragraph
 bundle: home_page_hero_header
-label: Content
+label: Description
 description: ''
 required: false
 translatable: false
