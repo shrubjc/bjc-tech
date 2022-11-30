@@ -1,0 +1,10 @@
+uuid: 4c40a7c0-311c-4885-a406-f95dab7b9b32
+langcode: en
+status: true
+dependencies: {  }
+id: expand_and_collapse
+label: 'Expand and Collapse'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+<div class="expand-collapse">
+        <div class="expand-collapse_item">
+            {% if content.field_headline or content.field_content  %}
+                <div class="collapse-toggle" role="button">
+                    <div class="collapsible">
+                        {{ content.field_headline }}
+                        <span><i class="fa-solid fa-circle-plus"></i></span>
+                    </div>
+                </div>
+             {% else %}
+                <div class="non-collapsible">
+                    {{ content.field_headline }}
+                </div>
+             {% endif %}
+
+            {% if content.field_content  %}
+                <div class="collapse-content">
+                   {{ content.field_content }}
+                </div>
+            {% endif %}
+        </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="flex flex_expand-collapse">
+    <div class="container">
+        <div class="main-content">
+            {% if content.field_headline or content.field_content  %}
+                <div class="intro-content">
+                    {% if content.field_headline  %}
+                        <h2 id="">{{ content.field_headline }}</h2>
+                    {% endif %}
+                    {% if content.field_content  %}
+                        <div class="copy">{{ content.field_content }}</div>
+                   {% endif %}
+                </div>
+           {% endif %}
+            {% if content.field_expand_and_collapse  %}
+               {{ content.field_expand_and_collapse }}
+            {% endif %}
+        </div>
+    </div><!-- .container -->
+</div><!-- .flex_expand-collapse -->

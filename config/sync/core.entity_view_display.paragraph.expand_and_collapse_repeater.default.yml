@@ -1,0 +1,31 @@
+uuid: d4642b21-4ac2-4ee2-bcbd-a2e0b4756dc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expand_and_collapse_repeater.field_content
+    - field.field.paragraph.expand_and_collapse_repeater.field_headline
+    - paragraphs.paragraphs_type.expand_and_collapse_repeater
+  module:
+    - text
+id: paragraph.expand_and_collapse_repeater.default
+targetEntityType: paragraph
+bundle: expand_and_collapse_repeater
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
