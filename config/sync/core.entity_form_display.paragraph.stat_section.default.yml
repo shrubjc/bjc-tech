@@ -1,0 +1,46 @@
+uuid: 89a2ab71-32e9-40b4-ab45-08700ed549f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_section.field_image
+    - field.field.paragraph.stat_section.field_stat_child_section
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.stat_section
+  module:
+    - image
+    - paragraphs
+id: paragraph.stat_section.default
+targetEntityType: paragraph
+bundle: stat_section
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_stat_child_section:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

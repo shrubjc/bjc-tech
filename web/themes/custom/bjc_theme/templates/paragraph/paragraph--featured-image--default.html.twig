@@ -1,0 +1,32 @@
+{#
+*
+* Form
+*
+#}
+<div class="full-width-content featured-image-block ">
+{% set conBody %}
+{{ content.field_background_color }}                         
+{% endset %}
+  <div {{ attributes.addClass(conBody|striptags|spaceless) }} >
+    <div class="container">
+        <div class="content">
+            {% if content.field_headline  %}
+              <h2>{{ content.field_headline }}</h2>
+            {% endif %}
+            {% if content.field_body  %}
+                <div class="copy">
+                   {{ content.body }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="image-wrap">
+            <img src={{ file_url(content.field_image['#items'].entity.uri.value) }} alt="">
+            <a class="button-yellow" href={{ content.field_link[0]['#url'] }} target="_blank">{{ content.field_link[0]['#title'] }}</a>
+        </div>
+    </div>
+    {% if content.field_background_texture  %}
+        <div class="image-overlay"><img src={{ file_url(content.field_background_texture['#items'].entity.uri.value) }} alt="area texture"></div>
+    {% endif %}
+
+</div>
+</div>

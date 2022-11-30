@@ -8,11 +8,12 @@ dependencies:
     - paragraphs.paragraphs_type.animated_counter
     - paragraphs.paragraphs_type.callout_bar
     - paragraphs.paragraphs_type.content_card
+    - paragraphs.paragraphs_type.featured_image
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
-    - paragraphs.paragraphs_type.recent_news
     - paragraphs.paragraphs_type.home_page_slideshow
+    - paragraphs.paragraphs_type.recent_news
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.upcoming_events
   module:
@@ -21,14 +22,14 @@ id: node.page.field_home_page_section
 field_name: field_home_page_section
 entity_type: node
 bundle: page
-label: "Home Page Section"
-description: ""
+label: 'Home Page Section'
+description: ''
 required: false
 translatable: false
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:paragraph"
+  handler: 'default:paragraph'
   handler_settings:
     target_bundles:
       home_page_hero_header: home_page_hero_header
@@ -39,8 +40,9 @@ settings:
       featured_video_gallery: featured_video_gallery
       callout_bar: callout_bar
       content_card: content_card
-      recent_news: recent_news
+      featured_image: featured_image
       home_page_slideshow: home_page_slideshow
+      recent_news: recent_news
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -58,6 +60,9 @@ settings:
       content_card_child:
         weight: 16
         enabled: false
+      featured_image:
+        weight: 20
+        enabled: true
       featured_video_gallery:
         weight: -10
         enabled: true
