@@ -1,0 +1,21 @@
+uuid: 658911ed-5f59-416b-adf6-f418b1a8cb09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.expand_and_collapse_repeater
+  module:
+    - text
+id: paragraph.expand_and_collapse_repeater.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: expand_and_collapse_repeater
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

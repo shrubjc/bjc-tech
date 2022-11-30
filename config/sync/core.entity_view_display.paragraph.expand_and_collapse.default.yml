@@ -1,0 +1,42 @@
+uuid: 38cb60f6-fd76-45db-8358-3f302608159a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expand_and_collapse.field_content
+    - field.field.paragraph.expand_and_collapse.field_expand_and_collapse
+    - field.field.paragraph.expand_and_collapse.field_headline
+    - paragraphs.paragraphs_type.expand_and_collapse
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.expand_and_collapse.default
+targetEntityType: paragraph
+bundle: expand_and_collapse
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_expand_and_collapse:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
