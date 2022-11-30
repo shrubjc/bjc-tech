@@ -1,0 +1,290 @@
+.featured-video-gallery .main-content {
+    height: auto;
+    padding: 330px 20px 60px;
+    background-size: cover;
+    background-position: 75% center;
+}
+@media (min-width: 768px) {
+    .featured-video-gallery .main-content {
+        height: 80vh;
+        padding: 100px;
+        background-size: cover;
+   }
+}
+.featured-video-gallery .main-content h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.featured-video-gallery .main-content h2 div div:nth-child(1){
+    display: none;
+}
+
+.featured-video-gallery .main-content h2 div div:nth-child(2){
+    font-size: 48px;
+}
+
+.featured-video-gallery .main-content h2 + p + div div:nth-child(1){
+    display: none;
+}
+
+.featured-video-gallery .main-content h2 + p + div div:nth-child(2){
+    font-size: 20px;
+    color: white;
+    margin-top: -30px;
+    text-transform: uppercase;
+}
+
+.video-button{
+    float: left;
+    color: #00529B;
+    background-color: white;
+    border-radius: 500px;
+    height: 20px;
+    margin-top: -36px;
+}
+
+@media (min-width: 768px) {
+    .featured-video-gallery .main-content h2 {
+        max-width: 50%;
+   }
+}
+.featured-video-gallery .main-content p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .featured-video-gallery .main-content p {
+        margin-top: 60px;
+        margin-bottom: 60px;
+   }
+}
+.featured-video-gallery .main-content .gallery-wrap {
+    position: relative;
+}
+
+.video div:nth-child(2){
+    display: flex;
+    margin-bottom: -50px;
+}
+
+.video-popup + div{
+    position: absolute;
+    width: 97% !important;
+    left: 0px;
+}
+
+.video div:nth-child(odd){
+    width: 100%;
+}
+
+.video div:nth-child(even){
+    width: 100%;
+}
+
+
+
+/*
+@media (min-width: 768px) {
+    .gallery-wrap .insta-gallery {
+        margin: -50px auto 0px;
+   }
+}
+.gallery-wrap .insta-gallery .insta-gallery_card {
+    max-width: 45%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+}
+@media (min-width: 768px) {
+    .gallery-wrap .insta-gallery .insta-gallery_card {
+        max-width: 23%;
+        max-height: 250px;
+   }
+}
+@media (min-width: 1024px) {
+    .gallery-wrap .insta-gallery .insta-gallery_card {
+        max-width: 23%;
+        max-height: 378px;
+   }
+}
+@media (min-width: 1280px) {
+    .gallery-wrap .insta-gallery .insta-gallery_card {
+        max-width: 25%;
+        max-height: 450px;
+   }
+} */
+.video div:nth-child(2) div .gallery-wrap .insta-gallery .insta-gallery_card{
+    transform: rotate(-9.52deg);
+}
+
+.video div:nth-child(2) div:nth-child(2) .gallery-wrap .insta-gallery .insta-gallery_card{
+    transform: rotate(9.22deg);
+}
+
+.video div:nth-child(2) div:nth-child(3) .gallery-wrap .insta-gallery .insta-gallery_card{
+    transform: rotate(-2.22deg);
+}
+
+.video div:nth-child(2) div:nth-child(4) .gallery-wrap .insta-gallery .insta-gallery_card{
+    transform: rotate(12.47deg);
+}
+
+.gallery-wrap .insta-gallery .insta-gallery_card a {
+    display: block;
+    overflow: hidden;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease-in-out;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card img:hover {
+    transform: scale(1.1);
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .insta-user {
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .insta-user a {
+    color: #fff;
+    text-decoration: none;
+    overflow: visible;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .insta-user a p {
+    font-weight: 600;
+    color: #fff;
+    transition: transform 0.7s ease-in-out;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .insta-user a p:hover {
+    transform: scale(1.1);
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .insta-user a p:before {
+    font-family: "Font Awesome 6 Brands";
+    content: '\f16d';
+    margin-right: 5px;
+}
+.gallery-wrap .insta-gallery .insta-gallery_card .slick-arrows {
+    display: none;
+}
+.gallery-wrap .media-gallery-wrap {
+    position: relative;
+    margin-top: 20px;
+}
+/* .gallery-wrap .media-gallery-wrap .media-gallery {
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger {
+    margin: 0 10px;
+    position: relative;
+    width: 100%;
+    max-width: calc(100vw - 40px);
+    max-height: 326px;
+    min-height: 326px;
+}
+@media (min-width: 768px) {
+    .gallery-wrap .media-gallery-wrap .media-gallery .image-trigger {
+        max-width: 405px;
+        min-width: 405px;
+   }
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger a {
+    display: block;
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger img {
+    object-fit: cover;
+    min-height: 326px;
+    width: 100%;
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger i {
+    color: #fff;
+    opacity: 0.85;
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger:hover i {
+    opacity: 1;
+    z-index: 999;
+}
+.gallery-wrap .media-gallery-wrap .media-gallery .image-trigger:hover img {
+    filter: brightness(90%);
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows {
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+@media (min-width: 768px) {
+    .gallery-wrap .media-gallery-wrap .slick-arrows {
+        position: absolute;
+        right: 0;
+        top: 20%;
+        background: #fff;
+        padding-left: 10px;
+        display: block;
+        margin-top: 0;
+   }
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video, .gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video {
+    background: #fff;
+    padding: 5px 40px 5px 40px;
+    color: #00529b;
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video i, .gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video i {
+    font-size: 30px;
+    font-weight: 300;
+    transition: transform 0.7s ease-in-out;
+}
+@media (min-width: 768px) {
+    .gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video, .gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video {
+        padding: 30px 10px 30px 10px;
+   }
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video {
+    border: 1px solid #00529b;
+    border-radius: 0 100px 100px 0;
+}
+@media (min-width: 768px) {
+    .gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video {
+        border: none;
+        border-radius: 0;
+   }
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .next-arrow-video:hover i {
+    transform: scale(1.3);
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video {
+    border: 1px solid #00529b;
+    border-right: none;
+    border-radius: 100px 0 0 100px;
+}
+@media (min-width: 768px) {
+    .gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video {
+        border: none;
+        border-right: none;
+        border-bottom: 1px solid #8a8889;
+        border-radius: 0;
+   }
+}
+.gallery-wrap .media-gallery-wrap .slick-arrows .prev-arrow-video:hover i {
+    transform: scale(1.3);
+} */
