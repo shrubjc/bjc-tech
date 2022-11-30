@@ -9,6 +9,7 @@ libraries:
 base theme: false
 regions:
   primary_menu: 'Primary menu'
+  header_alert: 'Header Alert'
   header_logo: 'Header Logo'
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'

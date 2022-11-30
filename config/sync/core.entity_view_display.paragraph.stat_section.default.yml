@@ -1,0 +1,37 @@
+uuid: 5a1d6054-a88b-4a18-a254-f593b04a9739
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_section.field_image
+    - field.field.paragraph.stat_section.field_stat_child_section
+    - paragraphs.paragraphs_type.stat_section
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.stat_section.default
+targetEntityType: paragraph
+bundle: stat_section
+mode: default
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_stat_child_section:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
