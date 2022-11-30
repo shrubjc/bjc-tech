@@ -1,0 +1,29 @@
+uuid: f98daaf4-ee9f-425c-9b27-f7ede7b8c6ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_news
+    - node.type.posts
+    - paragraphs.paragraphs_type.recent_news
+id: paragraph.recent_news.field_featured_news
+field_name: field_featured_news
+entity_type: paragraph
+bundle: recent_news
+label: 'Featured News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      posts: posts
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

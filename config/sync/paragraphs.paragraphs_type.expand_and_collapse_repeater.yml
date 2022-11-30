@@ -1,0 +1,10 @@
+uuid: 4e2a51d5-dc82-40a6-869a-4338bad72f23
+langcode: en
+status: true
+dependencies: {  }
+id: expand_and_collapse_repeater
+label: 'Expand and Collapse Repeater'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

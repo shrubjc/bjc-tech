@@ -56,8 +56,9 @@
 #}
 <div id="page-wrapper">
   <div id="page">
-    <header id="masthead" class="site-header">
-      <div class="container">
+    <header id="masthead" class="site-newheader">
+      {{ page.header_alert }}
+      <div class="headercontainer">
         <div class="site-branding">
           {{ page.header_logo }}
         </div>
@@ -71,6 +72,8 @@
         </div>
       </div>
     </header>
+
+
     {% if page.highlighted %}
       <div class="highlighted">
         <aside class="layout-container section clearfix" role="complementary">
@@ -132,16 +135,16 @@
 
 
 
-<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-newfooter" style="margin-top: 250px">
    <div class="layout-container">
       {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
                 <div class="action-bar">
-                    <div class="container">
+                    <div>
                         {{ page.footer_first }}
                     </div>
                 </div>
                 <div class="site-info">
-                  <div class="container">
+                  <div class="footersubcontainer">
 
 
                       <div class="contact-info page-two">
@@ -195,53 +198,5 @@
     </div>
 </footer>
 
-
-
-{#  Old  #}
-    {# <footer id="colophon" class="site-footer">
-      <div class="layout-container">
-        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-          <div class="action-bar">
-            <div class="container">
-              {{ page.footer_first }}
-            </div>
-          </div>
-          <div class="site-info">
-            <div class="container">
-              <div class="contact-info">
-                {{ page.footer_second }}
-              </div>
-              {{ page.footer_third }}
-            </div>
-          <div>
-          
-          {{ page.footer_fourth }}
-        {% endif %}
-        {% if page.footer_fifth %}
-          <div class="site-footer__bottom">
-            {{ page.footer_fifth }}
-          </div>
-        {% endif %}
-      </div>
-      {% if page.copyright_section_first or page.copyright_section_second or page.copyright_section_third %}
-        <div class= "copyright">
-          <div class= "container">
-            <div>
-              {{ page.copyright_section_first }}
-            </div>
-            <div>
-              {{ page.copyright_section_second }}
-            </div>
-            <div>
-              {{ page.copyright_section_third }}
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    </footer> #}
-
-
-
-
-  </div>
+ </div>
 </div>

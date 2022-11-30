@@ -37,3 +37,8 @@ function bjc_theme_theme_suggestions_page_alter(array &$suggestions, array $vari
     $suggestions[] = 'page__' . $error;
   }
 }
+
+
+function bjc_theme_preprocess_paragraph(&$variables){
+$variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}
