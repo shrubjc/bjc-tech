@@ -21,3 +21,4 @@ global-styling:
       css/contentcard.css : {}
       css/stats.css: {}
       css/calloutbar.css: {}
+      css/featuredvideo.css: {}

@@ -1,5 +1,5 @@
 <div class="full-width-content featured-video-gallery" >
-    <div class="homepage-hero" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
+    <div class="main-content" style="background-image:url({{ file_url(content.field_background_image['#items'].entity.uri.value | image_style('hero_headline_banner')) }})">
     {% if content.field_quote  %}
             <h2>{{ content.field_quote }}</h2>
         {% endif %}    
