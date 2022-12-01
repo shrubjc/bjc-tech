@@ -11,7 +11,7 @@ id: paragraph.basic_wysiwyg.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: basic_wysiwyg
-label: Title
+label: 'Section Title'
 description: ''
 required: false
 translatable: false

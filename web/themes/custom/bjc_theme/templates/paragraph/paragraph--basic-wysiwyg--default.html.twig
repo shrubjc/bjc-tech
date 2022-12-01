@@ -1,0 +1,13 @@
+<div class="flex flex_basic-wysiwyg">
+    <div class="container">
+        <div class="main-content">
+             {% if  content.field_title or content.body  %}
+                <div class="section-intro">
+                        <h2 id="<?php echo $classID; ?>">{{ content.field_title }}</h2>
+                        <div class="copy">{{ content.field_body	 }}</div>
+                    
+                {% endif %}
+        {{ content.field_ta }}
+        </div>
+    </div>
+</div>

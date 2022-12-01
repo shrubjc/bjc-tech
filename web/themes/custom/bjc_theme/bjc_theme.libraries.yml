@@ -22,3 +22,4 @@ global-styling:
       css/stats.css: {}
       css/calloutbar.css: {}
       css/featuredvideo.css: {}
+      css/recentnews.css: {}

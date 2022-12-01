@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.basic_wysiwyg.field_body
-    - field.field.paragraph.basic_wysiwyg.field_table_content_1
-    - field.field.paragraph.basic_wysiwyg.field_table_content_2
+    - field.field.paragraph.basic_wysiwyg.field_ta
     - field.field.paragraph.basic_wysiwyg.field_title
     - paragraphs.paragraphs_type.basic_wysiwyg
   module:
+    - entity_reference_revisions
     - text
 id: paragraph.basic_wysiwyg.default
 targetEntityType: paragraph
@@ -17,30 +17,23 @@ mode: default
 content:
   field_body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
-  field_table_content_1:
-    type: string
-    label: above
+  field_ta:
+    type: entity_reference_revisions_entity_view
+    label: hidden
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     weight: 2
     region: content
-  field_table_content_2:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_title:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
