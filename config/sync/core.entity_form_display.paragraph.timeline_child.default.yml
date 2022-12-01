@@ -1,0 +1,23 @@
+uuid: 37776ef8-c5f0-491f-8841-7cadb7f177fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_child.field_year
+    - paragraphs.paragraphs_type.timeline_child
+id: paragraph.timeline_child.default
+targetEntityType: paragraph
+bundle: timeline_child
+mode: default
+content:
+  field_year:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

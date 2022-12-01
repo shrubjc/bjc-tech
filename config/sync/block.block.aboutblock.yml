@@ -1,0 +1,25 @@
+uuid: 22931af4-5fcc-4db0-be2d-82a805e7fc33
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c520010b-5e15-489b-8da8-281c0484f71f'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: aboutblock
+theme: bjc_theme
+region: featured_bottom_first
+weight: -18
+provider: null
+plugin: 'block_content:c520010b-5e15-489b-8da8-281c0484f71f'
+settings:
+  id: 'block_content:c520010b-5e15-489b-8da8-281c0484f71f'
+  label: 'About Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

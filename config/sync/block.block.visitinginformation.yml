@@ -1,0 +1,25 @@
+uuid: da649113-4154-4552-98ec-1a8a338953e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.visiting-information
+  module:
+    - system
+  theme:
+    - bjc_theme
+id: visitinginformation
+theme: bjc_theme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:visiting-information'
+settings:
+  id: 'system_menu_block:visiting-information'
+  label: 'Visiting Information'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

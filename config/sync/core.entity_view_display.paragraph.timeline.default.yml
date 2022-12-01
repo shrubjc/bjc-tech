@@ -1,0 +1,21 @@
+uuid: 607728b3-0b3a-4be9-9d5f-6e9fa7b18d3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline.field_headline
+    - paragraphs.paragraphs_type.timeline
+id: paragraph.timeline.default
+targetEntityType: paragraph
+bundle: timeline
+mode: default
+content:
+  field_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

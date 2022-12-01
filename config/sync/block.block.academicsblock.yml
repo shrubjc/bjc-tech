@@ -1,0 +1,25 @@
+uuid: b8f54d51-2da8-416e-9f71-cead3ce24e69
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:0862e1cc-768c-48df-b78f-39de96c2876f'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: academicsblock
+theme: bjc_theme
+region: featured_bottom_first
+weight: -17
+provider: null
+plugin: 'block_content:0862e1cc-768c-48df-b78f-39de96c2876f'
+settings:
+  id: 'block_content:0862e1cc-768c-48df-b78f-39de96c2876f'
+  label: 'Academics Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
