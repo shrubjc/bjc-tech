@@ -1,0 +1,30 @@
+uuid: 4afb1d02-25fe-4edb-a156-dc31a36e0f8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_content.field_a
+    - field.field.paragraph.table_content.field_b
+    - paragraphs.paragraphs_type.table_content
+id: paragraph.table_content.default
+targetEntityType: paragraph
+bundle: table_content
+mode: default
+content:
+  field_a:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_b:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

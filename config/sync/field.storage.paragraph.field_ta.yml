@@ -1,18 +1,17 @@
-uuid: 1d90b373-653e-4a9d-9db1-66e354780ee4
+uuid: 3f0194d1-27be-4f89-b3b2-97365ce212fd
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - paragraphs
-id: paragraph.field_table_content_2
-field_name: field_table_content_2
+id: paragraph.field_ta
+field_name: field_ta
 entity_type: paragraph
-type: string
+type: entity_reference_revisions
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true

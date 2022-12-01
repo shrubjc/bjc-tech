@@ -1,0 +1,32 @@
+uuid: adbc885b-9ceb-4e91-90f6-458ef67c4bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_content.field_a
+    - field.field.paragraph.table_content.field_b
+    - paragraphs.paragraphs_type.table_content
+id: paragraph.table_content.default
+targetEntityType: paragraph
+bundle: table_content
+mode: default
+content:
+  field_a:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_b:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
