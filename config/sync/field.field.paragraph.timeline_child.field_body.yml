@@ -1,0 +1,21 @@
+uuid: 2f907512-9b29-45bf-863d-92bdedc9c0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.timeline_child
+  module:
+    - text
+id: paragraph.timeline_child.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: timeline_child
+label: 'Image Copy'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
