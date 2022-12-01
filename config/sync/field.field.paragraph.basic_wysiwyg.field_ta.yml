@@ -1,0 +1,82 @@
+uuid: 91eb8b6d-18c7-4b5b-a80c-5d33c29fab37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ta
+    - paragraphs.paragraphs_type.basic_wysiwyg
+    - paragraphs.paragraphs_type.table_content
+  module:
+    - entity_reference_revisions
+id: paragraph.basic_wysiwyg.field_ta
+field_name: field_ta
+entity_type: paragraph
+bundle: basic_wysiwyg
+label: 'Table Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      table_content: table_content
+    negate: 0
+    target_bundles_drag_drop:
+      animated_counter:
+        weight: 19
+        enabled: false
+      basic_wysiwyg:
+        weight: 20
+        enabled: false
+      callout_bar:
+        weight: 21
+        enabled: false
+      content_card:
+        weight: 22
+        enabled: false
+      content_card_child:
+        weight: 23
+        enabled: false
+      expand_and_collapse:
+        weight: 24
+        enabled: false
+      expand_and_collapse_repeater:
+        weight: 25
+        enabled: false
+      featured_image:
+        weight: 26
+        enabled: false
+      featured_video_gallery:
+        weight: 27
+        enabled: false
+      home_page_content_with_image:
+        weight: 28
+        enabled: false
+      home_page_hero_header:
+        weight: 29
+        enabled: false
+      home_page_slideshow:
+        weight: 30
+        enabled: false
+      instagram_gallery:
+        weight: 31
+        enabled: false
+      recent_news:
+        weight: 32
+        enabled: false
+      slideshow:
+        weight: 33
+        enabled: false
+      stat_section:
+        weight: 34
+        enabled: false
+      table_content:
+        weight: 35
+        enabled: true
+      upcoming_events:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

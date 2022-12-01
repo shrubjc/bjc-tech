@@ -11,8 +11,8 @@ dependencies:
     - bjc_theme
 id: views_block__featured_news_block_2
 theme: bjc_theme
-region: content
-weight: -6
+region: sidebar_first
+weight: -7
 provider: null
 plugin: 'views_block:featured_news-block_2'
 settings:
