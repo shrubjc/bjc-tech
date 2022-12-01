@@ -1,0 +1,21 @@
+uuid: e3f74715-7c2c-4cad-9bc4-240582e8fb64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.home_page_hero_header
+  module:
+    - options
+id: paragraph.home_page_hero_header.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: home_page_hero_header
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
