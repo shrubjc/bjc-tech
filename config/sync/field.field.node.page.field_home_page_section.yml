@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.basic_wysiwyg
     - paragraphs.paragraphs_type.callout_bar
     - paragraphs.paragraphs_type.content_card
+    - paragraphs.paragraphs_type.expand_and_collapse
     - paragraphs.paragraphs_type.featured_image
     - paragraphs.paragraphs_type.featured_video_gallery
     - paragraphs.paragraphs_type.home_page_content_with_image
@@ -45,6 +46,7 @@ settings:
       featured_image: featured_image
       home_page_slideshow: home_page_slideshow
       recent_news: recent_news
+      expand_and_collapse: expand_and_collapse
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -64,7 +66,7 @@ settings:
         enabled: false
       expand_and_collapse:
         weight: 24
-        enabled: false
+        enabled: true
       expand_and_collapse_repeater:
         weight: 25
         enabled: false
@@ -85,6 +87,9 @@ settings:
         enabled: true
       instagram_gallery:
         weight: -9
+        enabled: false
+      media_gallery:
+        weight: 33
         enabled: false
       recent_news:
         weight: 22
