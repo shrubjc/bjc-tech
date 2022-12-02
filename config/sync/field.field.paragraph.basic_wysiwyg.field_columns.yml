@@ -1,0 +1,21 @@
+uuid: 35aa8ac1-735d-478a-8341-5e1e646c13cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.basic_wysiwyg
+  module:
+    - options
+id: paragraph.basic_wysiwyg.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: basic_wysiwyg
+label: Columns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.form.field_body
+    - field.field.paragraph.form.field_form_embed
     - field.field.paragraph.form.field_headline
     - paragraphs.paragraphs_type.form
   module:
     - text
+    - webform
 id: paragraph.form.default
 targetEntityType: paragraph
 bundle: form
@@ -19,6 +21,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_form_embed:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_headline:
     type: string
