@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.featured_video_gallery.field_cite
     - field.field.paragraph.featured_video_gallery.field_gallery
     - field.field.paragraph.featured_video_gallery.field_gallery_type
+    - field.field.paragraph.featured_video_gallery.field_media_gallery
     - field.field.paragraph.featured_video_gallery.field_quote
     - field.field.paragraph.featured_video_gallery.field_video_iframe_code
     - paragraphs.paragraphs_type.featured_video_gallery
@@ -53,6 +54,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_media_gallery:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_quote:
     type: basic_string
