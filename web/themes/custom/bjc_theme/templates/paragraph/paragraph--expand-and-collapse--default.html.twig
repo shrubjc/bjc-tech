@@ -4,7 +4,7 @@
             {% if content.field_headline or content.field_content  %}
                 <div class="intro-content">
                     {% if content.field_headline  %}
-                        <h2 id="">{{ content.field_headline }}</h2>
+                        <h2 id="{{ content.field_headline.0 }}">{{ content.field_headline }}</h2>
                     {% endif %}
                     {% if content.field_content  %}
                         <div class="copy">{{ content.field_content }}</div>
