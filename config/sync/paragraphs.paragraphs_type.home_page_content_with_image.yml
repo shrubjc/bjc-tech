@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: home_page_content_with_image
-label: 'Home Page Content with Image'
+label: 'Content with Image'
 icon_uuid: null
 icon_default: null
 description: ''

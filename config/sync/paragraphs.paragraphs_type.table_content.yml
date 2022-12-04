@@ -1,9 +1,9 @@
-uuid: bafecdbf-6a59-40d3-b67c-58c5c036ec52
+uuid: cbf8a0a2-511d-4caa-8b69-ab917c3c1652
 langcode: en
 status: true
 dependencies: {  }
-id: home_page_hero_header
-label: 'Hero Banner'
+id: table_content
+label: 'Table content'
 icon_uuid: null
 icon_default: null
 description: ''

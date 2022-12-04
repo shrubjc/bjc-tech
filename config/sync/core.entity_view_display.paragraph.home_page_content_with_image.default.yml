@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.home_page_content_with_image.field_image_alignment
     - field.field.paragraph.home_page_content_with_image.field_link
     - field.field.paragraph.home_page_content_with_image.field_subheading
+    - field.field.paragraph.home_page_content_with_image.field_video_iframe_code
     - paragraphs.paragraphs_type.home_page_content_with_image
   module:
     - image
@@ -72,5 +73,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_video_iframe_code:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden: {  }

@@ -11,7 +11,7 @@ id: paragraph.home_page_hero_header.field_hero_headline
 field_name: field_hero_headline
 entity_type: paragraph
 bundle: home_page_hero_header
-label: 'Hero Headline'
+label: Title
 description: ''
 required: false
 translatable: false

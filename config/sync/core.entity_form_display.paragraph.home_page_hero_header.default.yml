@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.home_page_hero_header.field_background_color
     - field.field.paragraph.home_page_hero_header.field_background_image
     - field.field.paragraph.home_page_hero_header.field_content
     - field.field.paragraph.home_page_hero_header.field_hero_headline
@@ -18,6 +19,12 @@ targetEntityType: paragraph
 bundle: home_page_hero_header
 mode: default
 content:
+  field_background_color:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_background_image:
     type: image_image
     weight: 0

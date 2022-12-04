@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.basic_wysiwyg.field_body
-    - field.field.paragraph.basic_wysiwyg.field_table_content_1
-    - field.field.paragraph.basic_wysiwyg.field_table_content_2
+    - field.field.paragraph.basic_wysiwyg.field_ta
     - field.field.paragraph.basic_wysiwyg.field_title
     - paragraphs.paragraphs_type.basic_wysiwyg
   module:
+    - paragraphs
     - text
 id: paragraph.basic_wysiwyg.default
 targetEntityType: paragraph
@@ -23,21 +23,23 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_table_content_1:
-    type: string_textfield
+  field_ta:
+    type: paragraphs
     weight: 2
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_table_content_2:
-    type: string_textfield
-    weight: 3
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_title:
     type: text_textfield

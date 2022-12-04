@@ -1,0 +1,21 @@
+uuid: 18f03c4e-1310-4972-8b5b-5475ed4d9f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_iframe_code
+    - paragraphs.paragraphs_type.home_page_content_with_image
+  module:
+    - text
+id: paragraph.home_page_content_with_image.field_video_iframe_code
+field_name: field_video_iframe_code
+entity_type: paragraph
+bundle: home_page_content_with_image
+label: 'Video Iframe Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
