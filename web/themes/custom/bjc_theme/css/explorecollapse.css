@@ -1,0 +1,131 @@
+.intro-content h2 div{
+    color: #001a32;
+    font-size: 48px;
+}
+
+.intro-content .copy div p{
+    font-size: 19px;
+    opacity: 0.9;
+}
+
+.flex_expand-collapse .expandchild-collapse{
+    margin-top: 20px;
+} 
+
+/* .expand-collapse_item{
+   
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.expand-collapse_item:hover{
+    box-shadow:  0px 1px 5px 0px #00000030;
+} */
+.expandchild-collapse .expandchild-collapse_item{
+    transition: color 0.3s ease-in-out;
+    background-color: white;
+    box-shadow: 0px 1px 5px 0px #00000015;
+}
+
+.expandchild-collapse .expandchild-collapse_item .collapse-toggle .collapsible{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.expandchild-collapse .expandchild-collapse_item .collapse-toggle .collapsible div{
+    font-size: 20px;
+    padding: 10px;
+    color: #00529b;
+}
+
+.expandchild-collapse .expandchild-collapse_item .collapse-content div{
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.collapse-content div p{
+    font-size: 19px;
+    opacity: 0.9;
+    padding: 10px;
+}
+
+.fa-circle-plus{
+    font-size: 24px;
+    color: #00529b;
+    cursor: pointer;
+    padding: 0px 15px;
+}
+  
+/* 
+.flex_expand-collapse .expandchild-collapse_item{
+    box-shadow: 0px 1px 5px 0px #0001;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.flex_expand-collapse .expandchild-collapse_item:hover {
+    box-shadow: 0px 1px 5px 0px #000 30;
+}
+.flex_expand-collapse .expandchild-collapse_item:hover .collapsible{
+    color: #00315d;
+}
+.flex_expand-collapse .non-collapsible{
+    padding: 20px;
+    background: white;
+    margin-top: 15px;
+}
+.flex_expand-collapse .collapse-toggle{
+    display: flex;
+    flex-basis: 100%;
+    position: relative;
+    padding: 20px 60px 20px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    background: white;
+}
+.flex_expand-collapse .collapse-toggle:hover{
+    cursor: pointer;
+}
+
+.flex_expand-collapse .collapse-toggle span{
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease-in-out;
+    font-size: 30px;
+}
+.flex_expand-collapse .collapse-toggle.active span i:before{
+    content: '\f056';
+}
+.flex_expand-collapse .collapse-content {
+    padding: 0px 20px 20px;
+    background: white;
+    font-size: 16px;
+}
+.flex_expand-collapse .collapse-content p {
+    text-align: left;
+    margin: 0;
+    padding: 0 0 20px;
+}
+.flex_expand-collapse .collapse-content p:last-of-type{
+    margin-bottom: 0px;
+}
+.textbook-expand-collapse {
+    padding: 50px 0;
+    background: rgba(243, 249, 255, .7);
+}
+@media (min-width: 1024px) {
+    .textbook-expand-collapse {
+        padding: 100px 0;
+   }
+}
+.textbook-expand-collapse .container {
+    max-width: 900px;
+}
+.textbook-expand-collapse .intro-content {
+    text-align: center;
+} */
