@@ -1563,7 +1563,7 @@ display:
         fields: true
       display_description: ''
       display_extenders: {  }
-      path: news-listing
+      path: news
     cache_metadata:
       max-age: -1
       contexts:
