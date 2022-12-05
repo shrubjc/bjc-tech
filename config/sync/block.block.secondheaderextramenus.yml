@@ -1,0 +1,25 @@
+uuid: 817d7744-773b-4901-a287-2e91f0f61cb9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:action_block_type:c4d35d23-0f3e-4e81-be4d-c5a5964668b2'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: secondheaderextramenus
+theme: bjc_theme
+region: secondary_menu
+weight: -12
+provider: null
+plugin: 'block_content:c4d35d23-0f3e-4e81-be4d-c5a5964668b2'
+settings:
+  id: 'block_content:c4d35d23-0f3e-4e81-be4d-c5a5964668b2'
+  label: 'Second Header Extra Menus'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

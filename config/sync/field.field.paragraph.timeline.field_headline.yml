@@ -1,0 +1,19 @@
+uuid: 2f87c523-610b-4c5f-9b81-8de594b5475b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.timeline
+id: paragraph.timeline.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: timeline
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

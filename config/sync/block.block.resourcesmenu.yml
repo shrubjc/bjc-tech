@@ -1,0 +1,25 @@
+uuid: d0669357-fc1d-4a56-8d24-c33a64c0bdc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources-menu
+  module:
+    - system
+  theme:
+    - bjc_theme
+id: resourcesmenu
+theme: bjc_theme
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'system_menu_block:resources-menu'
+settings:
+  id: 'system_menu_block:resources-menu'
+  label: 'Resources Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

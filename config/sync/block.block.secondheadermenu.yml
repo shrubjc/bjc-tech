@@ -1,0 +1,20 @@
+uuid: 2ab589f1-47ed-4925-a7f7-cf41991aeeeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - bjc_theme
+id: secondheadermenu
+theme: bjc_theme
+region: secondary_menu
+weight: -13
+provider: null
+plugin: 'we_megamenu_block:second-header-menu'
+settings:
+  id: 'we_megamenu_block:second-header-menu'
+  label: 'Second Header Menu'
+  label_display: '0'
+  provider: we_megamenu
+visibility: {  }

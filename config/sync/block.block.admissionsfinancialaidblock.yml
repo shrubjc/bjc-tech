@@ -1,0 +1,25 @@
+uuid: d4549a9d-904d-4282-bf65-d6d6b9dc1bdf
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:e7623f37-327e-4f78-a930-0331f62a9625'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: admissionsfinancialaidblock
+theme: bjc_theme
+region: featured_bottom_first
+weight: -14
+provider: null
+plugin: 'block_content:e7623f37-327e-4f78-a930-0331f62a9625'
+settings:
+  id: 'block_content:e7623f37-327e-4f78-a930-0331f62a9625'
+  label: 'Admissions & Financial Aid Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
