@@ -1,0 +1,25 @@
+uuid: 813341fc-847c-4e26-8e11-6cc4ebd9bbf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.first-header-extra-menu-
+  module:
+    - system
+  theme:
+    - bjc_theme
+id: firstheaderextramenu
+theme: bjc_theme
+region: primary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:first-header-extra-menu-'
+settings:
+  id: 'system_menu_block:first-header-extra-menu-'
+  label: 'First Header Extra Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

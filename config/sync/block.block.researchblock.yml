@@ -1,0 +1,25 @@
+uuid: 904bf998-7e16-4a41-8e08-0fb0391c7003
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:13bb13fb-6442-4099-afcb-8ca31411843d'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: researchblock
+theme: bjc_theme
+region: featured_bottom_first
+weight: -16
+provider: null
+plugin: 'block_content:13bb13fb-6442-4099-afcb-8ca31411843d'
+settings:
+  id: 'block_content:13bb13fb-6442-4099-afcb-8ca31411843d'
+  label: 'Research Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
