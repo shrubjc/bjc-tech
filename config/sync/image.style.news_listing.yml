@@ -1,0 +1,15 @@
+uuid: 7cb741ed-16ac-40ce-ba84-52de714dc07e
+langcode: en
+status: true
+dependencies: {  }
+name: news_listing
+label: 'News Listing(310X241)'
+effects:
+  fcc360bc-839a-4bf9-a48d-5ab03802534d:
+    uuid: fcc360bc-839a-4bf9-a48d-5ab03802534d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 310
+      height: 214
+      anchor: center-center
