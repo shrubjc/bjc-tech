@@ -15,11 +15,14 @@ global-styling:
     theme:
       css/header.css: {}
       css/footer.css: {}
-      css/homepage.css: {}
-      css/custom.css: {}
-      css/upcomingevents.css : {}
-      css/contentcard.css : {}
-      css/stats.css: {}
       css/calloutbar.css: {}
+      css/contentcard.css : {}
+      css/custom.css: {}
+      css/customstyle.css: {}
+      css/explorecollapse.css: {}
       css/featuredvideo.css: {}
+      css/homepage.css: {}
       css/recentnews.css: {}
+      css/stats.css: {}
+      css/slideshow.css: {}
+      css/upcomingevents.css : {}
