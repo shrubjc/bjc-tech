@@ -1,7 +1,7 @@
 // Header Search
 .search {
     position: relative;
-    top: 2px;
+    padding-top: 4px;
 
     &.desktop {
         display: none;
@@ -35,6 +35,7 @@
         &:hover {
             color: $footer_blue;
             cursor: pointer;
+            text-decoration: none;
         }
     }
 
