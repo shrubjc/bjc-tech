@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.expand_and_collapse
     - paragraphs.paragraphs_type.featured_image
     - paragraphs.paragraphs_type.featured_video_gallery
+    - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.home_page_content_with_image
     - paragraphs.paragraphs_type.home_page_hero_header
     - paragraphs.paragraphs_type.home_page_slideshow
@@ -47,6 +48,7 @@ settings:
       home_page_slideshow: home_page_slideshow
       recent_news: recent_news
       expand_and_collapse: expand_and_collapse
+      form: form
     negate: 0
     target_bundles_drag_drop:
       animated_counter:
@@ -75,6 +77,9 @@ settings:
         enabled: true
       featured_video_gallery:
         weight: -10
+        enabled: true
+      form:
+        weight: 30
         enabled: true
       home_page_content_with_image:
         weight: -14
