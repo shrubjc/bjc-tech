@@ -100,21 +100,21 @@ input[type="reset"] {
 
 .button-inverse {
 	@extend .button;
-	border-color: $white;
-	color: $white;
-	background: transparent;
-	-webkit-font-smoothing: antialiased;
+	border-color: $white !important;
+	color: $white !important;
+	background: transparent !important;
+	-webkit-font-smoothing: antialiased !important;
 
 	&:visited {
-		border-color: $white;
-		color: $white;
-		background: transparent;
+		border-color: $white !important;
+		color: $white !important;
+		background: transparent !important;
 	}
 
 	&:hover,
 	&:focus {
-		background: white;
-		color: $bjc_blue;
+		background: white !important;
+		color: $bjc_blue !important;
 	}
 }
 

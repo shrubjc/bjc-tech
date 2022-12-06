@@ -58,14 +58,15 @@
   <div id="page">
     <header id="masthead" class="site-newheader">
       {{ page.header_alert }}
-      <div class="headercontainer">
+      <div class="container headercontainer">
         <div class="site-branding">
           {{ page.header_logo }}
         </div>
-        <div class="navigation-container">
-				  <div class="utility-bar">
-            {{ page.primary_menu }}
-          </div>
+        <div
+          class="navigation-container">
+          {# <div class="utility-bar"> #}
+          {{ page.primary_menu }}
+          {# </div> #}
           <nav id="site-navigation" class="main-navigation">
             {{ page.secondary_menu }}
           </nav>
@@ -124,79 +125,69 @@
     {% endif %}
 
 
-
-
-
-
     {# Footer Section #}
 
 
+    <footer id="colophon" class="site-newfooter" style="margin-top: 250px">
+      <div class="action-bar">
+        <div class="layout-container container">
+          {% if page.footer_first %}
+            {{ page.footer_first }}
+          {% endif %}
+        </div>
+      </div>
+      <div class="site-info">
+        <div class=" container footersubcontainer">
+          {% if page.footer_second %}
+            <div class="contact-info page-two">
+              {{ page.footer_second }}
+            </div>
+          {% endif %}
+          {% if page.footer_third or page.footer_fourth %}
+            <div class=" menu-footer-menu-container page-three">
+              {% if page.footer_third %}
+                {{ page.footer_third }}
+              {% endif %}
+              {% if page.footer_fourth %}
+                {{ page.footer_fourth }}
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if page.footer_fifth %}
+        <div class="site-footer__bottom page-five">
+          {{ page.footer_fifth }}
+        {% endif %}
+      </div>
 
 
-
-
-<footer id="colophon" class="site-newfooter" style="margin-top: 250px">
-   <div class="layout-container">
-      {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-                <div class="action-bar">
-                    <div>
-                        {{ page.footer_first }}
-                    </div>
-                </div>
-                <div class="site-info">
-                  <div class="footersubcontainer">
-
-
-                      <div class="contact-info page-two">
-                        {{ page.footer_second }}
-                      </div>
-
-                      <div class="page-three">
-                      {{ page.footer_third }}
-                      </div>
-                  
-                      <div class="page-four">
-                      {{ page.footer_fourth }}
-                      {% endif %}
-                      </div>
-                      
-                      {% if page.footer_fifth %}
-                      <div class="site-footer__bottom page-five" >
-                        {{ page.footer_fifth }}           
-                      {% endif %}
-                      </div>
-
-                  </div>
-                  </div>
-    
-
-
-         {% if page.copyright_section_first or page.copyright_section_second or page.copyright_section_third %}
-         <div class= "copyright">
-              <div class= "container">
-                <h4>
-                    {{ page.copyright_section_first }}
-                </h4>
+      {% if page.copyright_section_first or page.copyright_section_second or page.copyright_section_third %}
+        <div class="copyright">
+          <div class="container">
+            <div class="bjc-footer-container">
+              <div class="bjc-footer-logo">
+                {{ page.copyright_section_first }}
               </div>
-
-
               <div class="straight-line">
-                <h4 class="footerpage-two">
-                <a>
+                <span class="footerpage-two">
+                  <a>
                     {{ page.copyright_section_second }}
-                </a>
-                </h4>
-                <span class="footerpage-three">
-                <a>
-                    {{ page.copyright_section_third }}
-                </a>
+                  </a>
                 </span>
-               
+                <span class="footerpage-three">
+                  <a>
+                    {{ page.copyright_section_third }}
+                  </a>
+                </span>
               </div>
+            </div>
           </div>
-         {% endif %}
-    </div>
-</footer>
 
- </div>
-</div>
+
+        </div>
+      {% endif %}
+    </div>
+  </footer>
+</div></div>
