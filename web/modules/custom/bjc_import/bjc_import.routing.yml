@@ -1,0 +1,8 @@
+bjc_import.textbooks_import:
+  path: '/textbooks-import'
+  defaults:
+    _form: '\Drupal\bjc_import\Form\BjcTextbookImport'
+    _title: 'Textbooks Import'
+  requirements:
+    _permission: 'access bulk_import'
+
