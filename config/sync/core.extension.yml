@@ -33,6 +33,7 @@ module:
   help: 0
   history: 0
   image: 0
+  image_popup: 0
   link: 0
   media: 0
   menu_link_content: 0

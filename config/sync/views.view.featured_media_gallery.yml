@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - image.style.inner_page_slideshow
   module:
-    - image
+    - image_popup
     - node
     - paragraphs
     - slick_views
@@ -77,12 +76,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: image_popup_field_formatter
           settings:
-            image_link: ''
             image_style: inner_page_slideshow
-            image_loading:
-              attribute: lazy
+            image_style_popup: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
