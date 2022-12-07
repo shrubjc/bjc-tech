@@ -1,0 +1,616 @@
+<?php
+
+/**
+ * @file
+ * Contains goldfarb_import.module.
+ */
+
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+use Drupal\image\Entity\ImageStyle;
+
+const TEXTBOOKS_CONTENT_TYPE = 'textbooks';
+const RESOURCE_CONTENT_TYPE = 'resource';
+const EVENTS_CONTENT_TYPE = 'events';
+const POSTS_CONTENT_TYPE = 'posts';
+const FACULTY_STAFF_CONTENT_TYPE = 'faculty_staff';
+const ACADEMIC_EVENTS_CONTENT_TYPE = 'academic_events';
+const GOLDFARB_IMPORT_TRANSLATE_CONTEXT = 'goldfarb_import';
+const TEXTBOOKS_CSV_COLUMNS = 14;
+const GOLDFARB_DATA_IMPORT_BATCH_SIZE = 50;
+const GOLDFARB_DATA_IMPORT_UPDATE_CSV_ROW_LENGTH = 4069;
+const TEXTBOOKS_AMAZON_FIELD = 'field_amazon_link';
+const TEXTBOOKS_CHEGG_FIELD = 'field_chegg_link';
+const TEXTBOOKS_PUBLISHER_FIELD = 'field_publisher_link';
+const REGISTER_LINK_FIELD = 'field_register_link';
+const LINK_FIELD = 'field_link';
+const TEXTBOOKS_EDITION_FIELD = 'field_edition';
+const TEXTBOOKS_COURSE_NAMES_FIELD = 'field_course_names';
+const TEXTBOOKS_ISBN_FIELD = 'field_isbn';
+const TEXTBOOKS_REQUIREMENT_STATUS_FIELD = 'field_requirement_status';
+const TEXTBOOKS_AUTHOR_FIELD = 'field_author';
+const RESOURCE_DEPARTMENT_FIELD = 'field_resource_department';
+const RESOURCE_CATEGORY_FIELD = 'field_resource_category';
+const EVENT_CATEGORY_FIELD = 'field_event_categories';
+const LOCATION_FIELD = 'field_location';
+const RESOURCE_FILE_FIELD = 'field_file';
+const FEATURED_IMAGE = 'field_featured_image';
+const COURSE_NAMES_VOCAB = 'course_names';
+const COURSE_NUMBERS_VOCAB = 'course_numbers';
+const RESOURCE_DEPARTMENTS_VOCAB = 'resources_departments';
+const RESOURCE_CATEGORIES_VOCAB = 'resources_categories';
+const POSTS_BLOG_CATEGORIES_VOCAB = 'blog_categories';
+const POSTS_CATEGORIES_FIELD = 'field_category';
+const USER_VOCAB = 'user';
+const USER_FIELD = 'field_user';
+const POSTS_TAG_FIELD = 'field_tag';
+const END_DATE_FIELD = 'field_end_date';
+const END_DATE_TIME_FIELD = 'field_end_date_time';
+const START_DATE_TIME_FIELD = 'field_start_date_time';
+const START_DATE_FIELD = 'field_start_date';
+const TERM_FIELD = 'field_term';
+const PROGRAMS_VOCAB = 'programs';
+const FACULTY_DEPARTMENT_VOCAB = 'faculty_staff_departments';
+const EVENT_CATEGORY_VOCAB = 'event_categories';
+const TRIMESTERS_VOCAB = 'trimesters';
+const TEXTBOOKS_COURSE_NUMBERS_FIELD = 'field_course_numbers';
+const TEXTBOOKS_PROGRAMS_FIELD = 'field_programs';
+const MOBILE_NUMBER_FIELD= 'field_goldfarb_mobile_number';
+const FACULTY_DEPARTMENT_FIELD= 'field_department';
+const FACULTY_EMAIL_FIELD= 'field_email_address';
+const FACULTY_IN_PERSON_MEETING_LINK_FIELD= 'field_in_person_meeting_link';
+const FACULTY_JOB_TITLE_FIELD= 'field_job_title';
+const FACULTY_OFFICE_NUMBER_FIELD= 'field_office_number';
+const FACULTY_ONLINE_MEETING_LINK_FIELD= 'field_online_meeting_link';
+const FACULTY_PHONE_MEETING_LINK_FIELD= 'field_phone_meeting_link';
+const FACULTY_PHOTO_FIELD= 'field_photo';
+const TEXTBOOKS_TRIMESTERS_FIELD = 'field_trimesters';
+const BULK_UPDATE_INPUT_FILE = 'public://textbooks.csv';
+const BULK_UPDATE_RESULTS_FILE = 'public://import/bulk_update_textbooks_results.csv';
+
+function _goldfarb_data_import_unique_file( $name ) : string {
+    $uniqueFile = $name;
+    if(!empty($name)) {
+        $strArray = explode(".", $name);
+        $uniqueFile = $strArray[0]."_".\Drupal::currentUser()->id()."_".rand(10,1000).".".$strArray[1];
+    }
+    return $uniqueFile;
+}
+
+function importTextbooksContentItem ($items, &$context){
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing textbooks type content.
+      goldfarb_import_textbooks_data($item, $context);
+    }
+  }
+
+  function importPostsContentItem($items, &$context) {
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing posts type content.
+      goldfarb_import_posts_data($item, $context);
+    }
+  }
+
+  function importFacultyStaffContentItem ($items, &$context) {
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing faculty staff type content.
+      goldfarb_import_faculty_staff_data($item, $context);
+    }
+  }
+
+  function importAcademicContentItem ($items, &$context){
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing academic type content.
+      goldfarb_import_academic_data($item, $context);
+    }
+  }
+
+  function importEventsContentItem ($items, &$context){
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing event type content.
+      goldfarb_import_event_data($item, $context);
+    }
+  }
+
+  function importResourceContentItem ($items, &$context) {
+    foreach ($items as $item) {
+      // Display data while running batch.
+      $batch_size=sizeof($items);
+      $context['message'] = sprintf("Importing %s rows per batch.", $batch_size);
+      $context['results'][] = sizeof($items);
+      // Importing resource type content.
+      goldfarb_import_resource_data($item, $context);
+    }
+  }
+           
+  function importContentItemCallback($success, $results, $operations) {
+    if ($success) {
+      $message = \Drupal::translation()->formatPlural(
+        count($results),
+        'One item processed.', '@count items processed.'
+      );
+    }
+    else {
+      $message = t('Finished with an error.');
+    }
+    \Drupal::messenger()->addMessage($message);
+  }
+
+  function goldfarb_import_posts_data($data, &$context) {
+    if (!empty($data)) {
+      $image_target_path = 'public://import/';
+      $title = $body = $type = '';
+      $categories = $department_names = $featured_img_arr = [];
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == 'post') {
+          $type = POSTS_CONTENT_TYPE;
+        }
+        if (!empty($data[14])) {
+          $categories = attach_terms_to_fields($data[14], POSTS_BLOG_CATEGORIES_VOCAB);
+        }
+        if (!empty($data[2])) {
+          $body = $data[2];
+        }
+        if (!empty($data[12])) {
+          $image_source_path = 'public://' . str_ireplace("https://gsondev.wpengine.com/wp-content", '', $data[12]);
+          $image_data = file_get_contents ($image_source_path);//echo $image_data;die('sd');
+          $image_alt = 'featured image';
+          $filename = '1682Screenshot-2022-02-23-131416.png';
+          $image_object = \Drupal::service('file.repository')->writeData($image_data, $image_target_path . $filename, FileSystemInterface::EXISTS_REPLACE);
+          $featured_img_arr = [
+            'target_id' => $image_object->id(),
+            'alt' => $image_alt,
+          ];
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+          'type' => $type,
+          'title' => $title,
+          'body' => [
+            'value' => $body,
+            'format' => 'full_html',
+          ],
+          FEATURED_IMAGE => $featured_img_arr,
+          POSTS_CATEGORIES_FIELD => $categories,
+          'status' => 1,
+          'uid' => 1
+        ]);
+        $node->save();
+        \Drupal::logger('goldfarb_import')->notice(t('pOSTS Node with ID: %node_id created.'),
+        array(
+          '%node_id' => $node->id(),
+        ));
+      }
+    }
+  }
+  
+  /**
+   * Helper function to create content - textbook.
+   */
+  function goldfarb_import_textbooks_data($data, &$context) {
+    if (!empty($data)) {
+      $title = $type = $amazon_link = $author = $chegg_link = $edition = $isbn = $publisher = '';
+      $requirement_status = '_none';
+      $course_names = $courses = $course_numbers = $course_nums = $programs_arr = $programs_tids = $trimesters_names = $trimesters = [];
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == 'textbook') {
+          $type = TEXTBOOKS_CONTENT_TYPE;
+        }
+        if (!empty($data[20])) {
+          $amazon_link = unserialize($data[20]);
+        }
+        if (!empty($data[26])) {
+          $author = $data[26];
+        }
+        if (!empty($data[22])) {
+          $chegg_link = unserialize($data[22]);
+        }
+        if (!empty($data[27])) {
+          $edition = $data[27];
+        }
+        if (!empty($data[29])) {
+          $isbn = $data[29];
+        }
+        if (!empty($data[24])) {
+          $pub_link = unserialize($data[24]);
+        }
+        if (!empty($data[31])) {
+          $requirement_status = strtolower(preg_replace('/\s+/', '', $data[31]));
+        }
+        if (!empty($data[16])) {
+          $course_names = attach_terms_to_fields($data[16], COURSE_NAMES_VOCAB);
+        }
+        if (!empty($data[17])) {
+          $course_numbers = attach_terms_to_fields($data[17], COURSE_NUMBERS_VOCAB);
+        }
+        if (!empty($data[15])) {
+          $programs_arr = attach_terms_to_fields($data[15], PROGRAMS_VOCAB);
+        }
+
+        if (!empty($data[14])) {
+          $trimesters_arr = attach_terms_to_fields($data[14], TRIMESTERS_VOCAB);
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+        'type' => $type,
+        'title' => $title,
+        TEXTBOOKS_AMAZON_FIELD => [
+      	  'uri'=> !empty($amazon_link) ? $amazon_link['url'] : '', 
+      	  'title' => !empty($amazon_link) ? substr($amazon_link['url'], 0, 200) : '',
+      	],
+        TEXTBOOKS_AUTHOR_FIELD => $author,
+        TEXTBOOKS_CHEGG_FIELD => [
+          'uri'=> !empty($chegg_link) ? $chegg_link['url'] : '',
+          'title' => !empty($chegg_link) ? substr($chegg_link['url'], 0, 200) : '',
+        ],
+        TEXTBOOKS_EDITION_FIELD => $edition,
+        TEXTBOOKS_ISBN_FIELD => $isbn,
+        TEXTBOOKS_PUBLISHER_FIELD => [
+          'uri'=> !empty($pub_link) ? $pub_link['url'] : '',
+          'title' => !empty($pub_link) ? substr($pub_link['url'], 0, 200) : '',
+        ],
+        TEXTBOOKS_REQUIREMENT_STATUS_FIELD => $requirement_status,
+        TEXTBOOKS_COURSE_NAMES_FIELD => $course_names,
+        TEXTBOOKS_COURSE_NUMBERS_FIELD => $course_numbers,
+        TEXTBOOKS_PROGRAMS_FIELD => $programs_arr,
+        TEXTBOOKS_TRIMESTERS_FIELD => $trimesters_arr,
+        'status' => 1,
+        'uid' => 1
+      ]);
+      $node->save();
+      \Drupal::logger('goldfarb_import')->notice(t('Textbooks Node with ID: %node_id created.'),
+        array(
+          '%node_id' => $node->id(),
+        ));
+      }
+    }
+  }
+
+  /**
+   * Helper function to create content - resource.
+   */
+  function goldfarb_import_resource_data($data, &$context) {
+    if (!empty($data)) {
+      $title = $link = $body = $type = $attachment = $file_id = '';
+      $categories = $department_names = [];
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == RESOURCE_CONTENT_TYPE) {
+          $type = RESOURCE_CONTENT_TYPE;
+          if (!empty($data[14])) {
+            $categories = attach_terms_to_fields($data[14], RESOURCE_CATEGORIES_VOCAB);
+          }
+          if (!empty($data[15])) {
+            $department_names = attach_terms_to_fields($data[15], RESOURCE_DEPARTMENTS_VOCAB);
+          }
+          if (!empty($data[16])) {
+            $users = attach_terms_to_fields($data[16], USER_VOCAB);
+          }
+          if (!empty($data[19])) {
+            $body = $data[19];
+          }
+          if (!empty($data[23])) {
+            $link = unserialize($data[23]);
+          }
+          if (!empty($data[13])) {
+            $attachments = explode("|", $data[13]);
+            if (!empty($attachments)) {
+              $fileRepository = \Drupal::service('file.repository');
+              $file_ids = [];
+              foreach ($attachments as $attachment) {
+                $filename = basename($attachment);
+                $data = file_get_contents(trim($attachment));
+                /** @var \Drupal\file\FileRepositoryInterface $fileRepository */
+                $file = $fileRepository->writeData($data, "public://import/" . $filename, FileSystemInterface::EXISTS_REPLACE);
+                $file_ids[]['target_id'] = $file->id();
+                unset($filename);
+                unset($file);
+              }
+            }
+          }
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+          'type' => $type,
+          'title' => $title,
+          LINK_FIELD => [
+            'uri'=> !empty($link) ? $link['url'] : '',
+            'title' => !empty($link) ? substr($link['url'], 0, 200) : '',
+          ],
+          RESOURCE_DEPARTMENT_FIELD => $department_names,
+          RESOURCE_CATEGORY_FIELD => $categories,
+          USER_FIELD => $users,
+          'body' => [
+            'value' => $body,
+            'format' => 'full_html',
+          ],
+          RESOURCE_FILE_FIELD => $file_ids,
+          'status' => 1,
+          'uid' => 1
+        ]);
+        $node->save();
+        \Drupal::logger('goldfarb_import')->notice(t('Resource Node with ID: %node_id created.'),
+          array(
+            '%node_id' => $node->id(),
+          ));
+        }
+    }
+  }
+
+  /**
+   * Helper function to create content - Academic Events.
+   */
+  function goldfarb_import_academic_data($data, &$context) {//print_r($data);die('sasa');
+    if (!empty($data)) {
+      $title = $type = $body = $startDate = $endDate = $start_year = $start_month = $start_year = $term = $status = $end_year = $end_month = $end_year = '';
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == 'academic_event') {
+          $type = ACADEMIC_EVENTS_CONTENT_TYPE;
+        }
+        if (!empty($data[16])) {
+          $start_year = substr($data[16],0,4);
+          $start_month = substr($data[16],4,2);
+          $start_day = substr($data[16],6,2);
+          $startDate = $start_year . '-' . $start_month . '-' . $start_day;
+        }
+        if (!empty($data[18])) {
+          $end_year = substr($data[18],0,4);
+          $end_month = substr($data[18],4,2);
+          $end_day = substr($data[18],6,2);
+          $endDate = $end_year . '-' . $end_month . '-' . $end_day;
+        }
+        if (!empty($data[20])) {
+          $term = strtolower($data[20]);
+        }
+        $status = 1;
+        if (!empty($data[23]) && $data[23] == 'draft') {
+          $status = 0;
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+          'type' => $type,
+          'title' => $title,
+          START_DATE_FIELD => $startDate,
+          END_DATE_FIELD => $endDate,
+          TERM_FIELD => $term,
+          'status' => $status,
+          'uid' => 1
+        ]);
+        $node->save();
+        \Drupal::logger('goldfarb_import')->notice(t('Academy Event Node with ID: %node_id created.'),
+          array(
+            '%node_id' => $node->id(),
+          ));
+      }
+    }
+  }
+
+  /**
+   * Helper function to create content - Events.
+   */
+  function goldfarb_import_event_data($data, &$context) {//print_r($data);die('sasa');
+    if (!empty($data)) {
+      $title = $type = $body = $startDate = $endDate = $start_year = $start_month = $start_year = $term = $status = $end_year = $end_month = $register_link = $location = $end_year = $startTime = $eventEnd = $eventStart = $endTime = '';
+      $event_cat = [];
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == 'event') {
+          $type = EVENTS_CONTENT_TYPE;
+        }
+        if (!empty($data[2])) {
+          $body = $data[2];
+        }
+        if (!empty($data[15])) {
+          $start_year = substr($data[15],0,4);
+          $start_month = substr($data[15],4,2);
+          $start_day = substr($data[15],6,2);
+          $startDate = $start_year . '-' . $start_month . '-' . $start_day;
+        }
+        if (!empty($data[19])) {
+          $startTime = $data[19];
+        }
+        $eventStart = $startDate . 'T' . $startTime;
+
+        if (!empty($data[17])) {
+          $end_year = substr($data[17],0,4);
+          $end_month = substr($data[17],4,2);
+          $end_day = substr($data[17],6,2);
+          $endDate = $end_year . '-' . $end_month . '-' . $end_day;
+        }
+        if (!empty($data[21])) {
+          $endTime = $data[21];
+        }
+        $eventEnd = $endDate . 'T' . $endTime;
+        if (!empty($data[14])) {
+          $event_cat = attach_terms_to_fields($data[14], EVENT_CATEGORY_VOCAB);
+        }
+        if (!empty($data[23])) {
+          $location = $data[23];
+        }
+        if (!empty($data[25])) {
+          $register_link = unserialize($data[25]);
+        }
+        $status = 1;
+        if (!empty($data[30]) && $data[30] == 'draft') {
+          $status = 0;
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+          'type' => $type,
+          'title' => $title,
+          'body' => [
+            'value' => $body,
+            'format' => 'full_html',
+          ],
+          END_DATE_TIME_FIELD => $eventEnd,
+          START_DATE_TIME_FIELD => $eventStart,
+          EVENT_CATEGORY_FIELD => $event_cat,
+          LOCATION_FIELD => $location,
+          REGISTER_LINK_FIELD => [
+          'uri'=> !empty($register_link) ? $register_link['url'] : '',
+          'title' => !empty($register_link) ? substr($register_link['url'], 0, 200) : '',
+        ],
+          'status' => $status,
+          'uid' => 1
+        ]);
+        $node->save();
+        \Drupal::logger('goldfarb_import')->notice(t('Event Node with ID: %node_id created.'),
+          array(
+            '%node_id' => $node->id(),
+          ));
+      }
+    }
+  }
+
+  function goldfarb_import_faculty_staff_data($data, &$context) {
+    if (!empty($data)) {
+      $title = $type = $mob_num = $body = $mail_address = $job_title = $file_id = '';
+      $department = [];
+      if (!empty($data[1])) {
+        $title = $data[1];
+        if (!empty($data[5]) && $data[5] == 'employee') {
+          $type = FACULTY_STAFF_CONTENT_TYPE;
+        }
+        if (!empty($data[21])) {
+          $mob_num = $data[21];
+        }
+         if (!empty($data[14])) {
+          $department = attach_terms_to_fields($data[14], FACULTY_DEPARTMENT_VOCAB);
+        }
+        if (!empty($data[17])) {
+          $mail_address = $data[17];
+        }
+        if (!empty($data[27])) {
+          $in_person_meet = unserialize($data[27]);
+        }
+        if (!empty($data[15])) {
+          $job_title = $data[15];
+        }
+        if (!empty($data[19])) {
+          $ofc_number = $data[19];
+        }
+        if (!empty($data[23])) {
+          $online_meeting_link = unserialize($data[23]);
+        }
+        if (!empty($data[25])) {
+          $phone_meeting_link = unserialize($data[25]);
+        }
+        if (!empty($data[7])) {
+          $fileRepository = \Drupal::service('file.repository');
+          $filename = basename($data[7]);
+          $data = file_get_contents(trim($data[7]));
+          /** @var \Drupal\file\FileRepositoryInterface $fileRepository */
+          $file = $fileRepository->writeData($data, "public://import/" . $filename, FileSystemInterface::EXISTS_REPLACE);
+          $file_id = $file->id();
+          $file = File::load($file_id);//echo $image_uri = $file->getFileUri();die('asdas');
+        }
+        $status = 1;
+        if (!empty($data[29]) && $data[29] == 'draft') {
+          $status = 0;
+        }
+      }
+      if (!empty($title) && !empty($type)) {
+        $image_media = Media::create([
+          'name' => 'My media name',
+          'bundle' => 'image',
+          'uid' => 1,
+          'langcode' => 'en',
+          'status' => 0,
+          FACULTY_PHOTO_FIELD => [
+            'target_id' => $file_id,
+            'alt' => t('My media alt attribute'),
+            'title' => t('My media title attribute'),
+          ],
+          'field_author' => '',
+          'field_date' => '2025-12-31T23:59:59',
+         ]);
+        $image_media->save();
+        $node = \Drupal::entityTypeManager()->getStorage('node')->create([
+          'type' => $type,
+          'title' => $title,
+          MOBILE_NUMBER_FIELD => $mob_num,
+          FACULTY_DEPARTMENT_FIELD => $department,
+          FACULTY_EMAIL_FIELD => $mail_address,
+          FACULTY_IN_PERSON_MEETING_LINK_FIELD => $in_person_meet['url'],
+          FACULTY_JOB_TITLE_FIELD => $job_title,
+          FACULTY_OFFICE_NUMBER_FIELD => $ofc_number,
+          FACULTY_ONLINE_MEETING_LINK_FIELD => $online_meeting_link['url'],
+          FACULTY_PHONE_MEETING_LINK_FIELD => $phone_meeting_link['url'],
+          FACULTY_PHOTO_FIELD => [
+            'target_id' => $file_id
+          ],
+          'status' => $status,
+          'uid' => 1
+        ]);
+        $node->save();
+        \Drupal::logger('goldfarb_import')->notice(t('Faculty/Staff Node with ID: %node_id created.'),
+          array(
+            '%node_id' => $node->id(),
+          ));
+      }
+    }
+  }
+
+  function getTidByName($name = NULL, $vid = NULL) {
+    if (empty($name) || empty($vid)) {
+      return 0;
+    }
+    $properties = [
+      'name' => $name,
+      'vid' => $vid,
+    ];
+    $terms = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term')->loadByProperties($properties);
+    $term = reset($terms);
+    return !empty($term) ? $term->id() : 0;
+  }
+
+  function attach_terms_to_fields($data_arr, $vocab): array {
+    $return_arr = [];
+    $terms = array_filter(explode("|", $data_arr));
+    if (!empty($terms)) {
+      foreach ($terms as $term) {
+        $tid = getTidByName($term, $vocab);
+        if (!empty($tid)) {
+          $return_arr[] = $tid;
+        } else {
+          $term_created = Term::create([ 'name' => $term, 'vid' => $vocab, ])->save();
+          $return_arr[] = $term_created;
+        }
+        unset($tid);
+      }
+    }
+    return $return_arr;
+  }
+
