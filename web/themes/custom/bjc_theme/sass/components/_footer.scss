@@ -529,4 +529,46 @@
       }
     }
   }
+  .bjc-footer-container{
+    display: flex;
+    padding: 15px 0;
+    .bjc-footer-logo{
+      flex-basis: 60%;
+    }
+    .straight-line{
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      width: 50%;
+      float: right;
+      flex-basis: 40%;
+      align-items: center;
+      .footerpage-two{
+        .content{
+          font-size: 14px;
+          line-height: 21px;
+          padding-right: 10px;
+        }
+      }
+      .footerpage-three{
+        #block-footerlinks{
+          .nav-btn{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            a{
+              font-size: 14px;
+              line-height: 21px;
+              text-decoration: underline;
+              &:before{
+                content: "|";
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

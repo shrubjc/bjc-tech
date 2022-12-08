@@ -22,7 +22,7 @@ h6 {
 }
 
 h1 {
-	font-family: $minionPro;
+	font-family: $font__main;
 	font-weight: bold;
 	font-size: 50px;
 	line-height: 60px;
@@ -174,4 +174,12 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
+}
+.main-navigation{
+	.navbar-we-mega-menu{
+		font-family: $font__main;
+		a{
+			font-family: $font__main;			
+		}
+	}
 }
