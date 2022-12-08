@@ -1,0 +1,45 @@
+uuid: 37776ef8-c5f0-491f-8841-7cadb7f177fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_child.field_body
+    - field.field.paragraph.timeline_child.field_image
+    - field.field.paragraph.timeline_child.field_year
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.timeline_child
+  module:
+    - image
+    - text
+id: paragraph.timeline_child.default
+targetEntityType: paragraph
+bundle: timeline_child
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_year:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

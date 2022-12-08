@@ -1,0 +1,15 @@
+uuid: fe82b431-36a4-42e0-b6dc-551ee61ea7dd
+langcode: en
+status: true
+dependencies: {  }
+name: inner_page_slideshow
+label: 'Inner Page SlideShow (405X326)'
+effects:
+  5dbb0eef-3443-4106-b214-a5c96aab9a64:
+    uuid: 5dbb0eef-3443-4106-b214-a5c96aab9a64
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 405
+      height: 326
+      anchor: center-center

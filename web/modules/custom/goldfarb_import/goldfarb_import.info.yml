@@ -1,0 +1,7 @@
+name: GOLDFARB Data Import
+description: Provide data import functionality from csv files.
+core: 8.x
+core_version_requirement: ^8 | ^9 || ^10
+type: module
+package: custom
+

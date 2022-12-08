@@ -12,7 +12,7 @@ dependencies:
 id: views_block__featured_news_block_2
 theme: bjc_theme
 region: sidebar_first
-weight: -7
+weight: -14
 provider: null
 plugin: 'views_block:featured_news-block_2'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: /node/8

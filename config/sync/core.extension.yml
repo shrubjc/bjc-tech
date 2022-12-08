@@ -30,9 +30,11 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  goldfarb_import: 0
   help: 0
   history: 0
   image: 0
+  image_popup: 0
   link: 0
   media: 0
   menu_link_content: 0
@@ -64,6 +66,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  views_base_url: 0
   views_ui: 0
   we_megamenu: 0
   webform: 0

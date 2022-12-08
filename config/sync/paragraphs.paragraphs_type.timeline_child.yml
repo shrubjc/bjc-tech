@@ -1,0 +1,10 @@
+uuid: 753b60cc-7c05-45ca-8060-494c5ddeb149
+langcode: en
+status: true
+dependencies: {  }
+id: timeline_child
+label: 'Timeline Child'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

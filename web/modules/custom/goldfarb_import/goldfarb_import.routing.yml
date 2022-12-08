@@ -1,0 +1,8 @@
+goldfarb_import.textbooks_import:
+  path: '/textbooks-import'
+  defaults:
+    _form: '\Drupal\goldfarb_import\Form\GoldfarbTextbookImport'
+    _title: 'Textbooks Import'
+  requirements:
+    _permission: 'access bulk_import'
+

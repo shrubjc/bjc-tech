@@ -1,0 +1,20 @@
+uuid: 91707005-b1c3-4b61-9b99-ffc63ff8b672
+langcode: en
+status: true
+dependencies:
+  module:
+    - bjc_common
+  theme:
+    - bjc_theme
+id: copyrightfooter
+theme: bjc_theme
+region: copyright_section_second
+weight: 0
+provider: null
+plugin: copyright_footer
+settings:
+  id: copyright_footer
+  label: 'Copyright Footer'
+  label_display: '0'
+  provider: bjc_common
+visibility: {  }

@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.basic_wysiwyg.field_body
+    - field.field.paragraph.basic_wysiwyg.field_columns
     - field.field.paragraph.basic_wysiwyg.field_ta
     - field.field.paragraph.basic_wysiwyg.field_title
     - paragraphs.paragraphs_type.basic_wysiwyg
   module:
     - entity_reference_revisions
+    - options
     - text
 id: paragraph.basic_wysiwyg.default
 targetEntityType: paragraph
@@ -21,6 +23,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_columns:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_ta:
     type: entity_reference_revisions_entity_view

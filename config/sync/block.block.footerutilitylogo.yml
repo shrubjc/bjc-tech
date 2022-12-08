@@ -1,0 +1,25 @@
+uuid: 9a7545d0-5957-4370-88b8-7be141ec3759
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:action_block_type:a5bcc05f-5ab5-45c1-bab7-173a9d3abb1e'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: footerutilitylogo
+theme: bjc_theme
+region: copyright_section_first
+weight: 0
+provider: null
+plugin: 'block_content:a5bcc05f-5ab5-45c1-bab7-173a9d3abb1e'
+settings:
+  id: 'block_content:a5bcc05f-5ab5-45c1-bab7-173a9d3abb1e'
+  label: 'Footer Utility Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 56d3c961-86d5-4980-8650-6329707ab285
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:action_block_type:c5692715-6cf4-49e1-8f13-4f2fd1f157b9'
+  module:
+    - block_content
+  theme:
+    - bjc_theme
+id: siteheaderlogo
+theme: bjc_theme
+region: header_logo
+weight: 0
+provider: null
+plugin: 'block_content:c5692715-6cf4-49e1-8f13-4f2fd1f157b9'
+settings:
+  id: 'block_content:c5692715-6cf4-49e1-8f13-4f2fd1f157b9'
+  label: 'Site Header Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
