@@ -289,7 +289,6 @@
 	padding: 20px;
 	h2 {
 		font-size: 24px;
-		text-transform: capitalize;
 	}
 	p {
 		font-size: 15px;
@@ -309,11 +308,6 @@
 		li {
 			margin-left: 0;
 			position: relative;
-			// a{
-			// 	font-weight: bold;
-			// 	font-style: normal;
-
-			// }
 			a {
 				color: $bjc_blue;
 				position: relative;
@@ -632,6 +626,9 @@ nav[data-style="Blue"] {
 								height: 100%;
 								.nav-callout{
 									padding: 40px;
+									h2{
+										text-transform: none !important;
+									}
 								}
 								.block-inner{
 									height: 100%;

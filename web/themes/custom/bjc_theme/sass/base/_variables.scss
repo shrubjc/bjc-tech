@@ -72,8 +72,8 @@ $color__text-screen: #21759b;
 $color__background-screen: #f1f1f1;
 
 //Fonts
-$minionPro: 'minion-pro', serif;
-$openSans: 'Open Sans', sans-serif;;
+$minionPro: 'minion-pro', serif !important;
+$openSans: 'Open Sans', sans-serif !important;
 
 //Font Awesome
 $fontAwesomeLight: var(--fa-font-light);
