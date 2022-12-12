@@ -28,8 +28,11 @@
         i {
             position: relative;
             margin-left: 8px;
-            font: $fontAwesomeRegular;
+            // font: $fontAwesomeRegular;
             font-size: 18px;
+            font-family: 'Font Awesome 5 Free';
+//    content: "\f101";
+   font-weight: 900;
         }
 
         &:hover {
@@ -97,6 +100,9 @@
             top: 5px;
             background:#fff0;
             transition: all .3s ease-in-out;
+            font-family: 'Font Awesome 5 Free';
+//    content: "\f101";
+   font-weight: 900;
 
             @include mobile {
                 padding: 4px 10px;

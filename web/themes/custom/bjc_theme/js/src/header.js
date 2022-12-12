@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
     var position = $(window).scrollTop();
 
     $(window).scroll(function() {
+      if($(window).width() > 1024){
         var scroll = $(window).scrollTop();
         if(scroll > position && scroll < 100) {
           $('.site-newheader').addClass('on-scroll-down');
@@ -22,9 +23,12 @@ jQuery(document).ready(function($) {
         if(scroll > position && scroll > 600) {
           $('.site-newheader').addClass('on-pin');
         }
-
+        if($('#toolbar-administration').length === 0){
+          $('.site-newheader').addClass('anonymous-user');
+        }
         position = scroll;
 
+      }
     });
 
     // // Add class to submenu to help with column wrapping
