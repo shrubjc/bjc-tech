@@ -76,9 +76,10 @@ $minionPro: 'minion-pro', serif !important;
 $openSans: 'Open Sans', sans-serif !important;
 
 //Font Awesome
-$fontAwesomeLight: var(--fa-font-light);
+// $fontAwesomeLight: var(--fa-font-light);
+$fontAwesomeLight: var(--fa-font-solid);
 $fontAwesomeSolid: var(--fa-font-solid);
-$fontAwesomeRegular: var(--fa-font-regular);
+$fontAwesomeRegular: var(--fa-font-solid);
 $fontAwesomeThin: var(--fa-font-thin);
 $fontAwesomeDuotone: var(--fa-font-duotone);
 $fontAwesomeBrands: var(--fa-font-brands);
